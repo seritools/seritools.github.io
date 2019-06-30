@@ -15,5 +15,5 @@ after_success: |
   [ $TRAVIS_PULL_REQUEST = false ] &&
   zola build &&
   sudo pip install ghp-import &&
-  ghp-import -c seri.tools -n public &&
+  ghp-import -c seri.tools -n -b master public &&
   git push -fq https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git master
