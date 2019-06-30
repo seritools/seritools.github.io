@@ -30,12 +30,6 @@ body {
   }
 }
 
-h1 {
-  margin: 0;
-  font-size: 240%;
-  padding: 0.2em 0;
-}
-
 header,
 main,
 footer {
@@ -43,14 +37,6 @@ footer {
   padding: 0.5em 1em;
   @media only screen and (max-width: 1180px) {
     padding: 0.5em;
-  }
-}
-
-#title {
-  text-decoration: none;
-  color: inherit;
-  & h1 {
-    font-weight: normal;
   }
 }
 
@@ -84,6 +70,21 @@ a {
       visibility: visible;
     }
   }
+}
+
+h1 {
+  margin: 0;
+  font-size: 240%;
+  padding: 0.2em 0;
+}
+
+#title {
+  font-weight: normal;
+}
+
+h1 a, h1 a:visited {
+  text-decoration: none;
+  color: inherit;
 }
 
 pre {
