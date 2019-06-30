@@ -1,0 +1,18 @@
+$font: "Source Sans Pro", "Segoe UI", Helvetica, Arial, sans-serif;
+$monospace: "Source Code Pro", "DejaVu Sans Mono", "Consolas", monospace, monospace;
+
+$darker: (
+  background: rgb(33, 37, 43),
+  background-highlight: #2c313a,
+  foreground: #ccc,
+  foreground-highlight: #fff,
+  foreground-dim: transparentize(#fff, 0.5)
+);
+
+$dark: (
+  background: #282c34,
+  background-highlight: #2c313a,
+  foreground: #bbb,
+  foreground-highlight: #eee,
+  foreground-dim: #495162
+);

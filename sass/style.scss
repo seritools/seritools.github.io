@@ -1,0 +1,118 @@
+@import 'normalize';
+@import 'theme';
+@import 'scrollbar';
+
+body {
+  background-color: map-get($map: $darker, $key: 'background');
+  color: map-get($map: $darker, $key: 'foreground');
+  font-family: $font;
+  font-size: 180%;
+
+  margin: 0 1em;
+
+  ::selection {
+    background-color: #005ccc;
+    color: #fff;
+  }
+
+  @include scrollbar-style();
+
+  @media only screen and (max-width: 1180px) {
+    font-size: 150%;
+    margin: 0 0.5em;
+  }
+
+  > div {
+    max-width: 1110px;
+    margin: 0.5em auto;
+
+    box-sizing: border-box;
+  }
+}
+
+h1 {
+  margin: 0;
+}
+
+header,
+main,
+footer {
+  display: block; // ie fix
+  padding: 0.5em 1em;
+  @media only screen and (max-width: 1180px) {
+    padding: 0.5em;
+  }
+}
+
+header {
+  > h1 {
+    font-weight: normal;
+  }
+}
+
+main {
+  background-color: map-get($map: $dark, $key: 'background');
+  color: map-get($map: $dark, $key: 'foreground');
+}
+
+footer {
+  font-size: 100%;
+}
+
+:not(header) > h1 {
+  font-size: 240%;
+  padding: 0.2em 0;
+}
+
+article {
+  text-align: justify;
+}
+
+a {
+  color: #61afef;
+
+  &:visited {
+    color: #c678dd;
+  }
+
+  &.zola-anchor {
+    vertical-align: middle;
+    visibility: hidden;
+    font-size: 50%;
+    text-decoration: none;
+
+    article > :hover > & {
+      visibility: visible;
+    }
+  }
+}
+
+pre {
+  @include scrollbar-style();
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  font-size: 70%;
+  padding: 0 0 0.5em 0;
+
+  // overwrite bg in theme
+  background: inherit !important;
+}
+
+code {
+  background-color: map-get($map: $darker, $key: 'background');
+  padding: 0 0.1em;
+  border-radius: 0.1em;
+  color: #ffd580;
+}
+
+ul {
+  list-style: circle;
+}
+
+.right {
+  // float right
+  float: right;
+  margin-left: 0.5em;
+}

@@ -1,0 +1,18 @@
+{% extends "index.html" %}
+
+{% block content %}
+
+<h1>Index</h1>
+<ul>
+{% for page in paginator.pages %}
+  <li>
+    <a href="{{ page.permalink | safe }}" title="{{ page.title }}">{{ page.title }}</a> ({{ page.date }})
+  </li>
+{% endfor %}
+</ul>
+
+{% if paginator.next %}
+<a href="{{ paginator.next | safe }}" title="Older posts">← Older posts</a>
+{% endif %}
+
+{% endblock content %}
