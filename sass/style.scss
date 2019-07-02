@@ -2,18 +2,18 @@
 @import 'theme';
 @import 'scrollbar';
 
+body,
+code,
+blockquote {
+  background: map-get($map: $darker, $key: 'background') !important;
+}
+
 body {
-  background-color: map-get($map: $darker, $key: 'background');
   color: map-get($map: $darker, $key: 'foreground');
   font-family: $font;
   font-size: 180%;
 
   margin: 0 1em;
-
-  ::selection {
-    background-color: #005ccc;
-    color: #fff;
-  }
 
   @include scrollbar-style();
 
@@ -28,6 +28,13 @@ body {
 
     box-sizing: border-box;
   }
+
+  text-align: justify;
+}
+
+::selection {
+  background: #005ccc;
+  color: #eee;
 }
 
 header,
@@ -41,7 +48,7 @@ footer {
 }
 
 main {
-  background-color: map-get($map: $dark, $key: 'background');
+  background: map-get($map: $dark, $key: 'background');
   color: map-get($map: $dark, $key: 'foreground');
 }
 
@@ -49,12 +56,8 @@ footer {
   font-size: 100%;
 }
 
-article {
-  text-align: justify;
-}
-
 a {
-  color: #61afef;
+  color: $accent;
 
   &:visited {
     color: #c678dd;
@@ -76,35 +79,30 @@ h1 {
   margin: 0;
   font-size: 240%;
   padding: 0.2em 0;
+
+  a, a:visited {
+    text-decoration: none;
+    color: inherit;
+  }
 }
 
 #title {
   font-weight: normal;
 }
 
-h1 a, h1 a:visited {
-  text-decoration: none;
-  color: inherit;
-}
-
 pre {
   @include scrollbar-style();
 
-  overflow-x: auto;
-  overflow-y: hidden;
-
-  font-size: 70%;
-  padding: 0 0 0.5em 0;
-
-  // overwrite bg in theme
-  background: inherit !important;
+  overflow: auto;
+  font-size: 75%;
+  padding: 0.5em;
+  background: inherit !important; // overwrite highlighter theme
 }
 
 code {
-  background-color: map-get($map: $darker, $key: 'background');
   padding: 0 0.1em;
   border-radius: 0.1em;
-  color: #ffd580;
+  color: $accent2;
 }
 
 ul {
@@ -112,7 +110,12 @@ ul {
 }
 
 .right {
-  // float right
   float: right;
   margin-left: 0.5em;
+}
+
+blockquote {
+  border-left: 0.25em solid $accent;
+  margin: 0.5em;
+  padding: 0 0.5em;
 }
