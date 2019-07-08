@@ -202,6 +202,6 @@ for i in pos..(pos + 0xFF_FFFF) {
 ```
 
 After waiting for somebody else to post the actual password for the installer I pushed my code for anyone interested to see:
-[seritools/find_drand48_innosetup_pw](https://github.com/seritools/find_drand48_innosetup_pw)
+[gh/find_drand48_innosetup_pw](https://github.com/seritools/find_drand48_innosetup_pw)
 
 The timing of it all was lucky as well—the weakness was reported to Hex-Rays on January 31st 2019, while the leaks happened just a few weeks earlier. Since Hex-Rays promised to harden the installer password, this will probably be the last version of IDA to be leaked/cracked in a usable state without a password.
