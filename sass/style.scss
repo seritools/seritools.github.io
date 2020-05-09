@@ -1,90 +1,72 @@
-@import 'normalize';
-@import 'theme';
-@import 'scrollbar';
+@import "normalize";
+@import "theme";
+@import "scrollbar";
 
-body,
-code,
-blockquote {
-  background: map-get($map: $darker, $key: 'background') !important;
+::selection {
+  background: #05c;
+  color: #eee;
+}
+
+html {
+  font: 160%/1.15 $font;
+  // -webkit-text-size-adjust: 100%;
 }
 
 body {
-  color: map-get($map: $darker, $key: 'foreground');
-  font-family: $font;
-  font-size: 180%;
+  background: map-get($map: $darker, $key: "background");
+  color: map-get($map: $darker, $key: "foreground");
 
-  margin: 0 1em;
+  margin: 0 16px;
 
   @include scrollbar-style();
-
-  @media only screen and (max-width: 1180px) {
-    font-size: 150%;
-    margin: 0 0.5em;
-  }
-
-  > div {
-    max-width: 1110px;
-    margin: 0.5em auto;
-
-    box-sizing: border-box;
-  }
 }
 
-::selection {
-  background: #005ccc;
-  color: #eee;
+#all {
+  max-width: 1010px;
+  margin: .5em auto;
 }
 
 p {
   text-align: justify;
+  margin: 1em 0;
 }
 
-header,
-main,
-footer {
-  display: block; // ie fix
-  padding: 0.5em 1em;
-  @media only screen and (max-width: 1180px) {
-    padding: 0.5em;
-  }
+.part {
+  padding: .5em 1em;
 }
 
-main {
-  background: map-get($map: $dark, $key: 'background');
-  color: map-get($map: $dark, $key: 'foreground');
-}
-
-footer {
-  font-size: 100%;
+#main {
+  background-color: map-get($map: $dark, $key: "background");
+  color: map-get($map: $dark, $key: "foreground");
 }
 
 a {
   color: $accent;
 
   &:visited {
-    color: #c678dd;
+    color: $accent3;
   }
+}
 
-  &.zola-anchor {
-    vertical-align: middle;
-    visibility: hidden;
-    font-size: 50%;
-    text-decoration: none;
+.a-link {
+  font-size: 50%;
+  visibility: hidden;
+  text-decoration: none;
 
-    article > :hover > & {
-      visibility: visible;
-    }
+  :hover > & {
+    visibility: visible;
   }
 }
 
 h1 {
   margin: 0;
   font-size: 240%;
-  padding: 0.2em 0;
+  padding: .2em 0;
 
-  a, a:visited {
+  a,
+  a:visited {
     text-decoration: none;
-    color: inherit;
+    color: map-get($map: $dark, $key: "foreground");
   }
 }
 
@@ -97,13 +79,10 @@ pre {
 
   overflow: auto;
   font-size: 75%;
-  padding: 0.5em;
-  background: inherit !important; // overwrite highlighter theme
+  padding: .5em;
 }
 
 code {
-  padding: 0 0.1em;
-  border-radius: 0.1em;
   color: $accent2;
 }
 
@@ -113,11 +92,11 @@ ul {
 
 .right {
   float: right;
-  margin-left: 0.5em;
+  margin-left: .5em;
 }
 
 blockquote {
-  border-left: 0.25em solid $accent;
-  margin: 0.5em;
-  padding: 0 0.5em;
+  border-left: 6px solid $blockquote;
+  margin: 0;
+  padding: 1px .5em;
 }

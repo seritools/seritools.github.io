@@ -1,21 +1,21 @@
-$font: "Source Sans Pro", "Segoe UI", Helvetica, Arial, sans-serif;
-$monospace: "Source Code Pro", "DejaVu Sans Mono", "Consolas", monospace, monospace;
+$font: "Noto Sans", sans-serif;
+$monospace: "Source Code Pro", "Consolas", monospace, monospace;
 
 $darker: (
-  background: rgb(33, 37, 43),
-  background-highlight: #2c313a,
+  background: #21252b,
+  background-highlight: #234,
   foreground: #ccc,
   foreground-highlight: #fff,
-  foreground-dim: transparentize(#fff, 0.5)
 );
 
 $dark: (
-  background: #282c34,
-  background-highlight: #2c313a,
+  background: #2b303b,
+  background-highlight: #345,
   foreground: #bbb,
   foreground-highlight: #eee,
-  foreground-dim: #495162
 );
 
-$accent: #61afef;
-$accent2: #ffd580;
+$accent: #6bf;
+$accent2: #db9d63;
+$accent3: #c7d;
+$blockquote: #37a;

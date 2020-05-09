@@ -2,9 +2,9 @@
 
 {% block title %}{{ page.title }}{% endblock title %}
 {% block content %}
-<article>
+<div class="article">
   <p class="right">Posted: {{ page.date }}</p>
   <h1><a href="#">{{ page.title }}</a></h1>
   {{ page.content | safe }}
-</article>
+</div>
 {% endblock content %}

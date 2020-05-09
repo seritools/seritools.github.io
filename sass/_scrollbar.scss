@@ -1,15 +1,14 @@
 @import "theme";
 
+::-webkit-scrollbar,
+::-webkit-scrollbar-corner {
+  background: map-get($map: $dark, $key: "background");
+}
+::-webkit-scrollbar-thumb {
+  background: map-get($map: $dark, $key: "background-highlight");
+}
+
 @mixin scrollbar-style() {
-  &::-webkit-scrollbar,
-  &::-webkit-scrollbar-corner {
-    background-color: map-get($map: $dark, $key: "background-highlight");
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background-color: map-get($map: $dark, $key: "foreground-dim");
-  }
-
-  scrollbar-color: map-get($map: $dark, $key: "foreground-dim")
-    map-get($map: $dark, $key: "background-highlight");
+  scrollbar-color: map-get($map: $dark, $key: "background-highlight")
+    map-get($map: $dark, $key: "background");
 }
