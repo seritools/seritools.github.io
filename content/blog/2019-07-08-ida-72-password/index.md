@@ -2,7 +2,7 @@
 title = "How IDA 7.2's installer password was found"
 +++
 
-*(Note: All hashes and passwords are redacted.)*
+*Note: All hashes and passwords are redacted.*
 
 ## Previously ...
 
@@ -65,7 +65,7 @@ And [here](https://github.com/Perl/perl5/blob/05ccd577e15cc66bbb7414fad5ee3c02f5
 
 Just a simple call to the C functions `srand` and `rand`, converting the random number to a double with a bit of bit-fiddling.
 
-Rechecking the full range was a little bit uglier with the older PRNG code since C's `srand`/`rand` are not thread-safe as it uses globals to store the PRNG state. That meant instead of using rayon multithreading, the brute-force loop has to run single-threaded. To make the program not lose all of its previous speed, chunking the search space into 16 blocks and just running the tool 16 times in parallel worked well enough.
+Re-checking the full range was a little bit uglier with the older PRNG code, since C's `srand`/`rand` are not thread-safe, as it uses globals to store the PRNG state. This meant that instead of using rayon multithreading, the brute-force loop has to run single-threaded. To make the program not lose all of its previous speed, chunking the search space into 16 blocks and just running the tool 16 times in parallel worked well enough.
 
 ```rs
 use hex_literal::hex;
@@ -128,7 +128,7 @@ fn perl_rand(max: u32) -> u32 {
 }
 ```
 
-This, surprisingly, turned out to be the right idea and successfully bruteforces the other hashes/passwords (when using Microsoft's C runtime implementation for `srand` and `rand`).
+This, surprisingly, turned out to be the right idea and successfully bruteforced the other hashes/passwords (when using Microsoft's C runtime implementation for `srand` and `rand`).
 
 ## IDA 7.2, though
 
@@ -190,7 +190,7 @@ o_O
 >
 > — [me in reply to hishe](https://devco.re/blog/2019/06/21/operation-crack-hacking-IDA-Pro-installer-PRNG-from-an-unusual-way-en/#comment-4512903087)
 
-It probably was a well-educated guess by hishe that lead to IDA 7.2 being finally pried open. Discarding the first generated number after setting the seed was everything that had to be changed to make it work (with DRand48):
+It probably was a well-educated guess by hishe that led to IDA 7.2 being finally pried open. Discarding the first generated number after setting the seed was everything that had to be changed to make it work (with DRand48):
 
 ```rs
 for i in pos..(pos + 0xFF_FFFF) {

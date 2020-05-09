@@ -1,5 +1,5 @@
 +++
-title = "Impressum/Legals/DSGVO/GDPR"
+title = "Impressum/Legals (DSGVO/GDPR)"
 +++
 
 ```plain
