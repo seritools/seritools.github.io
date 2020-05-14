@@ -7,12 +7,9 @@
   color: #eee;
 }
 
-html {
-  font: 160%/1.3 $font;
-  // -webkit-text-size-adjust: 100%;
-}
-
 body {
+  font: 150%/1.3 $font;
+  // -webkit-text-size-adjust: 100%;
   background: map-get($map: $darker, $key: "background");
   color: map-get($map: $darker, $key: "foreground");
 
@@ -22,12 +19,12 @@ body {
 }
 
 #all {
-  max-width: 1010px;
+  max-width: 900px;
   margin: .5em auto;
 }
 
 p {
-  text-align: justify;
+  // text-align: justify;
   margin: 1em 0;
 }
 
@@ -78,7 +75,7 @@ pre {
   @include scrollbar-style();
 
   overflow: auto;
-  font-size: 75%;
+  font-size: 80%;
   padding: .5em;
 }
 

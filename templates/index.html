@@ -16,10 +16,13 @@
 <body>
 <div id="all">
   <div id="header" class="part">
-    <a href="/blog" class="right">Posts</a>
-    <h1 id="title"><a href="/" title="seri.tools"><strong>seri</strong>.tools</a></h1>
+    <header>
+      <a href="/blog" class="right">Posts</a>
+      <h1 id="title"><a href="/" title="seri.tools"><strong>seri</strong>.tools</a></h1>
+    </header>
   </div>
   <div id="main" class="part">
+    <main>
     {% block content %}
       {% set section = get_section(path="blog/_index.md") %}
       {% if section.pages.0 %}
@@ -31,12 +34,15 @@
         </div>
       {% endif %}
     {% endblock content %}
+    </main>
   </div>
   <div id="footer" class="part">
-    Dennis Duda |
-    <a href="https://github.com/seritools">github/seritools</a> |
-    <a href="https://twitter.com/seritools">@seritools</a> |
-    <a href="/legal">Legals/Impressum</a>
+    <footer>
+      Dennis Duda |
+      <a href="https://github.com/seritools">github/seritools</a> |
+      <a href="https://twitter.com/seritools">@seritools</a> |
+      <a href="/legal">Legals/Impressum</a>
+    </footer>
   </div>
 </div>
 </body>
