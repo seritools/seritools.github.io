@@ -1,0 +1,15 @@
+{% set imgpath = get_url(path=page.path ~ src) %}
+{% set imginfo = get_image_metadata(path=page.relative_path ~ "/../" ~ src) %}
+
+<div class="{{ align | default(value="center") }}">
+{% if link | default(value=true) %}
+<a title="{{ alt }}" href="{{ imgpath }}">
+{% endif %}
+
+<img alt="{{ alt }}" src="{{ imgpath }}" width="{{ imginfo.width }}" height="{{ imginfo.height }}"
+  {% if lazy | default(value=true) %}loading="lazy"{% endif %}/>
+
+{% if link | default(value=true) %}
+</a>
+{% endif %}
+</div>

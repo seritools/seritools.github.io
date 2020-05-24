@@ -87,7 +87,7 @@ ul {
   list-style: circle;
 }
 
-.right {
+.float-right {
   float: right;
   margin-left: .5em;
 }
@@ -96,4 +96,13 @@ blockquote {
   border-left: 6px solid $blockquote;
   margin: 0;
   padding: 1px .5em;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.center {
+  text-align: center;
 }

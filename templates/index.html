@@ -17,7 +17,7 @@
 <div id="all">
   <div id="header" class="part">
     <header>
-      <a href="/blog" class="right">Posts</a>
+      <a href="/blog" class="float-right">Posts</a>
       <h1 id="title"><a href="/" title="seri.tools"><strong>seri</strong>.tools</a></h1>
     </header>
   </div>
@@ -28,7 +28,7 @@
       {% if section.pages.0 %}
         {% set page = section.pages.0 %}
         <div class="article">
-          <p class="right">Posted: {{ page.date }}</p>
+          <p class="float-right">Posted: {{ page.date }}</p>
           <h1><a href="{{ page.permalink | safe }}">{{ page.title }}</a></h1>
           {{ page.content | safe }}
         </div>
@@ -40,7 +40,9 @@
     <footer>
       Dennis Duda |
       <a href="https://github.com/seritools">github/seritools</a> |
-      <a href="https://twitter.com/seritools">@seritools</a> |
+      <a href="https://twitter.com/seritools">twitter/@seritools</a><br>
+      Discord: seri#6041 |
+      <a href="https://www.linkedin.com/in/seri-tools/">LinkedIn</a><br>
       <a href="/legal">Legals/Impressum</a>
     </footer>
   </div>
