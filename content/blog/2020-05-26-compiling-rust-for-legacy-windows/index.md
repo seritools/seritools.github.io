@@ -2,6 +2,8 @@
 title = "Compiling Rust binaries for Windows 98 SE and more: a journey"
 +++
 
+Discussion on [/r/rust](https://www.reddit.com/r/rust/comments/gr0xqa/compiling_rust_binaries_for_windows_98_se_and/), [HN](https://news.ycombinator.com/item?id=23313577), [Rust user forum](https://users.rust-lang.org/t/compiling-rust-binaries-for-windows-98-se-and-more-a-journey/43283)
+
 *tl;dr:* It actually works, mostly! See the [conclusion](#conclusion) down below.
 
 Did you know that [Rust](https://www.rust-lang.org/) has a [Tier 2 target](https://forge.rust-lang.org/release/platform-support.html) called `i586-pc-windows-msvc`? I didn't either, until a few days ago. This target disables SSE2 support and only emits instructions available on the original [Intel Pentium](https://en.wikipedia.org/wiki/P5_(microarchitecture)) from 1993.
@@ -472,5 +474,3 @@ backtrace = false
 Also see the blog's footer for my contact information if you have any comments, questions or suggestions.
 
 Thank you for reading!
-
-Discussion on [/r/rust](https://www.reddit.com/r/rust/comments/gr0xqa/compiling_rust_binaries_for_windows_98_se_and/), [HN](https://news.ycombinator.com/item?id=23313577), [Rust user forum](https://users.rust-lang.org/t/compiling-rust-binaries-for-windows-98-se-and-more-a-journey/43283)
