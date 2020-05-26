@@ -472,3 +472,5 @@ backtrace = false
 Also see the blog's footer for my contact information if you have any comments, questions or suggestions.
 
 Thank you for reading!
+
+Discussion on [/r/rust](https://www.reddit.com/r/rust/comments/gr0xqa/compiling_rust_binaries_for_windows_98_se_and/), [HN](https://news.ycombinator.com/item?id=23313577)
