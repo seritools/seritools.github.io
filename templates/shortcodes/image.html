@@ -1,5 +1,6 @@
 {% set imgpath = get_url(path=page.path ~ src) %}
-{% set imginfo = get_image_metadata(path=page.relative_path ~ "/../" ~ src) %}
+{% set localfolder = page.relative_path | replace(from="/index.md", to="") %}
+{% set imginfo = get_image_metadata(path=localfolder ~ "/" ~ src) %}
 
 <div class="{{ align | default(value="center") }}">
 {% if link | default(value=true) %}
