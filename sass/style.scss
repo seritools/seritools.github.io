@@ -35,6 +35,7 @@ p {
 #main {
   background-color: map-get($map: $dark, $key: "background");
   color: map-get($map: $dark, $key: "foreground");
+  overflow-x: auto;
 }
 
 a {
