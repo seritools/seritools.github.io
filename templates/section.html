@@ -6,7 +6,7 @@
 <ul>
 {% for page in paginator.pages %}
   <li>
-    <a href="{{ page.permalink | safe }}" title="{{ page.title }}">{{ page.title }}</a> ({{ page.date }})
+    {{ page.date }}: <a href="{{ page.permalink | safe }}" title="{{ page.title }}">{{ page.title }}</a>
   </li>
 {% endfor %}
 </ul>
