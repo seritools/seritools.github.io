@@ -20,7 +20,7 @@ body {
 
 #all {
   max-width: 900px;
-  margin: .5em auto;
+  margin: 0 auto;
 }
 
 p {
@@ -57,7 +57,7 @@ a {
 
 h1 {
   margin: 0;
-  font-size: 240%;
+  font-size: 220%;
   padding: .2em 0;
 
   a,
@@ -69,6 +69,7 @@ h1 {
 
 #title {
   font-weight: normal;
+  font-size: 250%;
 }
 
 pre {
@@ -90,6 +91,7 @@ ul {
 .float-right {
   float: right;
   margin-left: .5em;
+  margin-top: .5em;
 }
 
 blockquote {
