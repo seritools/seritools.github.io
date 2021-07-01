@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: //seri.tools/sitemap.xml
