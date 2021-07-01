@@ -2,13 +2,12 @@
 
 ::-webkit-scrollbar,
 ::-webkit-scrollbar-corner {
-  background: map-get($map: $dark, $key: "background");
+  background: $background-highlight;
 }
 ::-webkit-scrollbar-thumb {
-  background: map-get($map: $dark, $key: "background-highlight");
+  background: $background-highlight2;
 }
 
 @mixin scrollbar-style() {
-  scrollbar-color: map-get($map: $dark, $key: "background-highlight")
-    map-get($map: $dark, $key: "background");
+  scrollbar-color: $background-highlight2 $background-highlight;
 }

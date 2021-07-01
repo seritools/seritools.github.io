@@ -1,21 +1,15 @@
+@import "gruvbox";
+
 $font: "Noto Sans", "Segoe UI", sans-serif;
-$monospace: "Cascadia Mono", "Source Code Pro", "Consolas", monospace, monospace;
+$font-monospace: "Cascadia Mono", "Consolas", monospace, monospace;
 
-$darker: (
-  background: #21252b,
-  background-highlight: #234,
-  foreground: #ccc,
-  foreground-highlight: #fff,
-);
+$background: $bg;
+$background-highlight: $bg2;
+$background-highlight2: $bg5;
 
-$dark: (
-  background: #2b303b,
-  background-highlight: #345,
-  foreground: #bbb,
-  foreground-highlight: #eee,
-);
+$foreground: #d1cbb8;
 
-$accent: #6bf;
-$accent2: #db9d63;
-$accent3: #c7d;
-$blockquote: #37a;
+$accent: $blue; // links and stuff
+$accent2: $yellow; // code tags
+$accent3: $purple; // used links
+$blockquote: $dimOrange;

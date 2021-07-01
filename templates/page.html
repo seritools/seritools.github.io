@@ -1,9 +1,7 @@
-{% extends "index.html" %}
-
-{% block title %}{{ page.title }}{% endblock title %}
+{% extends "index.html" %} {% block title %}{{ page.title }}{% endblock title %}
 {% block content %}
 <div class="article">
-  <p class="float-right">Posted: {{ page.date }}</p>
+  <p class="post-date">Posted: {{ page.date }}</p>
   <h1><a href="#">{{ page.title }}</a></h1>
   {{ page.content | safe }}
 </div>

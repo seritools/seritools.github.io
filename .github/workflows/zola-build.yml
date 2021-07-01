@@ -1,0 +1,23 @@
+on:
+  push:
+    branches:
+      - source
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: download zola
+        run: curl -s -L https://github.com/getzola/zola/releases/download/v0.13.0/zola-v0.13.0-x86_64-unknown-linux-gnu.tar.gz | tar xzvf - -C $RUNNER_TEMP
+      - name: build page with zola
+        run: $RUNNER_TEMP/zola build
+      - uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+      - name: install ghp-import
+        run: |
+          python -m pip install --upgrade pip
+          pip install ghp-import
+      - name: run ghp-import
+        run: ghp-import --cname=seri.tools --no-jekyll --branch=master --push --force --no-history public
