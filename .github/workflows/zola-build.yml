@@ -20,4 +20,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install ghp-import
       - name: run ghp-import
-        run: ghp-import --cname=seri.tools --no-jekyll --branch=master --push --force --no-history public
+        run: |
+          git config --global user.name 'Dennis Duda'
+          git config --global user.email 'seritools@users.noreply.github.com'
+          ghp-import --cname=seri.tools --no-jekyll --branch=master --push --force --no-history public

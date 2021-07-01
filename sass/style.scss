@@ -11,8 +11,8 @@
 }
 
 ::selection {
-  background: #05c;
-  color: #eee;
+  background: $selection;
+  color: $foreground;
 }
 
 .top-nav {
@@ -49,7 +49,7 @@ p {
 
 .part {
   padding: 0.5em 0;
-  overflow-x: auto;
+  overflow: hidden;
 }
 
 a {
@@ -65,7 +65,7 @@ a {
   visibility: hidden;
   text-decoration: none;
 
-  :hover > & {
+  :hover & {
     visibility: visible;
   }
 }
