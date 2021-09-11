@@ -1,5 +1,6 @@
 @import "normalize";
 @import "theme";
+@import "gruvbox-highlight";
 @import "scrollbar";
 
 .float-right {
@@ -98,7 +99,7 @@ pre {
 }
 
 code {
-  color: $accent2;
+  color: $fg;
 }
 
 blockquote {

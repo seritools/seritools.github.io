@@ -134,7 +134,7 @@ This, surprisingly, turned out to be the right idea and successfully bruteforced
 
 The next thing I've tested was the IDA 7.2 installer, of course. [InnoExtract](http://constexpr.org/innoextract/) (`innoextract.exe --show-password`) is probably the easiest way of extracting the relevant data from the installer:
 
-```plain
+```
 Inspecting "IDA Pro v7.2 and Hex-Rays Decompiler (x64)" - setup data version 5.5.7 (unicode)
 Password hash: SHA-1 0000000000000000000000000000000000000000
 Password salt: 50617373776f7264436865636b486173680000000000000000 (hex bytes, prepended to password)

@@ -26,7 +26,7 @@ Props to the people that wrote the extensive documentation inside of `config.tom
 
 In order to use the fresh new toolchain, we have to tell `rustup` about it:
 
-```plain
+```
 rustup toolchain link win98 D:\RustProjs\rust\build\x86_64-pc-windows-msvc\stage1
 ```
 
@@ -34,13 +34,13 @@ rustup toolchain link win98 D:\RustProjs\rust\build\x86_64-pc-windows-msvc\stage
 
 First of all, I've created a new binary crate/project and changed the *Hello, world!* to *Hello, Windows 98!*, of course. To make sure that the project always uses our own toolchain, the default has to be overridden:
 
-```plain
+```
 rustup override set win98
 ```
 
 After confirming that the toolchain works by building with the default MSVC tooling (`cargo run --target i586-pc-windows-msvc`), I have tried building again, but this time from within the `vsvars32.bat` development environment:
 
-```plain
+```
 cmd
 call vsvars.bat
 cargo clean
@@ -49,7 +49,7 @@ cargo build --target i586-pc-windows-msvc
 
 But nope! For some reason Rust/Cargo tries to pass in the `x86_64-pc-windows-msvc` library object files, so `link.exe` rightfully errors with:
 
-```plain
+```
 fatal error LNK1112: module machine type 'X86' conflicts with target machine type 'x64'
 ```
 
@@ -77,7 +77,7 @@ rustflags = ["-Z", "print-link-args"]
 
 Now it looks like it has linked the files successfully, but there is no `.exe` file in sight! It took me an embarassingly large amount of time to get the idea to run the linking command manually:
 
-```plain
+```
 error: linking with `D:\RustProjs\hello-w98\linker.cmd` failed: exit code: 1103
   ...
   = note: Setting environment for using Microsoft Visual Studio 2005 x86 tools.
@@ -314,7 +314,7 @@ After patching out `RtlCaptureContext` once again, I was greeted with my first t
 
 The next day I've followed my train of thought about the linking process. Looking at the final linker command line:
 
-```plain
+```
 ... "advapi32.lib" "ws2_32.lib" "userenv.lib" "libcmt.lib"
 "/nod:kernel32.lib" "/nod:advapi32.lib" "/nod:user32.lib"
 "/nod:gdi32.lib" "/nod:shell32.lib" "/nod:comdlg32.lib"
@@ -402,13 +402,13 @@ Until this point, each and every new executable needs to be edited to "remove" t
 
 In order to find the source, the tool `dumpbin`, part of the MSVC toolset, comes to help. First I've confirmed that `RtlCaptureContext` is actually imported:
 
-```plain
+```
 dumpin /imports hello-w98.exe
 ```
 
 Then I've gone through all libraries listed in the linker call, in order, to find the one that mentions `RtlCaptureContext` somewhere in its defined symbols. Of course `libstd` is the one:
 
-```plain
+```
 dumpbin /symbols "D:\RustProjs\rust\build\x86_64-pc-windows-msvc\stage1\lib\rustlib\i586-pc-windows-msvclegacy\lib\libstd-ca1f5c4034a86a91.rlib" | rg Rtl
 239 00000000 UNDEF  notype       External     | _RtlCaptureContext@4
 ```
