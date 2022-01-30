@@ -21,12 +21,6 @@ somit keinerlei persönliche Daten.
 Diese Webseite wird von GitHub via GitHub Pages bereitgestellt.
 [GitHub Privacy Statement](https://help.github.com/en/articles/github-privacy-statement)
 
-### Fonts von Google Fonts
-
-Diese Webseite benutzt Schriften, die von Google via Google Fonts bereitgestellt werden.
-Siehe [Google Fonts FAQ](https://developers.google.com/fonts/faq) und
-[Google Privacy Policy](https://www.google.com/policies/privacy/)
-
 ## Privacy policy (GDPR)
 
 This website is fully static and thus does not collect, store or process any personal data.
@@ -35,9 +29,3 @@ This website is fully static and thus does not collect, store or process any per
 
 This website is hosted on GitHub via GitHub Pages.
 [GitHub Privacy Statement](https://help.github.com/en/articles/github-privacy-statement)
-
-### Fonts via Google Fonts
-
-This webseite uses fonts hosted by Google via Google Fonts.
-See [Google Fonts FAQ](https://developers.google.com/fonts/faq) and
-[Google Privacy Policy](https://www.google.com/policies/privacy/)

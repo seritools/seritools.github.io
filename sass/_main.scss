@@ -1,0 +1,110 @@
+.float-right {
+  float: right;
+}
+
+.center {
+  text-align: center;
+}
+
+::selection {
+  background: $selection;
+  color: $foreground;
+}
+
+.top-nav {
+  margin-top: 1.5em;
+}
+
+body {
+  line-height: 1.4;
+  font-family: $font;
+  font-size: 140%;
+
+  background: $background;
+  color: $foreground;
+
+  margin: 16px;
+
+  @include scrollbar-style();
+}
+
+#all {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+p {
+  margin: 1em 0;
+}
+
+.post-date {
+  line-height: 1;
+  margin-bottom: 0;
+  font-size: 80%;
+}
+
+.part {
+  padding: 0.5em 0;
+  overflow: hidden;
+}
+
+a {
+  color: $accent;
+
+  &:visited {
+    color: $accent3;
+  }
+}
+
+.anchor {
+  font-size: 50%;
+  visibility: hidden;
+  text-decoration: none;
+
+  :hover & {
+    visibility: visible;
+  }
+}
+
+h1 {
+  margin: 0;
+  font-size: 220%;
+  padding: 0.2em 0 0.5em 0;
+
+  a,
+  a:visited {
+    text-decoration: none;
+    color: $foreground;
+  }
+}
+
+#title {
+  font-weight: normal;
+  font-size: 250%;
+  margin: 0;
+}
+
+pre {
+  @include scrollbar-style();
+
+  overflow: auto;
+  font-size: 80%;
+  padding: 0.5em;
+  border: 1px solid $background-highlight2;
+}
+
+code {
+  color: $fg;
+}
+
+blockquote {
+  background: $background-highlight;
+  border-left: 4px solid $blockquote;
+  margin: 0;
+  padding: 1px 0.5em;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

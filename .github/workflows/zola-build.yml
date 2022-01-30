@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: download zola
-        run: curl -s -L https://github.com/getzola/zola/releases/download/v0.14.1/zola-v0.14.1-x86_64-unknown-linux-gnu.tar.gz | tar xzvf - -C $RUNNER_TEMP
+        run: curl -s -L https://github.com/getzola/zola/releases/download/v0.15.3/zola-v0.15.3-x86_64-unknown-linux-gnu.tar.gz | tar xzvf - -C $RUNNER_TEMP
       - name: build page with zola
         run: $RUNNER_TEMP/zola build
       - uses: actions/setup-python@v2
