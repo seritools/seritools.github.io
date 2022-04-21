@@ -2,21 +2,25 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <link rel="stylesheet" href="/style.css" />
+  <link rel="stylesheet" href="{{ get_url(path="style.css") }}" />
   <title>{% block title %}{{ config.title }}{% endblock title %}</title>
   <meta name="description" content="{{ config.description }}">
   <meta name="author" content="Dennis Duda">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#292828" />
-
+  {% block rss %}
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ get_url(path="rss.xml") }}">
+  {% endblock %}
 </head>
 
 <body bgcolor="333333">
 <div class="all">
   <div class="part">
     <header>
-      <a href="/blog" class="float-right top-nav">Posts</a>
-      <h1 class="title"><a href="/" title="seri.tools"><strong>seri</strong>.tools</a></h1>
+      <div class="float-right top-nav">
+        <a href="{{ get_url(path="blog") }}">Posts</a> | <a href="{{ get_url(path="rss.xml") }}">RSS</a>
+      </div>
+      <h1 class="title"><a href="{{ get_url(path="") }}" title="seri.tools"><strong>seri</strong>.tools</a></h1>
     </header>
   </div>
   <div class="part">
