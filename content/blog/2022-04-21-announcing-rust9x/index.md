@@ -2,6 +2,11 @@
 title = "Rust9x: Compile Rust code for Windows 95, NT and above"
 +++
 
+*Discuss on
+[Reddit](https://www.reddit.com/r/rust/comments/u8skda/rust9x_compile_rust_code_for_windows_95_nt_and/),
+[URLO](https://users.rust-lang.org/t/rust9x-compile-rust-code-for-windows-95-nt-and-above/74581),
+[HN](https://news.ycombinator.com/item?id=31112273)*
+
 *tl;dr:* see the project wiki on Github: [`rust9x/rust`](https://github.com/rust9x/rust/wiki)
 
 You might remember my old post about the journey to [get at least a bit of Rust code working for
