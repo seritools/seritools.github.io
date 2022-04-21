@@ -43,9 +43,11 @@ and/or create an issue in the repositories. Thanks! <3
 ### Extremely simple file downloader using `ureq` and `clap`
 
 This is a quick toy program I've whipped up to show some actual code/crates running. It uses
-[`clap`](https://docs.rs/clap/latest/clap/) for command line parsing and `ureq` to do the request.
+[`clap`](https://docs.rs/clap/latest/clap/) for command line parsing and
+[`ureq`](https://docs.rs/ureq/latest/ureq/) to do the request.
 
-TLS is supported via `rustls` starting from Windows XP, as its dependency `ring` [needs
+TLS is supported via [`rustls`](https://docs.rs/rustls/latest/rustls/) starting from Windows XP, as
+its dependency [`ring`](https://docs.rs/ring/latest/ring/) [needs
 `RtlGenRandom`](https://github.com/briansmith/ring/blob/main/src/rand.rs#L272). I haven't looked
 into it too much, but from what I could tell, this should be the only additional API dependency, so
 by falling back to another way of getting randomness (probably compromising security in the process
