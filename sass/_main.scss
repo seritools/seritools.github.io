@@ -60,16 +60,6 @@ a {
   }
 }
 
-.anchor {
-  font-size: 50%;
-  visibility: hidden;
-  text-decoration: none;
-
-  :hover & {
-    visibility: visible;
-  }
-}
-
 h1 {
   margin: 0;
   font-size: 220%;
@@ -110,4 +100,14 @@ blockquote {
 img {
   max-width: 100%;
   height: auto;
+}
+
+.anchor {
+  font-size: 50%;
+  visibility: hidden;
+  text-decoration: none;
+
+  :hover > & {
+    visibility: visible;
+  }
 }
