@@ -11,7 +11,7 @@ title = "Rust9x: Compile Rust code for Windows 95, NT and above"
 
 You might remember my old post about the journey to [get at least a bit of Rust code working for
 Windows 98 SE](@/blog/2020-05-26-compiling-rust-for-legacy-windows/index.md). Well, I'm back, this
-time with a move ambitious package:
+time with a more ambitious package:
 
 ## Announcing Rust9x (Rust 1.61.0-beta)
 
