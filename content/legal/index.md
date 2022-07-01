@@ -1,13 +1,6 @@
 +++
-title = "Impressum/Legals (DSGVO/GDPR)"
+title = "Legals (DSGVO/GDPR)"
 +++
-
-```
-Dennis Duda
-Gewerbeschulstr. 121a
-42289 Wuppertal
-Deutschland
-```
 
 ![mail](mail.png)
 
