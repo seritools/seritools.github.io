@@ -8,11 +8,11 @@ title = "Rust9x update: Rust 1.76.0-beta"
 20 months since the initial release, Rust9x is back, whether you like it or not!
 
 I've spent the last couple of days migrating the changes from Rust 1.61-beta to Rust 1.76-beta, and
-fill some of the holes in API support on the way.
+filling some of the holes in API support on the way.
 
 See the project wiki on Github:
 [`rust9x/rust`](https://github.com/rust9x/rust/wiki) and the [previous announcement
-post]((@/blog/2022-04-21-announcing-rust9x/index.md)).
+post](@/blog/2022-04-21-announcing-rust9x/index.md).
 
 ## What's new?
 
