@@ -1,7 +1,7 @@
 {% extends "index.html" %} {% block title %}{{ page.title }}{% endblock title %}
 {% block content %}
 <div class="article">
-  <p class="post-date">Posted: {{ page.date }}</p>
+  {% if page.date %} <p class="post-date">Posted: {{ page.date }}</p> {% endif %}
   <h1><a href="#">{{ page.title }}</a></h1>
   {{ page.content | safe }}
 </div>

@@ -1,5 +1,5 @@
 +++
-title = "Legals (DSGVO/GDPR)"
+title = "Legal"
 +++
 
 ![mail](mail.png)

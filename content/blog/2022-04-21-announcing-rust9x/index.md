@@ -15,7 +15,8 @@ time with a more ambitious package:
 
 ## Announcing Rust9x (Rust 1.61.0-beta)
 
-{{ image(src="logo.svg", alt="'Ferrissoft Visual Rust 9X', logo in the style of old Visual Studio logos (just a joke, not the real name of the project :)") }}
+{{ image(src="logo.svg",
+   alt="'Ferrissoft Visual Rust 9X', logo in the style of old Visual Studio logos (just a joke, not the real name of the project :) )") }}
 
 > *Blazingly fast! Y2k compliant! Works everywhere!*
 
