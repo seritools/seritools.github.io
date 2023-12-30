@@ -100,7 +100,7 @@ debug = false
 
 It has *finally* linked successfully, but the executable requires the VC 2005 redistributable, which I have installed on both the Windows 98 SE system and my host computer. The program has stayed stubborn:
 
-{{ image(src="msvcr80.png", alt="hello-w98.exe - System Error: The code execution cannot proceed because MSVCR80.dll was not found. Reinstalling the program may fix this problem.") }}
+{{ image(src="./msvcr80.png", alt="hello-w98.exe - System Error: The code execution cannot proceed because MSVCR80.dll was not found. Reinstalling the program may fix this problem.") }}
 
 Even putting the `MSVCR80.dll` that *comes with the tools I've linked the executable with* directly into the executable folder did not work! One more option to add to `rustflags`:
 
@@ -114,7 +114,7 @@ While I was at it, I have also added the [Microsoft Layer for Unicode](https://e
 
 This executable actually runs fine on my host system now, and in the Windows 98 VM a more descriptive error message appears, one that means that the program is actually trying to run! The message informs us that the entry point `KERNEL32.DLL:AddVectoredExceptionHandler` could not be found. Looking this function up it seems it was added with Windows XP. It is time to get to work in the standard library!
 
-{{ image(src="missing_add_vectored_98.png", alt="The HELLO-W98.EXE file is linked to missing export KERNEL32.DLL:AddVectoredExceptionHandler.") }}
+{{ image(src="./missing_add_vectored_98.png", alt="The HELLO-W98.EXE file is linked to missing export KERNEL32.DLL:AddVectoredExceptionHandler.") }}
 
 ## Intermission: KernelEx
 
@@ -182,11 +182,11 @@ In a "proper" implementation I would maybe expose another `target_something` con
 
 After this change and another recompile of the sample application the `AddVectoredExceptionHandler` error message is gone, only to be replaced by a message about a missing `KERNEL32.DLL:RtlCaptureContext` export:
 
-{{ image(src="missing_rtl_98.png", alt="The HELLO-W98.EXE file is linked to missing export KERNEL32.DLL:RtlCaptureContext.") }}
+{{ image(src="./missing_rtl_98.png", alt="The HELLO-W98.EXE file is linked to missing export KERNEL32.DLL:RtlCaptureContext.") }}
 
 I've quickly googled to find out whether KernelEx supports this function, and it does! Turning KernelEx on, opening the executable again, and I am greeted by my very first Rust output on Windows 98!
 
-{{ image(src="kernelex_works.png", alt="The working program and KernelEx settings") }}
+{{ image(src="./kernelex_works.png", alt="The working program and KernelEx settings") }}
 
 Granted, using KernelEx is cheating, but it gave me the confidence that a true legacy Windows compatible executable is within the realms of possibility.
 
@@ -196,7 +196,7 @@ As with `AddVectoredExceptionHandler`, [`RtlCaptureContext`](https://docs.micros
 
 Since a [Portable Executable (PE)](https://en.wikipedia.org/wiki/Portable_Executable) file usually has an `.idata` section with all the import information, I wanted to validate it with [Dependency Walker](https://www.dependencywalker.com/). That tool froze when loading the test executable for some reason, so I switched to the open-source alternative called [Dependencies](https://github.com/lucasg/Dependencies):
 
-{{ image(src="dependencies_gui.png", alt="DependenciesGUI with hello-w98.exe open") }}
+{{ image(src="./dependencies_gui.png", alt="DependenciesGUI with hello-w98.exe open") }}
 
 So yes, the import is definitely there. The next tool I have utilized was [Ghidra](https://ghidra-sre.org/), a reverse engineering and code analysis toolset. Ghidra can auto-analyze the binary to find all usages of the imported functions, for example. But, to my surprise, the import is not used at all according to the auto-analysis! So the *most sensible* thing to do is to open a hex editor, find the string `RtlCaptureContext` and replacing it with an import name that definitely exists in Windows 98, filling any additional space with `\0`. I have chosen `GetCurrentThread` just because it happened to be the import prior to `RtlCaptureContext`.
 
@@ -230,7 +230,7 @@ How are we going to debug the problem? We use [OllyDbg 1.10](http://www.ollydbg.
 
 After firing up Olly and loading the executable, checking that everything works as expected, I've gone back to the import list to find out which kernel function would be a good candidate to set a breakpoint on. `WriteFile` seemed like a good candidate, so I've reloaded the executable in Olly, right-clicked in the disassembly window, selected *Search for → all intermodular calls*, found two call to `WriteFile`, set breakpoints on both, pressed "play" to have the program running until a breakpoint and ...
 
-{{ image(src="olly_writefile.png", alt="OllyDbg with WriteFile breakpoints set") }}
+{{ image(src="./olly_writefile.png", alt="OllyDbg with WriteFile breakpoints set") }}
 
 ... it's not called.
 
@@ -240,15 +240,15 @@ Next to the *all intermodular calls* context menu entry there is an *all referen
 
 I've switched back to Ghidra, where the correct function was obvious: `WriteConsoleW`. Noting the addresses where it is used, I've gone back to OllyDbg to see what it shows at those locations. And there it is, a normal call to `WriteConsoleW`. How did it not show in the list of intermodular calls? Well...
 
-{{ image(src="olly_writeconsole.png", alt="OllyDbg showing the wrong function name") }}
+{{ image(src="./olly_writeconsole.png", alt="OllyDbg showing the wrong function name") }}
 
 I've sorted the list by the "Destination" column, which shows a wrong function name! Back on track, I've set breakpoints on both of these calls, pressed "go", and:
 
-{{ image(src="olly_writeconsole_bp_before.png", alt="OllyDbg hitting one of the WriteConsoleW breakpoints") }}
+{{ image(src="./olly_writeconsole_bp_before.png", alt="OllyDbg hitting one of the WriteConsoleW breakpoints") }}
 
 The breakpoint hits, we see our string as a parameter on the stack, and step over the call. OllyDbg has a nice status window that shows the current register values, and also other values helpful for debugging Windows applications, like the [`GetLastError`](https://docs.microsoft.com/en-us/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) value:
 
-{{ image(src="olly_writeconsole_bp_after.png", alt="OllyDbg showing the last error code after calling WriteConsoleW") }}
+{{ image(src="./olly_writeconsole_bp_after.png", alt="OllyDbg showing the last error code after calling WriteConsoleW") }}
 
 `ERROR_CALL_NOT_IMPLEMENTED (0x00000078)` ... makes sense on Windows 98! At that point I had realized:
 
@@ -415,7 +415,7 @@ dumpbin /symbols "D:\RustProjs\rust\build\x86_64-pc-windows-msvc\stage1\lib\rust
 
 Let's open the file in Ghidra, which detects it as having 32 subfiles (first time I've seen such a thing, interesting!):
 
-{{ image(src="ghidra_libstd.png", alt="Ghidra project listing, showing all 32 added object files inside the rlib", link=false) }}
+{{ image(src="./ghidra_libstd.png", alt="Ghidra project listing, showing all 32 added object files inside the rlib", link=false) }}
 
 There is probably a better way to do this, but I have opened them one by one until I found the one importing `RtlCaptureContext`. In the end it was the one starting with `5pja0`, and the function calling our target was `backtrace::backtrace::trace_unsynchronized`. Doh, `libstd` of course has dependencies that are not part of the rustc tree! And [*there*](https://github.com/rust-lang/backtrace-rs/blob/0d859d82d782a6784734cc618193907a354add46/src/backtrace/dbghelp.rs#L88) is the call, finally.
 
@@ -435,7 +435,7 @@ So I have turned backtraces off, recompiled everything, checked the imports and 
 
 Since the executable now works on Windows 98 SE, I've tried Windows NT 3.51 next. This worked out of the box (and should be easier anyways since it already supports the `W` unicode APIs out of the box). It works without further changes because NT 3.51 uses the [same PE subsystem version `4`](http://www.malsmith.net/blog/nt351-runs-40-applications/) that NT4 and Windows 98 SE use, both of which are ([more or less](http://www.malsmith.net/blog/visual-c-visual-history/)) supported by the VC2005 linker.
 
-{{ image(src="nt351.png", alt="'Hello Windows 98!' on Windows NT 3.51") }}
+{{ image(src="./nt351.png", alt="'Hello Windows 98!' on Windows NT 3.51") }}
 
 It seems that to go even lower, to NT 3.1, a subsystem version of `3.10` is needed. The [original way](http://www.malsmith.net/blog/pe-subsystem-2/) of setting that was to use `verfix.exe` from the NT 3.1 SDK, and looking for modern alternatives I have found that `editbin.exe` of the VC toolset has the same functionality as well. Just watch out for [behavior changes](http://www.malsmith.net/blog/pe-subsystem-version/) depending on the subsystem version.
 

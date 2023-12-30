@@ -2,7 +2,7 @@
 title = "Rust9x update: Rust 1.76.0-beta"
 +++
 
-{{ image(src="logo.svg",
+{{ image(src="/images/rust9x-logo.svg",
    alt="'Ferrissoft Visual Rust 9X', logo in the style of old Visual Studio logos (just a joke, not the real name of the project :) )") }}
 
 20 months since the initial release, Rust9x is back, whether you like it or not!
@@ -43,4 +43,4 @@ wiki](https://github.com/rust9x/rust/wiki).
 
 ## Obligatory picture
 
-{{ image(src="pic.jpg", alt="Picture of the sample program running on a Windows 98 SE PC and aWindows XP laptop") }}
+{{ image(src="./pic.jpg", alt="Picture of the sample program running on a Windows 98 SE PC and aWindows XP laptop") }}

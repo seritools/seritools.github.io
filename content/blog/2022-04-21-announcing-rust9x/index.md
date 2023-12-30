@@ -15,7 +15,7 @@ time with a more ambitious package:
 
 ## Announcing Rust9x (Rust 1.61.0-beta)
 
-{{ image(src="logo.svg",
+{{ image(src="/images/rust9x-logo.svg",
    alt="'Ferrissoft Visual Rust 9X', logo in the style of old Visual Studio logos (just a joke, not the real name of the project :) )") }}
 
 > *Blazingly fast! Y2k compliant! Works everywhere!*
@@ -56,11 +56,11 @@ by falling back to another way of getting randomness (probably compromising secu
 
 With TLS support on Windows XP SP3 (real hardware):
 
-{{ image(src="winxp_ureq_tls.jpg", alt="ureq and clap running with TLS enabled on Windows XP SP3") }}
+{{ image(src="./winxp_ureq_tls.jpg", alt="ureq and clap running with TLS enabled on Windows XP SP3") }}
 
 Without TLS support on Windows 95 B (real hardware):
 
-{{ image(src="w95b_ureq.png", alt="ureq and clap running on Windows 95 B") }}
+{{ image(src="./w95b_ureq.png", alt="ureq and clap running on Windows 95 B") }}
 
 ### Sample program
 
@@ -68,16 +68,16 @@ Windows NT 3.51 (VM):
 
 This one is missing the network tests as NT 3.51 and earlier never got WinSock 2 support.
 
-{{ image(src="win351.png", alt="sample program running on Windows NT 3.51") }}
+{{ image(src="./win351.png", alt="sample program running on Windows NT 3.51") }}
 
 Windows 95 B (real hardware):
 
-{{ image(src="w95b.png", alt="sample program running on Windows 95 B") }}
+{{ image(src="./w95b.png", alt="sample program running on Windows 95 B") }}
 
 Windows XP (real hardware):
 
-{{ image(src="winxp.jpg", alt="sample program running on Windows XP") }}
+{{ image(src="./winxp.jpg", alt="sample program running on Windows XP") }}
 
 Windows 11 (real hardware):
 
-{{ image(src="win11.jpg", alt="sample program running on Windows XP") }}
+{{ image(src="./win11.jpg", alt="sample program running on Windows XP") }}
