@@ -15,7 +15,7 @@
 <a title="{{ alt }}" href="{{ get_url(path=external_path) }}">
 {% endif %}
 
-<img alt="{{ alt }}" src="{{ get_url(path=external_path) }}" width="{{ imginfo.width }}" height="{{ imginfo.height }}"
+<img alt="{{ alt }}" src="{{ get_url(path=external_path) }}" width="{{ imginfo.width }}"
   {% if lazy | default(value=true) %}loading="lazy"{% endif %}>
 
 {% if link | default(value=true) %}

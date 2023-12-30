@@ -15,7 +15,7 @@
 
 <body bgcolor="#333333" fgcolor="#ded9c9">
 <div class="all">
-  <div class="part">
+  <div class="header">
     <header>
       <div class="float-right top-nav">
         <a href="{{ get_url(path="blog") }}">Posts</a> | <a href="{{ get_url(path="rss.xml") }}">RSS</a>
@@ -23,13 +23,13 @@
       <h1 class="title"><a href="{{ get_url(path="") }}" title="seri.tools"><strong>seri</strong>.tools</a></h1>
     </header>
   </div>
-  <div class="part">
+  <div>
     <main>
     {% block content %}
       {% set section = get_section(path="blog/_index.md") %}
       {% if section.pages.0 %}
         {% set page = section.pages.0 %}
-        <div class="article">
+        <div class="content">
           <p class="post-date">Posted: {{ page.date }}</p>
           <h1><a href="{{ page.permalink | safe }}">{{ page.title }}</a></h1>
           {{ page.content | safe }}
@@ -38,7 +38,8 @@
     {% endblock content %}
     </main>
   </div>
-  <div class="part">
+  <div class="footer">
+    <hr>
     <footer>
       Dennis Duda |
       <a href="https://github.com/seritools">github/seritools</a><br>
