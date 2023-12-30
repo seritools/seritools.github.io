@@ -35,6 +35,12 @@ was removed from upstream before, as no *relevant* platform needs it anymore.
 I haven't tested it, but I've added a `x86_64-rust9x-windows-msvc` target, which should work on
 XP 64-bit and up. Let me know whether it does :)
 
+### (Update: 2023-12-30) Downloadable binary package
+
+I've also figured out how to create an easily shareable binary package, so you can try it out
+without bothering to build it yourself. See the installation instructions in the [project
+wiki](https://github.com/rust9x/rust/wiki).
+
 ## Obligatory picture
 
 {{ image(src="pic.jpg", alt="Picture of the sample program running on a Windows 98 SE PC and aWindows XP laptop") }}
