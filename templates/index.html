@@ -9,7 +9,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#292828" />
   {% block rss %}
-  <link rel="alternate" type="application/rss+xml" title="RSS" href="/rss.xml">
+  <link rel="alternate" type="application/atom+xml" title="RSS" href="{{ get_url(path="atom.xml") }}" />
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ get_url(path="rss.xml") }}">
   {% endblock %}
 </head>
 
@@ -18,7 +19,7 @@
   <div class="header">
     <header>
       <div class="float-right top-nav">
-        <a href="{{ get_url(path="blog") }}">Posts</a> | <a href="{{ get_url(path="rss.xml") }}">RSS</a>
+        <a href="{{ get_url(path="blog") }}">Posts</a> | <a href="{{ get_url(path="atom.xml") }}">Atom</a> | <a href="{{ get_url(path="rss.xml") }}">RSS</a>
       </div>
       <h1 class="title"><a href="{{ get_url(path="") }}" title="seri.tools"><strong>seri</strong>.tools</a></h1>
     </header>
