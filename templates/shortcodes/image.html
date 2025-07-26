@@ -1,21 +1,19 @@
-{% if src is not starting_with("./") %}
-  {% set imginfo = get_image_metadata(path=src) %}
-  {% set external_path = src %}
+{% if src is starting_with("./") %}
+{%   set internal_path = page.colocated_path ~ src %}
+{%   set imginfo = get_image_metadata(path=internal_path) %}
+{%   set external_path = src %}
 {% else %}
-  {% set internal_path = page.colocated_path ~ src %}
-  {% set imginfo = get_image_metadata(path=internal_path) %}
-
-  {% set trimmed = src | trim_start_matches(pat="./") %}
-  {% set external_path = page.path ~ trimmed %}
+{%   set imginfo = get_image_metadata(path=src) %}
+{%   set external_path = get_url(path=src) %}
 {% endif %}
 
 <div class="{{ align | default(value="center") }}">
 
 {% if link | default(value=true) %}
-<a title="{{ alt }}" href="{{ get_url(path=external_path) }}">
+<a title="{{ alt }}" href="{{ external_path }}">
 {% endif %}
 
-<img alt="{{ alt }}" src="{{ get_url(path=external_path) }}" width="{{ imginfo.width }}"
+<img alt="{{ alt }}" src="{{ external_path }}" width="{{ imginfo.width }}"
   {% if lazy | default(value=true) %}loading="lazy"{% endif %}>
 
 {% if link | default(value=true) %}
