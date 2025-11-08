@@ -1,4 +1,4 @@
-{% extends "index.html" %} {% block title %}{{ page.title }}{% endblock title %}
+{% extends "index.html" %}{% block title %}{{ page.title }} - {{ config.title }}{% endblock title %}
 {% block content %}
 <div class="content">
   {% if page.date %} <p class="post-date">Posted: {{ page.date }}</p> {% endif %}
