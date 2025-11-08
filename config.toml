@@ -17,5 +17,6 @@ feed_filenames = ["rss.xml", "atom.xml"]
 highlight_code = true
 extra_syntaxes_and_themes = ["sass"]
 highlight_theme = "gruvbox-material"
+bottom_footnotes = true
 
 [extra]
