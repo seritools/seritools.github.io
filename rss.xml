@@ -1,0 +1,1509 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>seri.tools</title>
+      <link>https://seri.tools</link>
+      <description></description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://seri.tools/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Fri, 02 Jan 2026 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>Rust9x update: Rust 1.93.0-beta</title>
+          <pubDate>Fri, 02 Jan 2026 00:00:00 +0000</pubDate>
+          <author>Dennis Duda (seri)</author>
+          <link>https://seri.tools/blog/rust9x-1-93/</link>
+          <guid>https://seri.tools/blog/rust9x-1-93/</guid>
+          <description xml:base="https://seri.tools/blog/rust9x-1-93/">
+
+
+
+
+
+&lt;div class=&quot;center&quot;&gt;
+
+
+&lt;a title=&quot;&amp;#x27;Ferrissoft Visual Rust 9X&amp;#x27;, logo in the style of old Visual Studio logos&quot; href=&quot;https:&amp;#x2F;&amp;#x2F;seri.tools&amp;#x2F;images&amp;#x2F;rust9x-logo.svg&quot;&gt;
+
+
+&lt;img alt=&quot;&amp;#x27;Ferrissoft Visual Rust 9X&amp;#x27;, logo in the style of old Visual Studio logos&quot; src=&quot;https:&amp;#x2F;&amp;#x2F;seri.tools&amp;#x2F;images&amp;#x2F;rust9x-logo.svg&quot; width=&quot;568&quot;
+  loading=&quot;lazy&quot;&gt;
+
+
+&lt;&#x2F;a&gt;
+
+
+&lt;&#x2F;div&gt;
+&lt;p&gt;You know the drill by now: Another year and 8-9 Rust versions later, it&#x27;s time for a new Rust9x
+update!&lt;&#x2F;p&gt;
+&lt;p&gt;Rust9x provides Windows downlevel support for the Rust standard library, bringing it to Windows 95,
+98, ME, and most NT-based Windows versions. See the project wiki on Github:
+&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust9x&#x2F;rust&#x2F;wiki&quot;&gt;rust9x&#x2F;rust&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;what-s-new&quot;&gt;What&#x27;s new?&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#what-s-new&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Rebased and partially reimplemented all fallback code on-top of &lt;strong&gt;Rust 1.93-beta&lt;&#x2F;strong&gt;.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;target_vendor&lt;&#x2F;code&gt; is on the way to being deprecated. Rust9x now uses &lt;code&gt;target_family = &quot;rust9x&quot;&lt;&#x2F;code&gt;,
+instead.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;doc.rust-lang.org&#x2F;std&#x2F;net&#x2F;fn.hostname.html&quot;&gt;&lt;code&gt;std::net::hostname&lt;&#x2F;code&gt;&lt;&#x2F;a&gt; has a fallback now&lt;&#x2F;li&gt;
+&lt;li&gt;Process stdio piping has gained a second fallback implementation, now that the upstream version
+only works on Vista and later.&lt;&#x2F;li&gt;
+&lt;li&gt;The compiler build configuration now sets &lt;code&gt;lld = true&lt;&#x2F;code&gt;, so &lt;code&gt;rust-lld.exe&lt;&#x2F;code&gt; is available. &lt;code&gt;rust-lld&lt;&#x2F;code&gt;
+doesn&#x27;t prevent us from setting the subsystem and OS version to legacy values like modern
+&lt;code&gt;link.exe&lt;&#x2F;code&gt; versions do, so we can get rid of the post-build step that executed &lt;code&gt;editbin.exe&lt;&#x2F;code&gt; on
+built binaries. Check out the updated &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust9x&#x2F;rust9x-sample&quot;&gt;rust9x-sample&lt;&#x2F;a&gt; for the new configuration.&lt;&#x2F;li&gt;
+&lt;li&gt;(Back in 1.84 after the last blog post) Reimplemented the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust9x&#x2F;rust&#x2F;issues&#x2F;43&quot;&gt;&lt;code&gt;fileextd.lib&lt;&#x2F;code&gt;
+fallbacks&lt;&#x2F;a&gt; in Rust, giving us a near-complete
+&lt;code&gt;std::fs&lt;&#x2F;code&gt; implementation on Windows XP (and improved coverage for earlier NT-based systems).&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Feel free to hit me up on Discord if you&#x27;d like to help out or just chat about Rust9x!&lt;&#x2F;p&gt;
+</description>
+      </item>
+      <item>
+          <title>Why Castrol Honda Superbike crashes on (most) modern systems</title>
+          <pubDate>Sun, 16 Nov 2025 00:00:00 +0000</pubDate>
+          <author>Dennis Duda (seri)</author>
+          <link>https://seri.tools/blog/castrol-honda-superbike/</link>
+          <guid>https://seri.tools/blog/castrol-honda-superbike/</guid>
+          <description xml:base="https://seri.tools/blog/castrol-honda-superbike/">&lt;p&gt;A friend cleaned up and gave me a copy of a game I&#x27;ve not heard about before: &lt;em&gt;Castrol Honda
+Superbike World Champions&lt;&#x2F;em&gt;, a motorbike racing game for PC, released 1998 by Interactive
+Entertainment Ltd. and Midas Interactive Entertainment.&lt;&#x2F;p&gt;
+
+
+
+
+
+
+
+
+
+&lt;div class=&quot;center&quot;&gt;
+
+
+&lt;a title=&quot;Picture of the jewelcase&quot; href=&quot;https:&amp;#x2F;&amp;#x2F;seri.tools&amp;#x2F;blog&amp;#x2F;castrol-honda-superbike&amp;#x2F;jewelcase.webp&quot;&gt;
+
+
+&lt;img alt=&quot;Picture of the jewelcase&quot; src=&quot;https:&amp;#x2F;&amp;#x2F;seri.tools&amp;#x2F;blog&amp;#x2F;castrol-honda-superbike&amp;#x2F;jewelcase.webp&quot; width=&quot;1024&quot;
+  loading=&quot;lazy&quot;&gt;
+
+
+&lt;&#x2F;a&gt;
+
+
+&lt;&#x2F;div&gt;
+&lt;p&gt;Given the age of the game (and looking at the system requirements) it&#x27;s clear that the game comes
+from the tricky era of early 3D-accelerated PC gaming. For context, my copy of the game helpfully
+asks to install DirectX 5.&lt;&#x2F;p&gt;
+&lt;p&gt;Before Windows was known for cramming AI and account requirements into every single corner of the
+system, no matter how unnecessary, it was known for its excellent backwards compatibility with older
+software. Generally, unless there are genuine bugs (and sometimes even despite them), Windows tries
+its hardest to run old applications correctly.&lt;&#x2F;p&gt;
+&lt;p&gt;Pushing my luck and trying to run it on my Windows 7 machine, however, resulted in either a getting
+stuck on a black screen, or a crash, seemingly at random:&lt;&#x2F;p&gt;
+
+
+
+
+
+
+
+
+
+&lt;div class=&quot;center&quot;&gt;
+
+
+&lt;a title=&quot;Crash dialog from Windows 7: bike.exe has stopped working&quot; href=&quot;https:&amp;#x2F;&amp;#x2F;seri.tools&amp;#x2F;blog&amp;#x2F;castrol-honda-superbike&amp;#x2F;crash.webp&quot;&gt;
+
+
+&lt;img alt=&quot;Crash dialog from Windows 7: bike.exe has stopped working&quot; src=&quot;https:&amp;#x2F;&amp;#x2F;seri.tools&amp;#x2F;blog&amp;#x2F;castrol-honda-superbike&amp;#x2F;crash.webp&quot; width=&quot;527&quot;
+  loading=&quot;lazy&quot;&gt;
+
+
+&lt;&#x2F;a&gt;
+
+
+&lt;&#x2F;div&gt;
+&lt;p&gt;Let&#x27;s go back in time and see how far we need to go to get it running: Installing and running it on
+my Windows 98 and Windows XP machines was as uneventful, and the game works just fine&lt;sup class=&quot;footnote-reference&quot; id=&quot;fr-1-1&quot;&gt;&lt;a href=&quot;#fn-1&quot;&gt;1&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;, including
+with 3D acceleration. Glorious 1024x768x16:&lt;&#x2F;p&gt;
+
+
+
+
+
+
+
+
+
+&lt;div class=&quot;center&quot;&gt;
+
+
+&lt;a title=&quot;Screencap ingame&quot; href=&quot;https:&amp;#x2F;&amp;#x2F;seri.tools&amp;#x2F;blog&amp;#x2F;castrol-honda-superbike&amp;#x2F;ingame.webp&quot;&gt;
+
+
+&lt;img alt=&quot;Screencap ingame&quot; src=&quot;https:&amp;#x2F;&amp;#x2F;seri.tools&amp;#x2F;blog&amp;#x2F;castrol-honda-superbike&amp;#x2F;ingame.webp&quot; width=&quot;1024&quot;
+  loading=&quot;lazy&quot;&gt;
+
+
+&lt;&#x2F;a&gt;
+
+
+&lt;&#x2F;div&gt;&lt;h2 id=&quot;debugging-the-issue&quot;&gt;Debugging the issue&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#debugging-the-issue&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;p&gt;Debugging is more fun than playing, so let&#x27;s get started! :^)&lt;&#x2F;p&gt;
+&lt;p&gt;I pulled over the installation directory to my main machine and ran &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;horsicq&#x2F;Detect-It-Easy&quot;&gt;Detect It
+Easy&lt;&#x2F;a&gt; to see what we can learn about the executable:&lt;&#x2F;p&gt;
+
+
+
+
+
+
+
+
+
+&lt;div class=&quot;center&quot;&gt;
+
+
+&lt;a title=&quot;Screenshot of Detect It Easy with bike.exe loaded&quot; href=&quot;https:&amp;#x2F;&amp;#x2F;seri.tools&amp;#x2F;blog&amp;#x2F;castrol-honda-superbike&amp;#x2F;die.webp&quot;&gt;
+
+
+&lt;img alt=&quot;Screenshot of Detect It Easy with bike.exe loaded&quot; src=&quot;https:&amp;#x2F;&amp;#x2F;seri.tools&amp;#x2F;blog&amp;#x2F;castrol-honda-superbike&amp;#x2F;die.webp&quot; width=&quot;1440&quot;
+  loading=&quot;lazy&quot;&gt;
+
+
+&lt;&#x2F;a&gt;
+
+
+&lt;&#x2F;div&gt;
+&lt;p&gt;&lt;code&gt;Linker: Microsoft Linker(5.10)&lt;&#x2F;code&gt; and &lt;code&gt;Compiler: Microsoft Visual C&#x2F;C++(...)[libcmtd]&lt;&#x2F;code&gt; are the
+interesting bits here. Notice how it&#x27;s &lt;code&gt;libcmtd&lt;&#x2F;code&gt;, not &lt;code&gt;libcmt&lt;&#x2F;code&gt;? The binary is linked against the
+static &lt;em&gt;debug&lt;&#x2F;em&gt; version of VC5&#x27;s runtime. The debug runtime has heaps of extra checks and &lt;a href=&quot;https:&#x2F;&#x2F;learn.microsoft.com&#x2F;en-us&#x2F;windows&#x2F;win32&#x2F;api&#x2F;debugapi&#x2F;nf-debugapi-outputdebugstringa&quot;&gt;logging&lt;&#x2F;a&gt;,
+which might help later.&lt;&#x2F;p&gt;
+&lt;p&gt;Let&#x27;s attach a debugger and see what&#x27;s going on. Given that the game crashes very early on (before
+the credits intro screen), I hoped to see something right away. The cases where the game got stuck
+in a loop seemed to actually get stuck in some Windows API call stack.&lt;&#x2F;p&gt;
+&lt;p&gt;Anyway, the cases where it crashed gave a clearer starting point:&lt;&#x2F;p&gt;
+
+
+
+
+
+
+
+
+
+&lt;div class=&quot;center&quot;&gt;
+
+
+&lt;a title=&quot;Stack trace from debugger&quot; href=&quot;https:&amp;#x2F;&amp;#x2F;seri.tools&amp;#x2F;blog&amp;#x2F;castrol-honda-superbike&amp;#x2F;stack.webp&quot;&gt;
+
+
+&lt;img alt=&quot;Stack trace from debugger&quot; src=&quot;https:&amp;#x2F;&amp;#x2F;seri.tools&amp;#x2F;blog&amp;#x2F;castrol-honda-superbike&amp;#x2F;stack.webp&quot; width=&quot;821&quot;
+  loading=&quot;lazy&quot;&gt;
+
+
+&lt;&#x2F;a&gt;
+
+
+&lt;&#x2F;div&gt;
+&lt;p&gt;The game seems to be stuck after a call to DirectInput&#x27;s &lt;code&gt;DirectInputCreateEx&lt;&#x2F;code&gt; function. At this
+point I started to do some static analysis of the functions leading to this call. While doing that I
+noticed that the game seems to have quite extensive logging, anything from game initialization to
+memory allocations.&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;If you&#x27;re interested in all the logs, here are the config settings to enable them all:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;In &lt;code&gt;Config.dat&lt;&#x2F;code&gt;, switch &lt;code&gt;ErrorLog&lt;&#x2F;code&gt;, &lt;code&gt;FileLog&lt;&#x2F;code&gt;, &lt;code&gt;MallocLog&lt;&#x2F;code&gt; from &lt;code&gt;off&lt;&#x2F;code&gt; to &lt;code&gt;on&lt;&#x2F;code&gt;.
+&lt;ul&gt;
+&lt;li&gt;These are the &quot;normal&quot; log files the game produces.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;ErrorLog&lt;&#x2F;code&gt; produces &lt;code&gt;error.log&lt;&#x2F;code&gt;, which is the general log file.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;FileLog&lt;&#x2F;code&gt; produces &lt;code&gt;files.log&lt;&#x2F;code&gt;, tracking all opened files and their access modes.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;MallocLog&lt;&#x2F;code&gt; produces &lt;code&gt;malloc.log&lt;&#x2F;code&gt;, tracking all memory allocations and frees. The devs even
+kept descriptions for every allocation site!&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;Set an environment variable named &lt;code&gt;errorfile&lt;&#x2F;code&gt; to any file name (not path). The game will write
+logs to that file in the game directory.
+&lt;ul&gt;
+&lt;li&gt;You might also need to create an empty &lt;code&gt;*.c&lt;&#x2F;code&gt; file in the game directory.&lt;&#x2F;li&gt;
+&lt;li&gt;Just gives a bit of extra logging.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Bonus: add a setting named &lt;code&gt;windowed=true&lt;&#x2F;code&gt; to the config file to force windowed mode; only works
+correctly in 16-bit mode (garbled graphics in True Color).&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;After enabling all the logging, I ran the game a few more times, and noticed that the last log
+messages in &lt;code&gt;error.log&lt;&#x2F;code&gt; before the crash were these:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#292828;color:#e2cca9;&quot;&gt;&lt;code&gt;&lt;span&gt;0&amp;gt; Instance : Mouse
+&lt;&#x2F;span&gt;&lt;span&gt;0&amp;gt; Product : Mouse
+&lt;&#x2F;span&gt;&lt;span&gt;1&amp;gt; Instance : Keyboard
+&lt;&#x2F;span&gt;&lt;span&gt;1&amp;gt; Product : Keyboard
+&lt;&#x2F;span&gt;&lt;span&gt;2&amp;gt; Instance : Gaming Mouse G502
+&lt;&#x2F;span&gt;&lt;span&gt;2&amp;gt; Product : Gaming Mouse G502
+&lt;&#x2F;span&gt;&lt;span&gt;3&amp;gt; Instance : Gaming Mouse G502
+&lt;&#x2F;span&gt;&lt;span&gt;3&amp;gt; Product : Gaming Mouse G502
+&lt;&#x2F;span&gt;&lt;span&gt;4&amp;gt; Instance : Gaming Mouse G502
+&lt;&#x2F;span&gt;&lt;span&gt;4&amp;gt; Product : Gaming Mouse G502
+&lt;&#x2F;span&gt;&lt;span&gt;5&amp;gt; Instance : Gaming Mouse G502
+&lt;&#x2F;span&gt;&lt;span&gt;5&amp;gt; Product : Gaming Mouse G502
+&lt;&#x2F;span&gt;&lt;span&gt;6&amp;gt; Instance : USB Keyboard
+&lt;&#x2F;span&gt;&lt;span&gt;6&amp;gt; Product : USB Keyboard
+&lt;&#x2F;span&gt;&lt;span&gt;7&amp;gt; Instance : USB Keyboard
+&lt;&#x2F;span&gt;&lt;span&gt;7&amp;gt; Product : USB Keyboard
+&lt;&#x2F;span&gt;&lt;span&gt;8&amp;gt; Instance : LED Controller
+&lt;&#x2F;span&gt;&lt;span&gt;8&amp;gt; Product : LED Controller
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Great, the game is enumerating input devices— uh, why is there an &quot;LED Controller&quot; device? The
+motherboard in my Windows 7 machine has a built-in LED controller, so that checks out. Maybe the
+detection isn&#x27;t working properly, and the game is trying to use it as an input device?&lt;&#x2F;p&gt;
+&lt;p&gt;After disabling the LED controller in Device Manager, the game started up just fine, consistently!
+So far, so good. Of course I wanted to know what was actually going wrong, though, so let&#x27;s see
+where these messages are printed.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;side-quest-cd-check&quot;&gt;Side quest: CD check&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#side-quest-cd-check&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;p&gt;The game seemed to close without any notice if I forgot to insert the game disc. A quick trace
+showed that the &lt;code&gt;GibbonPosture&lt;&#x2F;code&gt; setting in &lt;code&gt;f1.cfg&lt;&#x2F;code&gt; is used to point to the disc drive from which
+the game was installed. The only check seems to be that the path &lt;code&gt;redist\dsetup.dll&lt;&#x2F;code&gt; exists on the
+disc. Copying the redist folder to the installation directory and changing the setting to
+&lt;code&gt;GibbonPosture=.\&lt;&#x2F;code&gt; seems to work just fine. :)&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;the-bug&quot;&gt;The bug&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#the-bug&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;p&gt;Finding the &lt;code&gt;Instance :&lt;&#x2F;code&gt; and &lt;code&gt;Product :&lt;&#x2F;code&gt; log messages in the binary was easy enough. They are
+referenced in only one function, which is a &lt;a href=&quot;https:&#x2F;&#x2F;learn.microsoft.com&#x2F;en-us&#x2F;previous-versions&#x2F;windows&#x2F;desktop&#x2F;ee416622(v=vs.85)&quot;&gt;&lt;code&gt;DIEnumDevicesCallback&lt;&#x2F;code&gt;&lt;&#x2F;a&gt; callback function that is
+provided to &lt;code&gt;IDirectInput::EnumDevices&lt;&#x2F;code&gt; (Microsoft has only kept the documentation for the &lt;a href=&quot;https:&#x2F;&#x2F;learn.microsoft.com&#x2F;en-us&#x2F;previous-versions&#x2F;windows&#x2F;desktop&#x2F;ee417804(v=vs.85)&quot;&gt;DX8
+version&lt;&#x2F;a&gt; of EnumDevices left online, but it&#x27;s close enough).&lt;&#x2F;p&gt;
+&lt;p&gt;This is the pseudocode of the call and the callback, and the relevant data structure:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;c&quot; style=&quot;background-color:#292828;color:#e2cca9;&quot; class=&quot;language-c &quot;&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;struct &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8bba7f;&quot;&gt;DinputDeviceData
+&lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;char&lt;&#x2F;span&gt;&lt;span&gt; instance_name[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;128&lt;&#x2F;span&gt;&lt;span&gt;];
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;char&lt;&#x2F;span&gt;&lt;span&gt; product_name[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;128&lt;&#x2F;span&gt;&lt;span&gt;];
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e9b143;&quot;&gt;DWORD&lt;&#x2F;span&gt;&lt;span&gt; dwDevType;
+&lt;&#x2F;span&gt;&lt;span&gt;  GUID guid;
+&lt;&#x2F;span&gt;&lt;span&gt;};
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#928374;&quot;&gt;&#x2F;&#x2F; ...
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e9b143;&quot;&gt;BOOL&lt;&#x2F;span&gt;&lt;span&gt; __stdcall &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8bba7f;&quot;&gt;dinput_enumdevices_callback&lt;&#x2F;span&gt;&lt;span&gt;(LPCDIDEVICEINSTANCEA &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;lpDevice&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e9b143;&quot;&gt;LPVOID &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;pvRef&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; index &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt; g_dinput_device_index;
+&lt;&#x2F;span&gt;&lt;span&gt;    g_direct_input_devices[index].&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;guid &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt; lpDevice-&amp;gt;guidInstance;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e9b143;&quot;&gt;strcpy&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;(g_direct_input_devices[index].instance_name, lpDevice-&amp;gt;tszInstanceName)&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e9b143;&quot;&gt;strcpy&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;(g_direct_input_devices[index].product_name, lpDevice-&amp;gt;tszProductName)&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    g_direct_input_devices[index].&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;dwDevType &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt; lpDevice-&amp;gt;dwDevType;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;log_line(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b0b846;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;%d&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b0b846;&quot;&gt;&amp;gt; Instance : &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;%s&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b0b846;&quot;&gt;\n&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;, index, lpDevice-&amp;gt;tszInstanceName)&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;log_line(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b0b846;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;%d&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b0b846;&quot;&gt;&amp;gt; Product : &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;%s&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b0b846;&quot;&gt;\n&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;, index, lpDevice-&amp;gt;tszProductName)&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;( &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;LOBYTE(g_direct_input_devices[index].dwDevType) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;==&lt;&#x2F;span&gt;&lt;span&gt; DIDEVTYPE_JOYSTICK )
+&lt;&#x2F;span&gt;&lt;span&gt;    {
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;int&lt;&#x2F;span&gt;&lt;span&gt; joystick_index &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt; g_joystick_index;
+&lt;&#x2F;span&gt;&lt;span&gt;        g_joystick_info[joystick_index].&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;dinput_device_index &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt; index;
+&lt;&#x2F;span&gt;&lt;span&gt;        g_joystick_info[joystick_index].&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;field_4 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;        g_joystick_info[joystick_index].&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;field_8 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;        g_joystick_info[joystick_index].&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;field_38 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;        g_joystick_info[joystick_index].&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;field_1 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;        g_joystick_index &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt; joystick_index &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;+ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    }
+&lt;&#x2F;span&gt;&lt;span&gt;    g_dinput_device_index &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt; index &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;+ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;return&lt;&#x2F;span&gt;&lt;span&gt; DIENUM_CONTINUE;
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#928374;&quot;&gt;&#x2F;&#x2F; ...
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;g_dinput_create_hresult &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;DirectInputCreateA(hInstance, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;0x500&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;u&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;&amp;amp;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;g_dinput_instance, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;)&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;g_dinput_device_index &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;g_joystick_index &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;g_dinput_instance-&amp;gt;lpVtbl-&amp;gt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;EnumDevices(
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;    g_dinput_instance, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;, dinput_enumdevices_callback, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;, DIEDFL_ATTACHEDONLY)&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;So, for each enumerated device, the game stores some general information about it in the global
+array &lt;code&gt;g_direct_input_devices&lt;&#x2F;code&gt;. Then, if the device is a joystick (generally, a game controller), it
+also adds it to &lt;code&gt;g_joystick_info&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Can you guess the bug yet? :) If not, here&#x27;s the declaration of the global arrays:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;c&quot; style=&quot;background-color:#292828;color:#e2cca9;&quot; class=&quot;language-c &quot;&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;&lt;span&gt;DinputDeviceData g_direct_input_devices[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;8&lt;&#x2F;span&gt;&lt;span&gt;];
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#928374;&quot;&gt;&#x2F;&#x2F; ...
+&lt;&#x2F;span&gt;&lt;span&gt;JoystickInfo g_joystick_info[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;8&lt;&#x2F;span&gt;&lt;span&gt;];
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;There&#x27;s only space for eight DirectInput devices in the array! &lt;code&gt;8&amp;gt; Instance : LED Controller&lt;&#x2F;code&gt; was
+the ninth one, overwriting lots of important other data in the process, including timer handles and
+the actual DirectInput instance pointer.&lt;&#x2F;p&gt;
+&lt;p&gt;But it gets worse: The game uses DirectInput for game controllers only. Copying the device info out
+of &lt;code&gt;lpDevice&lt;&#x2F;code&gt; is entirely pointless for other types of devices. Just moving the &lt;code&gt;DIDEVTYPE_JOYSTICK&lt;&#x2F;code&gt;
+check up would have hidden the bug for basically all setups, since you&#x27;d have to have more than 8
+game controllers connected for the game to write out of bounds.&lt;&#x2F;p&gt;
+&lt;p&gt;Actually, there would&#x27;ve been an even simpler workaround: &lt;code&gt;EnumDevices&lt;&#x2F;code&gt; allows passing a &lt;code&gt;DIDEVTYPE&lt;&#x2F;code&gt;
+as a filter:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;c&quot; style=&quot;background-color:#292828;color:#e2cca9;&quot; class=&quot;language-c &quot;&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;&lt;span&gt;g_dinput_instance-&amp;gt;lpVtbl-&amp;gt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;EnumDevices(
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;    g_dinput_instance, DIDEVTYPE_JOYSTICK, dinput_enumdevices_callback, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;, DIEDFL_ATTACHEDONLY)&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;                    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#928374;&quot;&gt;&#x2F;&#x2F; ^^^^^^^^^^^^^^^^^^
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;This would make DirectInput call the callback for game controllers only. Without it, all devices,
+whether they are keyboards, mice, or actually any HID devices, are enumerated. (I&#x27;ve checked the
+DirectX 5 SDK docs, and even there it mentions the HID device support.) This includes the
+vendor-defined devices of my mouse and its emulated keyboard (for macros), and of course the
+motherboard&#x27;s LED controller.&lt;&#x2F;p&gt;
+&lt;p&gt;The moral of the story? Always check your bounds, kids! You&#x27;ll never know if some weirdo comes along
+and plugs in a dozen game controllers to their PC. :^)&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;the-fix&quot;&gt;The fix&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#the-fix&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;seritools&#x2F;castrol-honda-dinput-fix&quot;&gt;Over on GitHub&lt;&#x2F;a&gt; I&#x27;ve pushed a minimal patch as a classic DLL shim. With the provided &lt;code&gt;dinput.dll&lt;&#x2F;code&gt;
+in the game directory, the game will load that instead of the system one. DirectInput has only one
+relevant exported function that we need to shim: &lt;code&gt;DirectInputCreateA&lt;&#x2F;code&gt;. The rest of the API is
+implemented via COM interfaces, for which we can modify the respective vtables as needed.&lt;&#x2F;p&gt;
+&lt;p&gt;I&#x27;ve implemented two fixes in the shim:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;Inject the &lt;code&gt;DIDEVTYPE_JOYSTICK&lt;&#x2F;code&gt; filter in the call to &lt;code&gt;EnumDevices&lt;&#x2F;code&gt; to only return joysticks&#x2F;game
+controllers.&lt;&#x2F;li&gt;
+&lt;li&gt;Cancel enumeration once 8 joysticks have been found.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;For fun, I&#x27;ve also tried to minimize the size of the shim DLL -- the final binary weighs in at 2
+KiB.&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;These are the reasonable settings I changed:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Compile with &lt;code&gt;opt-level = &quot;z&quot;&lt;&#x2F;code&gt; to optimize for minimum size. (though the code is so low-level
+that it&#x27;s effectively the same as &lt;code&gt;opt-level = 3&lt;&#x2F;code&gt;)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;#[no_std]&lt;&#x2F;code&gt; to avoid linking the Rust standard library.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;codegen-units = 1&lt;&#x2F;code&gt; and &lt;code&gt;lto = true&lt;&#x2F;code&gt; to enable whole-program optimization.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;panic = &quot;immediate-abort&quot;&lt;&#x2F;code&gt; to remove all unnecessary panic handling code; an unwrap will
+immediately abort the process.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;And these are the cursed ones:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&#x2F;NODEFAULTLIB&lt;&#x2F;code&gt; to not link against any MSVC runtime library; added my own minimal &lt;code&gt;DllMain&lt;&#x2F;code&gt;.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;&#x2F;FORCE:UNRESOLVED&lt;&#x2F;code&gt; to ignore the missing symbols for &lt;code&gt;_aullrem&lt;&#x2F;code&gt;, &lt;code&gt;_aulldiv&lt;&#x2F;code&gt;, and &lt;code&gt;_fltused&lt;&#x2F;code&gt;. We
+aren&#x27;t using any of these, but the LLVM target still seems to insist on linking them in.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;&#x2F;FILEALIGN:512&lt;&#x2F;code&gt; to force the linker to use the minimum supported PE section alignment in the
+file.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;&#x2F;MERGE:.rdata=.text&lt;&#x2F;code&gt; merges the read-only data section into the code section.&lt;&#x2F;li&gt;
+&lt;li&gt;Prevent zero-initialization of the system directory path by using &lt;code&gt;MaybeUninit&lt;&#x2F;code&gt;.&lt;&#x2F;li&gt;
+&lt;li&gt;Storing globals in &lt;code&gt;static mut&lt;&#x2F;code&gt; just like the original game does. Since the fix is specific to
+this game I can do these &quot;global&quot; assumptions here :^)
+&lt;ul&gt;
+&lt;li&gt;Ensure all globals are zero-initialized so the &lt;code&gt;.data&lt;&#x2F;code&gt; section is 0 bytes in the binary.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;.unwrap_unchecked()&lt;&#x2F;code&gt; to avoid any extra branches where they aren&#x27;t needed.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;&#x2F;DEBUG:NONE&lt;&#x2F;code&gt; to not generate debug information, and not store a &lt;code&gt;.pdb&lt;&#x2F;code&gt; path in the binary.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;Furthermore, I switched to &lt;code&gt;rust-lld.exe&lt;&#x2F;code&gt; as the linker, as it&#x27;s fine with setting
+&lt;code&gt;&#x2F;SUBSYSTEM:WINDOWS,4.0&quot;&lt;&#x2F;code&gt; and &lt;code&gt;&#x2F;OSVERSION:4.0&lt;&#x2F;code&gt; without complaining. :) Since there is no linked
+runtime code at all, the resulting binary should work on any 32-bit Windows version, even without
+&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust9x&#x2F;rust&#x2F;wiki&quot;&gt;Rust9x&lt;&#x2F;a&gt;. I&#x27;ve tested it on Windows 7 and Windows 98 SE.&lt;&#x2F;p&gt;
+&lt;p&gt;Feel free to grab the compiled DLL from the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;seritools&#x2F;castrol-honda-dinput-fix&#x2F;releases&quot;&gt;releases page&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;section class=&quot;footnotes&quot;&gt;
+&lt;ol class=&quot;footnotes-list&quot;&gt;
+&lt;li id=&quot;fn-1&quot;&gt;
+&lt;p&gt;Except for True Color rendering, &lt;a href=&quot;https:&#x2F;&#x2F;seri.tools&#x2F;blog&#x2F;castrol-honda-superbike&#x2F;.&#x2F;truecolor.webp&quot;&gt;which seems to be broken&lt;&#x2F;a&gt;, no matter the
+system, graphics card, or game version? Investigating that is left as a mystery for another
+day. &lt;a href=&quot;#fr-1-1&quot;&gt;↩&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;&#x2F;section&gt;
+</description>
+      </item>
+      <item>
+          <title>Rust9x update: Rust 1.84.0-beta</title>
+          <pubDate>Tue, 03 Dec 2024 00:00:00 +0000</pubDate>
+          <author>Dennis Duda (seri)</author>
+          <link>https://seri.tools/blog/rust9x-1-84/</link>
+          <guid>https://seri.tools/blog/rust9x-1-84/</guid>
+          <description xml:base="https://seri.tools/blog/rust9x-1-84/">
+
+
+
+
+
+&lt;div class=&quot;center&quot;&gt;
+
+
+&lt;a title=&quot;&amp;#x27;Ferrissoft Visual Rust 9X&amp;#x27;, logo in the style of old Visual Studio logos&quot; href=&quot;https:&amp;#x2F;&amp;#x2F;seri.tools&amp;#x2F;images&amp;#x2F;rust9x-logo.svg&quot;&gt;
+
+
+&lt;img alt=&quot;&amp;#x27;Ferrissoft Visual Rust 9X&amp;#x27;, logo in the style of old Visual Studio logos&quot; src=&quot;https:&amp;#x2F;&amp;#x2F;seri.tools&amp;#x2F;images&amp;#x2F;rust9x-logo.svg&quot; width=&quot;568&quot;
+  loading=&quot;lazy&quot;&gt;
+
+
+&lt;&#x2F;a&gt;
+
+
+&lt;&#x2F;div&gt;
+&lt;p&gt;Another year has passed, oh how the time flies! Time for some Tier 4 target action once again!&lt;&#x2F;p&gt;
+&lt;p&gt;Rust9x adds support for Windows 9x and older NT-based Windows versions to Rust. See the project wiki
+on Github: &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust9x&#x2F;rust&#x2F;wiki&quot;&gt;&lt;code&gt;rust9x&#x2F;rust&lt;&#x2F;code&gt;&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;what-s-new&quot;&gt;What&#x27;s new?&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#what-s-new&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Rebased and reimplemented all fallback code ontop of the ~29600 commits of progress from Rust 1.76
+to Rust 1.84-beta&lt;&#x2F;li&gt;
+&lt;li&gt;The thread parker now only conditionally falls back to the basic, generic one. If supported by the
+OS, Rust9x will instead choose the &lt;code&gt;NtCreateEvent&lt;&#x2F;code&gt;-based parker or the
+&lt;code&gt;futex&lt;&#x2F;code&gt;&#x2F;&lt;code&gt;WaitOnAddress&lt;&#x2F;code&gt;-based one.&lt;&#x2F;li&gt;
+&lt;li&gt;Better &lt;code&gt;RwLock&lt;&#x2F;code&gt; implementation: Rust9x now uses the upstream &lt;code&gt;queue&lt;&#x2F;code&gt; implementation instead of
+falling back to a simple &lt;code&gt;Mutex&lt;&#x2F;code&gt;. Similarly, &lt;code&gt;Once&lt;&#x2F;code&gt; also uses the &lt;code&gt;queue&lt;&#x2F;code&gt; implementation now.
+&lt;ul&gt;
+&lt;li&gt;Since these fallbacks rely on the thread parker only, they should run much faster with the new
+thread parker fallbacks above, too!&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;Cleaned up the fallback implementations to intrude less on normal non-rust9x Rust &lt;code&gt;windows-msvc&lt;&#x2F;code&gt;
+targets.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;what-s-next&quot;&gt;What&#x27;s next?&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#what-s-next&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;I&#x27;ll try to keep up with 1.84 beta branch changes for now.&lt;&#x2F;li&gt;
+&lt;li&gt;TLS is as bad as ever. Even with the native TLS callback, &lt;code&gt;Drop&lt;&#x2F;code&gt; impls will not run on 9x. I still
+hope to get to the bottom of this!&lt;&#x2F;li&gt;
+&lt;li&gt;Windows NT 3.51 is currently broken (failing on &lt;code&gt;_chkstk&lt;&#x2F;code&gt; stack probes when doing stdio, but
+&lt;em&gt;only&lt;&#x2F;em&gt; then). NT 4 and Windows 95 RTM work fine.&lt;&#x2F;li&gt;
+&lt;li&gt;Reimplementing the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust9x&#x2F;rust&#x2F;issues&#x2F;43&quot;&gt;&lt;code&gt;fileextd.lib&lt;&#x2F;code&gt; fallbacks&lt;&#x2F;a&gt; in Rust
+will give us a much more complete &lt;code&gt;std::fs&lt;&#x2F;code&gt; implementation on Windows XP (and possibly earlier
+NT-based systems).&lt;&#x2F;li&gt;
+&lt;li&gt;The &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust9x&#x2F;rust&#x2F;issues&#x2F;5&quot;&gt;fallback&lt;&#x2F;a&gt; from WinSock2 to WinSock 1.1 should
+actually be pretty simple to implement. It would give us networking support without extra DLL
+dependencies on Windows 95 RTM and NT 3.51.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;For now I won&#x27;t publish a precompiled package (the &lt;code&gt;install&lt;&#x2F;code&gt; scripts are insanely slow on Windows).
+I&#x27;d rather work on the above fixes and leave compiling as an exercise to the reader :^). You can
+find build instructions in the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust9x&#x2F;rust&#x2F;wiki&quot;&gt;Wiki&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Please don&#x27;t expect too much, though - &lt;a href=&quot;https:&#x2F;&#x2F;pathofexile2.com&#x2F;early-access&quot;&gt;Path of Exile 2&lt;&#x2F;a&gt; is
+launching into EA soon, too, so I&#x27;ll be busy with that!&lt;&#x2F;p&gt;
+&lt;p&gt;Feel free to hit me up on Discord if you&#x27;d like to help out or just chat about Rust9x!&lt;&#x2F;p&gt;
+</description>
+      </item>
+      <item>
+          <title>Rust9x update: Rust 1.76.0-beta</title>
+          <pubDate>Fri, 29 Dec 2023 00:00:00 +0000</pubDate>
+          <author>Dennis Duda (seri)</author>
+          <link>https://seri.tools/blog/rust9x-1-76/</link>
+          <guid>https://seri.tools/blog/rust9x-1-76/</guid>
+          <description xml:base="https://seri.tools/blog/rust9x-1-76/">
+
+
+
+
+
+&lt;div class=&quot;center&quot;&gt;
+
+
+&lt;a title=&quot;&amp;#x27;Ferrissoft Visual Rust 9X&amp;#x27;, logo in the style of old Visual Studio logos (just a joke, not the real name of the project :) )&quot; href=&quot;https:&amp;#x2F;&amp;#x2F;seri.tools&amp;#x2F;images&amp;#x2F;rust9x-logo.svg&quot;&gt;
+
+
+&lt;img alt=&quot;&amp;#x27;Ferrissoft Visual Rust 9X&amp;#x27;, logo in the style of old Visual Studio logos (just a joke, not the real name of the project :) )&quot; src=&quot;https:&amp;#x2F;&amp;#x2F;seri.tools&amp;#x2F;images&amp;#x2F;rust9x-logo.svg&quot; width=&quot;568&quot;
+  loading=&quot;lazy&quot;&gt;
+
+
+&lt;&#x2F;a&gt;
+
+
+&lt;&#x2F;div&gt;
+&lt;p&gt;20 months since the initial release, Rust9x is back, whether you like it or not!&lt;&#x2F;p&gt;
+&lt;p&gt;I&#x27;ve spent the last couple of days migrating the changes from Rust 1.61-beta to Rust 1.76-beta, and
+filling some of the holes in API support on the way.&lt;&#x2F;p&gt;
+&lt;p&gt;See the project wiki on Github:
+&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust9x&#x2F;rust&#x2F;wiki&quot;&gt;&lt;code&gt;rust9x&#x2F;rust&lt;&#x2F;code&gt;&lt;&#x2F;a&gt; and the &lt;a href=&quot;https:&#x2F;&#x2F;seri.tools&#x2F;blog&#x2F;announcing-rust9x&#x2F;&quot;&gt;previous announcement
+post&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;what-s-new&quot;&gt;What&#x27;s new?&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#what-s-new&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;p&gt;Other than the obvious update to Rust 1.76 with all its benefits, there are a few other changes:&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;backtrace-support&quot;&gt;Backtrace support&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#backtrace-support&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
+&lt;p&gt;Backtraces are now supported on at least Windows 98 and up when providing a supported &lt;code&gt;dbghelp.dll&lt;&#x2F;code&gt;
+file, and are natively supported on Windows XP and up. It is still recommended to supply an updated
+dbghelp.dll. See the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust9x&#x2F;rust&#x2F;wiki&#x2F;Limitations&quot;&gt;Limitations&lt;&#x2F;a&gt; page for more
+information.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;thread-parking-support&quot;&gt;Thread parking support&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#thread-parking-support&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
+&lt;p&gt;Code that uses thread parking should now work! I&#x27;ve brought back the old generic implementation that
+was removed from upstream before, as no &lt;em&gt;relevant&lt;&#x2F;em&gt; platform needs it anymore.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;x86-64-support&quot;&gt;x86_64 support?&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#x86-64-support&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
+&lt;p&gt;I haven&#x27;t tested it, but I&#x27;ve added a &lt;code&gt;x86_64-rust9x-windows-msvc&lt;&#x2F;code&gt; target, which should work on
+XP 64-bit and up. Let me know whether it does :)&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;update-2023-12-30-downloadable-binary-package&quot;&gt;(Update: 2023-12-30) Downloadable binary package&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#update-2023-12-30-downloadable-binary-package&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
+&lt;p&gt;I&#x27;ve also figured out how to create an easily shareable binary package, so you can try it out
+without bothering to build it yourself. See the installation instructions in the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust9x&#x2F;rust&#x2F;wiki&quot;&gt;project
+wiki&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;obligatory-picture&quot;&gt;Obligatory picture&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#obligatory-picture&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+
+
+
+
+
+
+
+
+
+&lt;div class=&quot;center&quot;&gt;
+
+
+&lt;a title=&quot;Picture of the sample program running on a Windows 98 SE PC and aWindows XP laptop&quot; href=&quot;https:&amp;#x2F;&amp;#x2F;seri.tools&amp;#x2F;blog&amp;#x2F;rust9x-1-76&amp;#x2F;pic.jpg&quot;&gt;
+
+
+&lt;img alt=&quot;Picture of the sample program running on a Windows 98 SE PC and aWindows XP laptop&quot; src=&quot;https:&amp;#x2F;&amp;#x2F;seri.tools&amp;#x2F;blog&amp;#x2F;rust9x-1-76&amp;#x2F;pic.jpg&quot; width=&quot;1696&quot;
+  loading=&quot;lazy&quot;&gt;
+
+
+&lt;&#x2F;a&gt;
+
+
+&lt;&#x2F;div&gt;</description>
+      </item>
+      <item>
+          <title>Rust9x: Compile Rust code for Windows 95, NT and above</title>
+          <pubDate>Thu, 21 Apr 2022 00:00:00 +0000</pubDate>
+          <author>Dennis Duda (seri)</author>
+          <link>https://seri.tools/blog/announcing-rust9x/</link>
+          <guid>https://seri.tools/blog/announcing-rust9x/</guid>
+          <description xml:base="https://seri.tools/blog/announcing-rust9x/">&lt;p&gt;&lt;em&gt;Discuss on
+&lt;a href=&quot;https:&#x2F;&#x2F;www.reddit.com&#x2F;r&#x2F;rust&#x2F;comments&#x2F;u8skda&#x2F;rust9x_compile_rust_code_for_windows_95_nt_and&#x2F;&quot;&gt;Reddit&lt;&#x2F;a&gt;,
+&lt;a href=&quot;https:&#x2F;&#x2F;users.rust-lang.org&#x2F;t&#x2F;rust9x-compile-rust-code-for-windows-95-nt-and-above&#x2F;74581&quot;&gt;URLO&lt;&#x2F;a&gt;,
+&lt;a href=&quot;https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=31112273&quot;&gt;HN&lt;&#x2F;a&gt;&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;em&gt;tl;dr:&lt;&#x2F;em&gt; see the project wiki on Github: &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust9x&#x2F;rust&#x2F;wiki&quot;&gt;&lt;code&gt;rust9x&#x2F;rust&lt;&#x2F;code&gt;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;You might remember my old post about the journey to &lt;a href=&quot;https:&#x2F;&#x2F;seri.tools&#x2F;blog&#x2F;compiling-rust-for-legacy-windows&#x2F;&quot;&gt;get at least a bit of Rust code working for
+Windows 98 SE&lt;&#x2F;a&gt;. Well, I&#x27;m back, this
+time with a more ambitious package:&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;announcing-rust9x-rust-1-61-0-beta&quot;&gt;Announcing Rust9x (Rust 1.61.0-beta)&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#announcing-rust9x-rust-1-61-0-beta&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+
+
+
+
+
+
+&lt;div class=&quot;center&quot;&gt;
+
+
+&lt;a title=&quot;&amp;#x27;Ferrissoft Visual Rust 9X&amp;#x27;, logo in the style of old Visual Studio logos (just a joke, not the real name of the project :) )&quot; href=&quot;https:&amp;#x2F;&amp;#x2F;seri.tools&amp;#x2F;images&amp;#x2F;rust9x-logo.svg&quot;&gt;
+
+
+&lt;img alt=&quot;&amp;#x27;Ferrissoft Visual Rust 9X&amp;#x27;, logo in the style of old Visual Studio logos (just a joke, not the real name of the project :) )&quot; src=&quot;https:&amp;#x2F;&amp;#x2F;seri.tools&amp;#x2F;images&amp;#x2F;rust9x-logo.svg&quot; width=&quot;568&quot;
+  loading=&quot;lazy&quot;&gt;
+
+
+&lt;&#x2F;a&gt;
+
+
+&lt;&#x2F;div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;Blazingly fast! Y2k compliant! Works everywhere!&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;Over on &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust9x&#x2F;rust&#x2F;&quot;&gt;Github&lt;&#x2F;a&gt; you&#x27;ll find a forked Rust repository containing
+two new targets, &lt;code&gt;i586-rust9x-windows-msvc&lt;&#x2F;code&gt; and &lt;code&gt;i686-rust9x-windows-msvc&lt;&#x2F;code&gt;, as well as all the
+necessary changes to support most of what the Rust standard library offers, on &lt;em&gt;all*&lt;&#x2F;em&gt; 32-bit
+Windows versions, including Windows 95, 98, Me, NT 3.51, NT 4.0, 2000, XP and Vista.&lt;&#x2F;p&gt;
+&lt;p&gt;* NT 3.1 and 3.5 were not tested (yet).&lt;&#x2F;p&gt;
+&lt;p&gt;Please have a look at the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust9x&#x2F;rust&#x2F;wiki&quot;&gt;wiki&lt;&#x2F;a&gt; for information on how to set
+up and use the toolchain if you so desire, and if you&#x27;d like to have a look under the hood, have a
+look at the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust9x&#x2F;rust&#x2F;commits&#x2F;rust9x&quot;&gt;commits&lt;&#x2F;a&gt; themselves, which have some
+additional information about the changes, both in code and in the commit messages.&lt;&#x2F;p&gt;
+&lt;p&gt;Do note that this is just a side project I&#x27;ve done for fun; I&#x27;ll probably not keep it up to date
+with upstream all the time.&lt;&#x2F;p&gt;
+&lt;p&gt;If you have any questions, encounter issues (there surely are lots of
+them left) or would like to join the project, feel free to contact me via the links in the footer,
+and&#x2F;or create an issue in the repositories. Thanks! &amp;lt;3&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;gallery&quot;&gt;Gallery&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#gallery&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;extremely-simple-file-downloader-using-ureq-and-clap&quot;&gt;Extremely simple file downloader using &lt;code&gt;ureq&lt;&#x2F;code&gt; and &lt;code&gt;clap&lt;&#x2F;code&gt;&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#extremely-simple-file-downloader-using-ureq-and-clap&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
+&lt;p&gt;This is a quick toy program I&#x27;ve whipped up to show some actual code&#x2F;crates running. It uses
+&lt;a href=&quot;https:&#x2F;&#x2F;docs.rs&#x2F;clap&#x2F;latest&#x2F;clap&#x2F;&quot;&gt;&lt;code&gt;clap&lt;&#x2F;code&gt;&lt;&#x2F;a&gt; for command line parsing and
+&lt;a href=&quot;https:&#x2F;&#x2F;docs.rs&#x2F;ureq&#x2F;latest&#x2F;ureq&#x2F;&quot;&gt;&lt;code&gt;ureq&lt;&#x2F;code&gt;&lt;&#x2F;a&gt; to do the request.&lt;&#x2F;p&gt;
+&lt;p&gt;TLS is supported via &lt;a href=&quot;https:&#x2F;&#x2F;docs.rs&#x2F;rustls&#x2F;latest&#x2F;rustls&#x2F;&quot;&gt;&lt;code&gt;rustls&lt;&#x2F;code&gt;&lt;&#x2F;a&gt; starting from Windows XP, as
+its dependency &lt;a href=&quot;https:&#x2F;&#x2F;docs.rs&#x2F;ring&#x2F;latest&#x2F;ring&#x2F;&quot;&gt;&lt;code&gt;ring&lt;&#x2F;code&gt;&lt;&#x2F;a&gt; &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;briansmith&#x2F;ring&#x2F;blob&#x2F;main&#x2F;src&#x2F;rand.rs#L272&quot;&gt;needs
+&lt;code&gt;RtlGenRandom&lt;&#x2F;code&gt;&lt;&#x2F;a&gt;. I haven&#x27;t looked
+into it too much, but from what I could tell, this should be the only additional API dependency, so
+by falling back to another way of getting randomness (probably compromising security in the process
+:)) this should work all the way down to Windows 95&#x2F;NT 4.0 as well.&lt;&#x2F;p&gt;
+&lt;p&gt;With TLS support on Windows XP SP3 (real hardware):&lt;&#x2F;p&gt;
+
+
+
+
+
+
+
+
+
+&lt;div class=&quot;center&quot;&gt;
+
+
+&lt;a title=&quot;ureq and clap running with TLS enabled on Windows XP SP3&quot; href=&quot;https:&amp;#x2F;&amp;#x2F;seri.tools&amp;#x2F;blog&amp;#x2F;announcing-rust9x&amp;#x2F;winxp_ureq_tls.jpg&quot;&gt;
+
+
+&lt;img alt=&quot;ureq and clap running with TLS enabled on Windows XP SP3&quot; src=&quot;https:&amp;#x2F;&amp;#x2F;seri.tools&amp;#x2F;blog&amp;#x2F;announcing-rust9x&amp;#x2F;winxp_ureq_tls.jpg&quot; width=&quot;1024&quot;
+  loading=&quot;lazy&quot;&gt;
+
+
+&lt;&#x2F;a&gt;
+
+
+&lt;&#x2F;div&gt;
+&lt;p&gt;Without TLS support on Windows 95 B (real hardware):&lt;&#x2F;p&gt;
+
+
+
+
+
+
+
+
+
+&lt;div class=&quot;center&quot;&gt;
+
+
+&lt;a title=&quot;ureq and clap running on Windows 95 B&quot; href=&quot;https:&amp;#x2F;&amp;#x2F;seri.tools&amp;#x2F;blog&amp;#x2F;announcing-rust9x&amp;#x2F;w95b_ureq.png&quot;&gt;
+
+
+&lt;img alt=&quot;ureq and clap running on Windows 95 B&quot; src=&quot;https:&amp;#x2F;&amp;#x2F;seri.tools&amp;#x2F;blog&amp;#x2F;announcing-rust9x&amp;#x2F;w95b_ureq.png&quot; width=&quot;1024&quot;
+  loading=&quot;lazy&quot;&gt;
+
+
+&lt;&#x2F;a&gt;
+
+
+&lt;&#x2F;div&gt;&lt;h3 id=&quot;sample-program&quot;&gt;Sample program&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#sample-program&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
+&lt;p&gt;Windows NT 3.51 (VM):&lt;&#x2F;p&gt;
+&lt;p&gt;This one is missing the network tests as NT 3.51 and earlier never got WinSock 2 support.&lt;&#x2F;p&gt;
+
+
+
+
+
+
+
+
+
+&lt;div class=&quot;center&quot;&gt;
+
+
+&lt;a title=&quot;sample program running on Windows NT 3.51&quot; href=&quot;https:&amp;#x2F;&amp;#x2F;seri.tools&amp;#x2F;blog&amp;#x2F;announcing-rust9x&amp;#x2F;win351.png&quot;&gt;
+
+
+&lt;img alt=&quot;sample program running on Windows NT 3.51&quot; src=&quot;https:&amp;#x2F;&amp;#x2F;seri.tools&amp;#x2F;blog&amp;#x2F;announcing-rust9x&amp;#x2F;win351.png&quot; width=&quot;640&quot;
+  loading=&quot;lazy&quot;&gt;
+
+
+&lt;&#x2F;a&gt;
+
+
+&lt;&#x2F;div&gt;
+&lt;p&gt;Windows 95 B (real hardware):&lt;&#x2F;p&gt;
+
+
+
+
+
+
+
+
+
+&lt;div class=&quot;center&quot;&gt;
+
+
+&lt;a title=&quot;sample program running on Windows 95 B&quot; href=&quot;https:&amp;#x2F;&amp;#x2F;seri.tools&amp;#x2F;blog&amp;#x2F;announcing-rust9x&amp;#x2F;w95b.png&quot;&gt;
+
+
+&lt;img alt=&quot;sample program running on Windows 95 B&quot; src=&quot;https:&amp;#x2F;&amp;#x2F;seri.tools&amp;#x2F;blog&amp;#x2F;announcing-rust9x&amp;#x2F;w95b.png&quot; width=&quot;1024&quot;
+  loading=&quot;lazy&quot;&gt;
+
+
+&lt;&#x2F;a&gt;
+
+
+&lt;&#x2F;div&gt;
+&lt;p&gt;Windows XP (real hardware):&lt;&#x2F;p&gt;
+
+
+
+
+
+
+
+
+
+&lt;div class=&quot;center&quot;&gt;
+
+
+&lt;a title=&quot;sample program running on Windows XP&quot; href=&quot;https:&amp;#x2F;&amp;#x2F;seri.tools&amp;#x2F;blog&amp;#x2F;announcing-rust9x&amp;#x2F;winxp.jpg&quot;&gt;
+
+
+&lt;img alt=&quot;sample program running on Windows XP&quot; src=&quot;https:&amp;#x2F;&amp;#x2F;seri.tools&amp;#x2F;blog&amp;#x2F;announcing-rust9x&amp;#x2F;winxp.jpg&quot; width=&quot;1024&quot;
+  loading=&quot;lazy&quot;&gt;
+
+
+&lt;&#x2F;a&gt;
+
+
+&lt;&#x2F;div&gt;
+&lt;p&gt;Windows 11 (real hardware):&lt;&#x2F;p&gt;
+
+
+
+
+
+
+
+
+
+&lt;div class=&quot;center&quot;&gt;
+
+
+&lt;a title=&quot;sample program running on Windows XP&quot; href=&quot;https:&amp;#x2F;&amp;#x2F;seri.tools&amp;#x2F;blog&amp;#x2F;announcing-rust9x&amp;#x2F;win11.jpg&quot;&gt;
+
+
+&lt;img alt=&quot;sample program running on Windows XP&quot; src=&quot;https:&amp;#x2F;&amp;#x2F;seri.tools&amp;#x2F;blog&amp;#x2F;announcing-rust9x&amp;#x2F;win11.jpg&quot; width=&quot;1235&quot;
+  loading=&quot;lazy&quot;&gt;
+
+
+&lt;&#x2F;a&gt;
+
+
+&lt;&#x2F;div&gt;</description>
+      </item>
+      <item>
+          <title>Compiling Rust binaries for Windows 98 SE and more: a journey</title>
+          <pubDate>Tue, 26 May 2020 00:00:00 +0000</pubDate>
+          <author>Dennis Duda (seri)</author>
+          <link>https://seri.tools/blog/compiling-rust-for-legacy-windows/</link>
+          <guid>https://seri.tools/blog/compiling-rust-for-legacy-windows/</guid>
+          <description xml:base="https://seri.tools/blog/compiling-rust-for-legacy-windows/">&lt;p&gt;Discussion on &lt;a href=&quot;https:&#x2F;&#x2F;www.reddit.com&#x2F;r&#x2F;rust&#x2F;comments&#x2F;gr0xqa&#x2F;compiling_rust_binaries_for_windows_98_se_and&#x2F;&quot;&gt;&#x2F;r&#x2F;rust&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=23313577&quot;&gt;HN&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;users.rust-lang.org&#x2F;t&#x2F;compiling-rust-binaries-for-windows-98-se-and-more-a-journey&#x2F;43283&quot;&gt;Rust user forum&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;em&gt;tl;dr:&lt;&#x2F;em&gt; It actually works, mostly! See the &lt;a href=&quot;https:&#x2F;&#x2F;seri.tools&#x2F;blog&#x2F;compiling-rust-for-legacy-windows&#x2F;#conclusion&quot;&gt;conclusion&lt;&#x2F;a&gt; down below.&lt;&#x2F;p&gt;
+&lt;p&gt;Did you know that &lt;a href=&quot;https:&#x2F;&#x2F;www.rust-lang.org&#x2F;&quot;&gt;Rust&lt;&#x2F;a&gt; has a &lt;a href=&quot;https:&#x2F;&#x2F;forge.rust-lang.org&#x2F;release&#x2F;platform-support.html&quot;&gt;Tier 2 target&lt;&#x2F;a&gt; called &lt;code&gt;i586-pc-windows-msvc&lt;&#x2F;code&gt;? I didn&#x27;t either, until a few days ago. This target disables SSE2 support and only emits instructions available on the original &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;P5_(microarchitecture)&quot;&gt;Intel Pentium&lt;&#x2F;a&gt; from 1993.&lt;&#x2F;p&gt;
+&lt;p&gt;So, for fun, I wanted to try compiling a binary that works on similarly old systems. My retro Windows of choice is Windows 98 Second Edition, so that is what I have settled for as the initial target for this project.&lt;&#x2F;p&gt;
+&lt;p&gt;Some inspiration also came from &lt;a href=&quot;https:&#x2F;&#x2F;www.hanselman.com&#x2F;blog&#x2F;NETEverywhereApparentlyAlsoMeansWindows311AndDOS.aspx&quot;&gt;C# running on Windows 3.11&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;prerequisites&quot;&gt;Prerequisites&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#prerequisites&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;visual-c-toolset&quot;&gt;Visual C++ Toolset&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#visual-c-toolset&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
+&lt;p&gt;After a quick search online it seems that the Visual C++ 2005 toolset is the last one that officially supports building for Windows 98. A quick Windows 10 VM and Visual Studio installation later, I&#x27;ve copied the whole &lt;code&gt;Microsoft Visual Studio 8&lt;&#x2F;code&gt; folder over to my host machine, knowing from previous endeavours that the CLI tools in Microsoft&#x27;s C&#x2F;C++ toolset are pretty much portable, as long as the environment variables are set correctly. The toolset includes a handful of batch files like &lt;code&gt;vsvars32.bat&lt;&#x2F;code&gt;, setting the proper paths and variables automatically. I&#x27;ve copied it and altered all the paths to point to the correct locations on my host machine.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;rust&quot;&gt;Rust&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#rust&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
+&lt;p&gt;Since I was sure that some tinkering with &lt;code&gt;rustc&lt;&#x2F;code&gt; and&#x2F;or the standard library will be necessary, I&#x27;ve checked out the Rust repo. Some &lt;code&gt;scoop install python&lt;&#x2F;code&gt;, setting the correct host and target in the &lt;code&gt;config.toml&lt;&#x2F;code&gt;, and &lt;code&gt;python x.py build -i --stage 1 src&#x2F;libstd&lt;&#x2F;code&gt; later, Rust and all the dependencies began compiling! After 26 Minutes and 18 Gigabytes the stage 1 compiler and standard library for &lt;code&gt;x86_64-pc-windows-msvc&lt;&#x2F;code&gt; and &lt;code&gt;i586-pc-windows-msvc&lt;&#x2F;code&gt; have been built!&lt;&#x2F;p&gt;
+&lt;p&gt;Props to the people that wrote the extensive documentation inside of &lt;code&gt;config.toml.example&lt;&#x2F;code&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;rustc-dev-guide.rust-lang.org&#x2F;building&#x2F;suggested.html&quot;&gt;online&lt;&#x2F;a&gt;, making the build not much harder than your regular ol&#x27; Rust crate!&lt;&#x2F;p&gt;
+&lt;p&gt;In order to use the fresh new toolchain, we have to tell &lt;code&gt;rustup&lt;&#x2F;code&gt; about it:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#292828;color:#e2cca9;&quot;&gt;&lt;code&gt;&lt;span&gt;rustup toolchain link win98 D:\RustProjs\rust\build\x86_64-pc-windows-msvc\stage1
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;let-the-tinkering-linkering-begin&quot;&gt;Let the &lt;del&gt;tinkering&lt;&#x2F;del&gt; linkering begin&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#let-the-tinkering-linkering-begin&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;p&gt;First of all, I&#x27;ve created a new binary crate&#x2F;project and changed the &lt;em&gt;Hello, world!&lt;&#x2F;em&gt; to &lt;em&gt;Hello, Windows 98!&lt;&#x2F;em&gt;, of course. To make sure that the project always uses our own toolchain, the default has to be overridden:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#292828;color:#e2cca9;&quot;&gt;&lt;code&gt;&lt;span&gt;rustup override set win98
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;After confirming that the toolchain works by building with the default MSVC tooling (&lt;code&gt;cargo run --target i586-pc-windows-msvc&lt;&#x2F;code&gt;), I have tried building again, but this time from within the &lt;code&gt;vsvars32.bat&lt;&#x2F;code&gt; development environment:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#292828;color:#e2cca9;&quot;&gt;&lt;code&gt;&lt;span&gt;cmd
+&lt;&#x2F;span&gt;&lt;span&gt;call vsvars.bat
+&lt;&#x2F;span&gt;&lt;span&gt;cargo clean
+&lt;&#x2F;span&gt;&lt;span&gt;cargo build --target i586-pc-windows-msvc
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;But nope! For some reason Rust&#x2F;Cargo tries to pass in the &lt;code&gt;x86_64-pc-windows-msvc&lt;&#x2F;code&gt; library object files, so &lt;code&gt;link.exe&lt;&#x2F;code&gt; rightfully errors with:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#292828;color:#e2cca9;&quot;&gt;&lt;code&gt;&lt;span&gt;fatal error LNK1112: module machine type &amp;#39;X86&amp;#39; conflicts with target machine type &amp;#39;x64&amp;#39;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;I think it has something to do with the full &lt;code&gt;vsvars32.bat&lt;&#x2F;code&gt; config, but I did not feel like debugging it further, so I have tried to use the old linker (and libs) only.&lt;&#x2F;p&gt;
+&lt;p&gt;Calling &lt;code&gt;link.exe&lt;&#x2F;code&gt; without the &lt;code&gt;vsvars32.bat&lt;&#x2F;code&gt; environment does not output anything and just exits with an error code. In order to configure the MSVC environment just for the linker call, I have created a &lt;code&gt;linker.cmd&lt;&#x2F;code&gt; batch file:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bat&quot; style=&quot;background-color:#292828;color:#e2cca9;&quot; class=&quot;language-bat &quot;&gt;&lt;code class=&quot;language-bat&quot; data-lang=&quot;bat&quot;&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;@&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;echo&lt;&#x2F;span&gt;&lt;span&gt; off
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;call &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;vsvars32&lt;&#x2F;span&gt;&lt;span&gt;.bat
+&lt;&#x2F;span&gt;&lt;span&gt;link.exe &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;%*
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;To tell cargo to use another linker, we can add a &lt;code&gt;.cargo&#x2F;config&lt;&#x2F;code&gt; file:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;toml&quot; style=&quot;background-color:#292828;color:#e2cca9;&quot; class=&quot;language-toml &quot;&gt;&lt;code class=&quot;language-toml&quot; data-lang=&quot;toml&quot;&gt;&lt;span&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8bba7f;&quot;&gt;build&lt;&#x2F;span&gt;&lt;span&gt;]
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#8bba7f;&quot;&gt;target &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b0b846;&quot;&gt;&amp;quot;i586-pc-windows-msvc&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8bba7f;&quot;&gt;target.i586-pc-windows-msvc&lt;&#x2F;span&gt;&lt;span&gt;]
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#8bba7f;&quot;&gt;linker &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b0b846;&quot;&gt;&amp;#39;D:\RustProjs\hello-w98\linker.cmd&amp;#39;
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#928374;&quot;&gt;# show the linker command line
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#8bba7f;&quot;&gt;rustflags &lt;&#x2F;span&gt;&lt;span&gt;= [&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b0b846;&quot;&gt;&amp;quot;-Z&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b0b846;&quot;&gt;&amp;quot;print-link-args&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;]
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Now it looks like it has linked the files successfully, but there is no &lt;code&gt;.exe&lt;&#x2F;code&gt; file in sight! It took me an embarassingly large amount of time to get the idea to run the linking command manually:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#292828;color:#e2cca9;&quot;&gt;&lt;code&gt;&lt;span&gt;error: linking with `D:\RustProjs\hello-w98\linker.cmd` failed: exit code: 1103
+&lt;&#x2F;span&gt;&lt;span&gt;  ...
+&lt;&#x2F;span&gt;&lt;span&gt;  = note: Setting environment for using Microsoft Visual Studio 2005 x86 tools.
+&lt;&#x2F;span&gt;&lt;span&gt;          hello_w98.xw46fam95fk1t5e.rcgu.o : fatal error LNK1103: debugging information corrupt; recompile module
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[current-time seri here]&lt;&#x2F;p&gt;
+&lt;p&gt;It took me embarassingly long &lt;em&gt;again&lt;&#x2F;em&gt; when retracing the steps while writing this blog post, since I didn&#x27;t bother checking what caused it to &quot;fail successfully&quot;. Batch files don&#x27;t work like rust expressions after all, so you have to append an &lt;code&gt;exit &#x2F;B %ERRORLEVEL%&lt;&#x2F;code&gt; line to have the batch file exit with the exit code of the linker...&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;But who needs debugging information anyways? :)&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;toml&quot; style=&quot;background-color:#292828;color:#e2cca9;&quot; class=&quot;language-toml &quot;&gt;&lt;code class=&quot;language-toml&quot; data-lang=&quot;toml&quot;&gt;&lt;span&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8bba7f;&quot;&gt;profile.dev&lt;&#x2F;span&gt;&lt;span&gt;]
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#8bba7f;&quot;&gt;debug &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;false
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8bba7f;&quot;&gt;profile.release&lt;&#x2F;span&gt;&lt;span&gt;]
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#8bba7f;&quot;&gt;debug &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;false
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;It has &lt;em&gt;finally&lt;&#x2F;em&gt; linked successfully, but the executable requires the VC 2005 redistributable, which I have installed on both the Windows 98 SE system and my host computer. The program has stayed stubborn:&lt;&#x2F;p&gt;
+
+
+
+
+
+
+
+
+
+&lt;div class=&quot;center&quot;&gt;
+
+
+&lt;a title=&quot;hello-w98.exe - System Error: The code execution cannot proceed because MSVCR80.dll was not found. Reinstalling the program may fix this problem.&quot; href=&quot;https:&amp;#x2F;&amp;#x2F;seri.tools&amp;#x2F;blog&amp;#x2F;compiling-rust-for-legacy-windows&amp;#x2F;msvcr80.png&quot;&gt;
+
+
+&lt;img alt=&quot;hello-w98.exe - System Error: The code execution cannot proceed because MSVCR80.dll was not found. Reinstalling the program may fix this problem.&quot; src=&quot;https:&amp;#x2F;&amp;#x2F;seri.tools&amp;#x2F;blog&amp;#x2F;compiling-rust-for-legacy-windows&amp;#x2F;msvcr80.png&quot; width=&quot;567&quot;
+  loading=&quot;lazy&quot;&gt;
+
+
+&lt;&#x2F;a&gt;
+
+
+&lt;&#x2F;div&gt;
+&lt;p&gt;Even putting the &lt;code&gt;MSVCR80.dll&lt;&#x2F;code&gt; that &lt;em&gt;comes with the tools I&#x27;ve linked the executable with&lt;&#x2F;em&gt; directly into the executable folder did not work! One more option to add to &lt;code&gt;rustflags&lt;&#x2F;code&gt;:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;toml&quot; style=&quot;background-color:#292828;color:#e2cca9;&quot; class=&quot;language-toml &quot;&gt;&lt;code class=&quot;language-toml&quot; data-lang=&quot;toml&quot;&gt;&lt;span style=&quot;font-weight:bold;color:#8bba7f;&quot;&gt;rustflags &lt;&#x2F;span&gt;&lt;span&gt;= [&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b0b846;&quot;&gt;&amp;quot;-Z&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b0b846;&quot;&gt;&amp;quot;print-link-args&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b0b846;&quot;&gt;&amp;quot;-C&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b0b846;&quot;&gt;&amp;quot;target-feature=+crt-static&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b0b846;&quot;&gt;&amp;quot;-C&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b0b846;&quot;&gt;&amp;quot;link-args=unicows.lib&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;]
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;This is highly discouraged for regular applications, but so is trying to compile for Windows 98 targets I guess. :)&lt;&#x2F;p&gt;
+&lt;p&gt;While I was at it, I have also added the &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Microsoft_Layer_for_Unicode&quot;&gt;Microsoft Layer for Unicode&lt;&#x2F;a&gt;, also known as &lt;code&gt;unicows.lib&#x2F;dll&lt;&#x2F;code&gt;. This library enables calling the &quot;wide&quot;&#x2F;&lt;code&gt;W&lt;&#x2F;code&gt; variants of many Windows APIs, which I assumed would be necessary anyways, since Rust supports Unicode of course. Of course I didn&#x27;t read quite enough on how to &lt;em&gt;actually&lt;&#x2F;em&gt; add the library to a program, but more on &lt;code&gt;unicows&lt;&#x2F;code&gt; later...&lt;&#x2F;p&gt;
+&lt;p&gt;This executable actually runs fine on my host system now, and in the Windows 98 VM a more descriptive error message appears, one that means that the program is actually trying to run! The message informs us that the entry point &lt;code&gt;KERNEL32.DLL:AddVectoredExceptionHandler&lt;&#x2F;code&gt; could not be found. Looking this function up it seems it was added with Windows XP. It is time to get to work in the standard library!&lt;&#x2F;p&gt;
+
+
+
+
+
+
+
+
+
+&lt;div class=&quot;center&quot;&gt;
+
+
+&lt;a title=&quot;The HELLO-W98.EXE file is linked to missing export KERNEL32.DLL:AddVectoredExceptionHandler.&quot; href=&quot;https:&amp;#x2F;&amp;#x2F;seri.tools&amp;#x2F;blog&amp;#x2F;compiling-rust-for-legacy-windows&amp;#x2F;missing_add_vectored_98.png&quot;&gt;
+
+
+&lt;img alt=&quot;The HELLO-W98.EXE file is linked to missing export KERNEL32.DLL:AddVectoredExceptionHandler.&quot; src=&quot;https:&amp;#x2F;&amp;#x2F;seri.tools&amp;#x2F;blog&amp;#x2F;compiling-rust-for-legacy-windows&amp;#x2F;missing_add_vectored_98.png&quot; width=&quot;437&quot;
+  loading=&quot;lazy&quot;&gt;
+
+
+&lt;&#x2F;a&gt;
+
+
+&lt;&#x2F;div&gt;&lt;h2 id=&quot;intermission-kernelex&quot;&gt;Intermission: KernelEx&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#intermission-kernelex&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;a href=&quot;http:&#x2F;&#x2F;kernelex.sourceforge.net&#x2F;&quot;&gt;KernelEx&lt;&#x2F;a&gt; is a compatibility layer for Windows 9X&#x2F;ME, allowing these systems to run some modern executables by providing missing system APIs. This works by patching the kernel in-memory via a device driver. I have tried running the executable with KernelEx throughout this journey, but &lt;code&gt;AddVectoredExceptionHandler&lt;&#x2F;code&gt; is not one of the APIs it provides.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;browsing-through-the-rust-source&quot;&gt;Browsing through the Rust source&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#browsing-through-the-rust-source&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;creating-a-new-target&quot;&gt;Creating a new target&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#creating-a-new-target&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
+&lt;p&gt;I have actually done this part directly after setting up the Rust compilation by just searching for &lt;code&gt;i586-pc-windows-msvc&lt;&#x2F;code&gt;. In &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;blob&#x2F;1.43.1&#x2F;src&#x2F;librustc_target&#x2F;spec&#x2F;i586_pc_windows_msvc.rs&quot;&gt;&lt;code&gt;i586_pc_windows_msvc.rs&lt;&#x2F;code&gt;&lt;&#x2F;a&gt; the target is defined by overwriting a few options of the regular &lt;code&gt;i686-pc-windows-msvc&lt;&#x2F;code&gt; target:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;rs&quot; style=&quot;background-color:#292828;color:#e2cca9;&quot; class=&quot;language-rs &quot;&gt;&lt;code class=&quot;language-rs&quot; data-lang=&quot;rs&quot;&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;use crate&lt;&#x2F;span&gt;&lt;span&gt;::spec::TargetResult;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;pub fn &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8bba7f;&quot;&gt;target&lt;&#x2F;span&gt;&lt;span&gt;() -&amp;gt; TargetResult {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;let mut&lt;&#x2F;span&gt;&lt;span&gt; base &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;super&lt;&#x2F;span&gt;&lt;span&gt;::i686_pc_windows_msvc::target()&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;?&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    base.options.cpu &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b0b846;&quot;&gt;&amp;quot;pentium&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e9b143;&quot;&gt;to_string&lt;&#x2F;span&gt;&lt;span&gt;();
+&lt;&#x2F;span&gt;&lt;span&gt;    base.llvm_target &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b0b846;&quot;&gt;&amp;quot;i586-pc-windows-msvc&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e9b143;&quot;&gt;to_string&lt;&#x2F;span&gt;&lt;span&gt;();
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e9b143;&quot;&gt;Ok&lt;&#x2F;span&gt;&lt;span&gt;(base)
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Especially of note are the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;blob&#x2F;1.43.1&#x2F;src&#x2F;librustc_target&#x2F;spec&#x2F;mod.rs#L560-L814&quot;&gt;&lt;code&gt;TargetOptions&lt;&#x2F;code&gt;&lt;&#x2F;a&gt;, which define lots and lots of interesting target-specific values, like &lt;code&gt;crt_static_default&lt;&#x2F;code&gt; for example, rendering &lt;code&gt;target-feature=+crt-static&lt;&#x2F;code&gt; redundant.&lt;&#x2F;p&gt;
+&lt;p&gt;The actual mapping of the target name&#x2F;triplet to the spec file happens &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;blob&#x2F;1.43.1&#x2F;src&#x2F;librustc_target&#x2F;spec&#x2F;mod.rs#L335&quot;&gt;here&lt;&#x2F;a&gt;. After copying the spec file as &lt;code&gt;i586-pc-windows-msvclegacy.rs&lt;&#x2F;code&gt;, adding it to the target list and changing the &lt;code&gt;target&lt;&#x2F;code&gt; entry in the &lt;code&gt;config.toml&lt;&#x2F;code&gt; file, the new target is up and ready to be used!&lt;&#x2F;p&gt;
+&lt;p&gt;I have &lt;em&gt;also&lt;&#x2F;em&gt; added &lt;code&gt;unicows.lib&lt;&#x2F;code&gt; to libstd&#x27;s &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;blob&#x2F;1.43.1&#x2F;src&#x2F;libstd&#x2F;build.rs#L45&quot;&gt;&lt;code&gt;build.rs&lt;&#x2F;code&gt;&lt;&#x2F;a&gt; file for good measure (still without reading about it):&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;rs&quot; style=&quot;background-color:#292828;color:#e2cca9;&quot; class=&quot;language-rs &quot;&gt;&lt;code class=&quot;language-rs&quot; data-lang=&quot;rs&quot;&gt;&lt;span style=&quot;font-style:italic;color:#928374;&quot;&gt;&#x2F;&#x2F; ...
+&lt;&#x2F;span&gt;&lt;span&gt;} &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;else if&lt;&#x2F;span&gt;&lt;span&gt; target.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e9b143;&quot;&gt;contains&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b0b846;&quot;&gt;&amp;quot;windows&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;(target &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;== &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b0b846;&quot;&gt;&amp;quot;i586-pc-windows-msvclegacy&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e9b143;&quot;&gt;println!&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b0b846;&quot;&gt;&amp;quot;cargo:rustc-link-lib=unicows&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;);
+&lt;&#x2F;span&gt;&lt;span&gt;    }
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e9b143;&quot;&gt;println!&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b0b846;&quot;&gt;&amp;quot;cargo:rustc-link-lib=advapi32&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;);
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e9b143;&quot;&gt;println!&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b0b846;&quot;&gt;&amp;quot;cargo:rustc-link-lib=ws2_32&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;);
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e9b143;&quot;&gt;println!&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b0b846;&quot;&gt;&amp;quot;cargo:rustc-link-lib=userenv&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;);
+&lt;&#x2F;span&gt;&lt;span&gt;} &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;else if&lt;&#x2F;span&gt;&lt;span&gt; target.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e9b143;&quot;&gt;contains&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b0b846;&quot;&gt;&amp;quot;fuchsia&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#928374;&quot;&gt;&#x2F;&#x2F; ...
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;yanking-out-addvectoredexceptionhandler&quot;&gt;Yanking out &lt;code&gt;AddVectoredExceptionHandler&lt;&#x2F;code&gt;&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#yanking-out-addvectoredexceptionhandler&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
+&lt;p&gt;The &lt;a href=&quot;https:&#x2F;&#x2F;docs.microsoft.com&#x2F;en-us&#x2F;windows&#x2F;win32&#x2F;api&#x2F;errhandlingapi&#x2F;nf-errhandlingapi-addvectoredexceptionhandler&quot;&gt;&lt;code&gt;AddVectoredExceptionHandler&lt;&#x2F;code&gt;&lt;&#x2F;a&gt; Windows API function is used by Rust to provide a nicer error experience in case of a &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;blob&#x2F;1.43.1&#x2F;src&#x2F;libstd&#x2F;sys&#x2F;windows&#x2F;stack_overflow.rs&quot;&gt;stack overflow&lt;&#x2F;a&gt;. However, as seen in other targets, this handling is completely optional. Incidentally the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;blob&#x2F;1.43.1&#x2F;src&#x2F;libstd&#x2F;sys&#x2F;windows&#x2F;stack_overflow_uwp.rs&quot;&gt;UWP implementation&lt;&#x2F;a&gt; is one of these targets, so we can just replace the regular implementation with that one (and even keep the &lt;code&gt;Handler&lt;&#x2F;code&gt; type, so no further source changes are needed).&lt;&#x2F;p&gt;
+&lt;p&gt;I wanted to not affect the host Windows target, however, so I have created a copy of the whole &lt;code&gt;libstd&#x2F;sys&#x2F;windows&lt;&#x2F;code&gt; folder as &lt;code&gt;libstd&#x2F;sys&#x2F;windows_legacy&lt;&#x2F;code&gt;, adding an admittedly wonky compilation condition to &lt;code&gt;libstd&#x2F;sys&#x2F;mod.rs&lt;&#x2F;code&gt;:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;rs&quot; style=&quot;background-color:#292828;color:#e2cca9;&quot; class=&quot;language-rs &quot;&gt;&lt;code class=&quot;language-rs&quot; data-lang=&quot;rs&quot;&gt;&lt;span style=&quot;font-style:italic;color:#928374;&quot;&gt;&#x2F;&#x2F; ...
+&lt;&#x2F;span&gt;&lt;span&gt;} &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;else if &lt;&#x2F;span&gt;&lt;span&gt;#[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;cfg&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;all(windows, not(target_arch &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b0b846;&quot;&gt;&amp;quot;x86&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;))&lt;&#x2F;span&gt;&lt;span&gt;)] {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;mod &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8bba7f;&quot;&gt;windows&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;pub use &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span&gt;::windows::&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;*&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;} &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;else if &lt;&#x2F;span&gt;&lt;span&gt;#[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;cfg&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;all(windows, target_arch &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b0b846;&quot;&gt;&amp;quot;x86&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;)&lt;&#x2F;span&gt;&lt;span&gt;)] {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;mod &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8bba7f;&quot;&gt;windows_legacy&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;pub use &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span&gt;::windows_legacy::&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;*&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;} &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;else if &lt;&#x2F;span&gt;&lt;span&gt;#[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;cfg&lt;&#x2F;span&gt;&lt;span&gt;(target_os &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b0b846;&quot;&gt;&amp;quot;cloudabi&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;)] {
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#928374;&quot;&gt;&#x2F;&#x2F; ...
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;This changes the &lt;code&gt;sys&lt;&#x2F;code&gt; module used for any 32-bit Windows of course, instead of just &lt;code&gt;i586-pc-windows-msvclegacy&lt;&#x2F;code&gt;, but I couldn&#x27;t find any way to conditionally compile for a specific target triple, since that is not directly exposed as a configuration option. Since my host target is 64-bit, that was good enough™, though. :)&lt;&#x2F;p&gt;
+&lt;p&gt;All C FFI declarations used for interfacing with Windows are neatly packed in &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;blob&#x2F;1.43.1&#x2F;src&#x2F;libstd&#x2F;sys&#x2F;windows&#x2F;c.rs&quot;&gt;&lt;code&gt;c.rs&lt;&#x2F;code&gt;&lt;&#x2F;a&gt;, where I removed the declarations for &lt;code&gt;AddVectoredExceptionHandler&lt;&#x2F;code&gt;, &lt;code&gt;SetThreadStackGuarantee&lt;&#x2F;code&gt; and a few structs needed for those, since the compilation settings in the Rust codebase rightfully deny any unused code.&lt;&#x2F;p&gt;
+&lt;p&gt;In a &quot;proper&quot; implementation I would maybe expose another &lt;code&gt;target_something&lt;&#x2F;code&gt; configuration option to match against, potentially even down to compatibility info per API per version.&lt;&#x2F;p&gt;
+&lt;p&gt;After this change and another recompile of the sample application the &lt;code&gt;AddVectoredExceptionHandler&lt;&#x2F;code&gt; error message is gone, only to be replaced by a message about a missing &lt;code&gt;KERNEL32.DLL:RtlCaptureContext&lt;&#x2F;code&gt; export:&lt;&#x2F;p&gt;
+
+
+
+
+
+
+
+
+
+&lt;div class=&quot;center&quot;&gt;
+
+
+&lt;a title=&quot;The HELLO-W98.EXE file is linked to missing export KERNEL32.DLL:RtlCaptureContext.&quot; href=&quot;https:&amp;#x2F;&amp;#x2F;seri.tools&amp;#x2F;blog&amp;#x2F;compiling-rust-for-legacy-windows&amp;#x2F;missing_rtl_98.png&quot;&gt;
+
+
+&lt;img alt=&quot;The HELLO-W98.EXE file is linked to missing export KERNEL32.DLL:RtlCaptureContext.&quot; src=&quot;https:&amp;#x2F;&amp;#x2F;seri.tools&amp;#x2F;blog&amp;#x2F;compiling-rust-for-legacy-windows&amp;#x2F;missing_rtl_98.png&quot; width=&quot;376&quot;
+  loading=&quot;lazy&quot;&gt;
+
+
+&lt;&#x2F;a&gt;
+
+
+&lt;&#x2F;div&gt;
+&lt;p&gt;I&#x27;ve quickly googled to find out whether KernelEx supports this function, and it does! Turning KernelEx on, opening the executable again, and I am greeted by my very first Rust output on Windows 98!&lt;&#x2F;p&gt;
+
+
+
+
+
+
+
+
+
+&lt;div class=&quot;center&quot;&gt;
+
+
+&lt;a title=&quot;The working program and KernelEx settings&quot; href=&quot;https:&amp;#x2F;&amp;#x2F;seri.tools&amp;#x2F;blog&amp;#x2F;compiling-rust-for-legacy-windows&amp;#x2F;kernelex_works.png&quot;&gt;
+
+
+&lt;img alt=&quot;The working program and KernelEx settings&quot; src=&quot;https:&amp;#x2F;&amp;#x2F;seri.tools&amp;#x2F;blog&amp;#x2F;compiling-rust-for-legacy-windows&amp;#x2F;kernelex_works.png&quot; width=&quot;660&quot;
+  loading=&quot;lazy&quot;&gt;
+
+
+&lt;&#x2F;a&gt;
+
+
+&lt;&#x2F;div&gt;
+&lt;p&gt;Granted, using KernelEx is cheating, but it gave me the confidence that a true legacy Windows compatible executable is within the realms of possibility.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;the-hunt-for-rtlcapturecontext-part-one&quot;&gt;The hunt for &lt;code&gt;RtlCaptureContext&lt;&#x2F;code&gt;, part one&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#the-hunt-for-rtlcapturecontext-part-one&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;p&gt;As with &lt;code&gt;AddVectoredExceptionHandler&lt;&#x2F;code&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;docs.microsoft.com&#x2F;en-us&#x2F;windows&#x2F;win32&#x2F;api&#x2F;winnt&#x2F;nf-winnt-rtlcapturecontext&quot;&gt;&lt;code&gt;RtlCaptureContext&lt;&#x2F;code&gt;&lt;&#x2F;a&gt; was introduced with Windows XP, so we will have to get rid of it. I couldn&#x27;t find a reference to this function in the Rust source (more on that in part two), so let&#x27;s get out some reversing tools!&lt;&#x2F;p&gt;
+&lt;p&gt;Since a &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Portable_Executable&quot;&gt;Portable Executable (PE)&lt;&#x2F;a&gt; file usually has an &lt;code&gt;.idata&lt;&#x2F;code&gt; section with all the import information, I wanted to validate it with &lt;a href=&quot;https:&#x2F;&#x2F;www.dependencywalker.com&#x2F;&quot;&gt;Dependency Walker&lt;&#x2F;a&gt;. That tool froze when loading the test executable for some reason, so I switched to the open-source alternative called &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;lucasg&#x2F;Dependencies&quot;&gt;Dependencies&lt;&#x2F;a&gt;:&lt;&#x2F;p&gt;
+
+
+
+
+
+
+
+
+
+&lt;div class=&quot;center&quot;&gt;
+
+
+&lt;a title=&quot;DependenciesGUI with hello-w98.exe open&quot; href=&quot;https:&amp;#x2F;&amp;#x2F;seri.tools&amp;#x2F;blog&amp;#x2F;compiling-rust-for-legacy-windows&amp;#x2F;dependencies_gui.png&quot;&gt;
+
+
+&lt;img alt=&quot;DependenciesGUI with hello-w98.exe open&quot; src=&quot;https:&amp;#x2F;&amp;#x2F;seri.tools&amp;#x2F;blog&amp;#x2F;compiling-rust-for-legacy-windows&amp;#x2F;dependencies_gui.png&quot; width=&quot;1084&quot;
+  loading=&quot;lazy&quot;&gt;
+
+
+&lt;&#x2F;a&gt;
+
+
+&lt;&#x2F;div&gt;
+&lt;p&gt;So yes, the import is definitely there. The next tool I have utilized was &lt;a href=&quot;https:&#x2F;&#x2F;ghidra-sre.org&#x2F;&quot;&gt;Ghidra&lt;&#x2F;a&gt;, a reverse engineering and code analysis toolset. Ghidra can auto-analyze the binary to find all usages of the imported functions, for example. But, to my surprise, the import is not used at all according to the auto-analysis! So the &lt;em&gt;most sensible&lt;&#x2F;em&gt; thing to do is to open a hex editor, find the string &lt;code&gt;RtlCaptureContext&lt;&#x2F;code&gt; and replacing it with an import name that definitely exists in Windows 98, filling any additional space with &lt;code&gt;\0&lt;&#x2F;code&gt;. I have chosen &lt;code&gt;GetCurrentThread&lt;&#x2F;code&gt; just because it happened to be the import prior to &lt;code&gt;RtlCaptureContext&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;The program runs to completion without any errors now, yay! But it also doesn&#x27;t output anything, oops. Even when putting &lt;code&gt;unicows.dll&lt;&#x2F;code&gt; next the executable, it just doesn&#x27;t output anything. At that point I&#x27;ve tried changing the &lt;code&gt;Hello, Windows 98!&lt;&#x2F;code&gt; implementation to one with byte strings, writing directly to &lt;code&gt;stdout&lt;&#x2F;code&gt;:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;rs&quot; style=&quot;background-color:#292828;color:#e2cca9;&quot; class=&quot;language-rs &quot;&gt;&lt;code class=&quot;language-rs&quot; data-lang=&quot;rs&quot;&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;use &lt;&#x2F;span&gt;&lt;span&gt;std::io::Write;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;fn &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8bba7f;&quot;&gt;main&lt;&#x2F;span&gt;&lt;span&gt;() {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;let&lt;&#x2F;span&gt;&lt;span&gt; stdout &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;std::io::stdout();
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;let mut&lt;&#x2F;span&gt;&lt;span&gt; lock &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt; stdout.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e9b143;&quot;&gt;lock&lt;&#x2F;span&gt;&lt;span&gt;();
+&lt;&#x2F;span&gt;&lt;span&gt;    lock.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e9b143;&quot;&gt;write&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;b&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b0b846;&quot;&gt;&amp;quot;Hello, Windows 98!&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;).&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e9b143;&quot;&gt;unwrap&lt;&#x2F;span&gt;&lt;span&gt;();
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;... which did not change a thing.&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[current-time seri here]&lt;&#x2F;p&gt;
+&lt;p&gt;Yes, I know, anyone with some form of knowledge about the Windows console knows that this was an exercise in futility, as I remember&#x2F;find out below :)&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h2 id=&quot;ollydbg-to-the-rescue&quot;&gt;OllyDbg to the rescue&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#ollydbg-to-the-rescue&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;p&gt;Let&#x27;s summarize:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;We are on Windows 98 SE&lt;&#x2F;li&gt;
+&lt;li&gt;without debugging info&#x2F;symbols&lt;&#x2F;li&gt;
+&lt;li&gt;in a release-compiled executable that doesn&#x27;t output anything&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;How are we going to debug the problem? We use &lt;a href=&quot;http:&#x2F;&#x2F;www.ollydbg.de&#x2F;&quot;&gt;OllyDbg 1.10&lt;&#x2F;a&gt;, which runs perfectly fine on Windows 98, like in the good ol&#x27; times!&lt;&#x2F;p&gt;
+&lt;p&gt;After firing up Olly and loading the executable, checking that everything works as expected, I&#x27;ve gone back to the import list to find out which kernel function would be a good candidate to set a breakpoint on. &lt;code&gt;WriteFile&lt;&#x2F;code&gt; seemed like a good candidate, so I&#x27;ve reloaded the executable in Olly, right-clicked in the disassembly window, selected &lt;em&gt;Search for → all intermodular calls&lt;&#x2F;em&gt;, found two call to &lt;code&gt;WriteFile&lt;&#x2F;code&gt;, set breakpoints on both, pressed &quot;play&quot; to have the program running until a breakpoint and ...&lt;&#x2F;p&gt;
+
+
+
+
+
+
+
+
+
+&lt;div class=&quot;center&quot;&gt;
+
+
+&lt;a title=&quot;OllyDbg with WriteFile breakpoints set&quot; href=&quot;https:&amp;#x2F;&amp;#x2F;seri.tools&amp;#x2F;blog&amp;#x2F;compiling-rust-for-legacy-windows&amp;#x2F;olly_writefile.png&quot;&gt;
+
+
+&lt;img alt=&quot;OllyDbg with WriteFile breakpoints set&quot; src=&quot;https:&amp;#x2F;&amp;#x2F;seri.tools&amp;#x2F;blog&amp;#x2F;compiling-rust-for-legacy-windows&amp;#x2F;olly_writefile.png&quot; width=&quot;1024&quot;
+  loading=&quot;lazy&quot;&gt;
+
+
+&lt;&#x2F;a&gt;
+
+
+&lt;&#x2F;div&gt;
+&lt;p&gt;... it&#x27;s not called.&lt;&#x2F;p&gt;
+&lt;p&gt;This means that &lt;code&gt;WriteFile&lt;&#x2F;code&gt; probably wasn&#x27;t the correct function, or it didn&#x27;t even try calling it because of &lt;em&gt;something&lt;&#x2F;em&gt;. I&#x27;ve went with the first option first and looked again for other suspicious function imports. None of them seemed related to writing to the console though, so I have tried another way: finding the string the program writes to the console itself!&lt;&#x2F;p&gt;
+&lt;p&gt;Next to the &lt;em&gt;all intermodular calls&lt;&#x2F;em&gt; context menu entry there is an &lt;em&gt;all referenced strings&lt;&#x2F;em&gt; entry. That search &lt;em&gt;did&lt;&#x2F;em&gt; yield the &lt;code&gt;Hello, Windows 98!&lt;&#x2F;code&gt; string, but it seems that OllyDbg stuggled with the static analysis, and marked the whole area that uses the string as data. Even after helping Olly by explicitly marking it as data and re-analyzing the binary, no additional calls seemed to be found.&lt;&#x2F;p&gt;
+&lt;p&gt;I&#x27;ve switched back to Ghidra, where the correct function was obvious: &lt;code&gt;WriteConsoleW&lt;&#x2F;code&gt;. Noting the addresses where it is used, I&#x27;ve gone back to OllyDbg to see what it shows at those locations. And there it is, a normal call to &lt;code&gt;WriteConsoleW&lt;&#x2F;code&gt;. How did it not show in the list of intermodular calls? Well...&lt;&#x2F;p&gt;
+
+
+
+
+
+
+
+
+
+&lt;div class=&quot;center&quot;&gt;
+
+
+&lt;a title=&quot;OllyDbg showing the wrong function name&quot; href=&quot;https:&amp;#x2F;&amp;#x2F;seri.tools&amp;#x2F;blog&amp;#x2F;compiling-rust-for-legacy-windows&amp;#x2F;olly_writeconsole.png&quot;&gt;
+
+
+&lt;img alt=&quot;OllyDbg showing the wrong function name&quot; src=&quot;https:&amp;#x2F;&amp;#x2F;seri.tools&amp;#x2F;blog&amp;#x2F;compiling-rust-for-legacy-windows&amp;#x2F;olly_writeconsole.png&quot; width=&quot;671&quot;
+  loading=&quot;lazy&quot;&gt;
+
+
+&lt;&#x2F;a&gt;
+
+
+&lt;&#x2F;div&gt;
+&lt;p&gt;I&#x27;ve sorted the list by the &quot;Destination&quot; column, which shows a wrong function name! Back on track, I&#x27;ve set breakpoints on both of these calls, pressed &quot;go&quot;, and:&lt;&#x2F;p&gt;
+
+
+
+
+
+
+
+
+
+&lt;div class=&quot;center&quot;&gt;
+
+
+&lt;a title=&quot;OllyDbg hitting one of the WriteConsoleW breakpoints&quot; href=&quot;https:&amp;#x2F;&amp;#x2F;seri.tools&amp;#x2F;blog&amp;#x2F;compiling-rust-for-legacy-windows&amp;#x2F;olly_writeconsole_bp_before.png&quot;&gt;
+
+
+&lt;img alt=&quot;OllyDbg hitting one of the WriteConsoleW breakpoints&quot; src=&quot;https:&amp;#x2F;&amp;#x2F;seri.tools&amp;#x2F;blog&amp;#x2F;compiling-rust-for-legacy-windows&amp;#x2F;olly_writeconsole_bp_before.png&quot; width=&quot;1024&quot;
+  loading=&quot;lazy&quot;&gt;
+
+
+&lt;&#x2F;a&gt;
+
+
+&lt;&#x2F;div&gt;
+&lt;p&gt;The breakpoint hits, we see our string as a parameter on the stack, and step over the call. OllyDbg has a nice status window that shows the current register values, and also other values helpful for debugging Windows applications, like the &lt;a href=&quot;https:&#x2F;&#x2F;docs.microsoft.com&#x2F;en-us&#x2F;windows&#x2F;win32&#x2F;api&#x2F;errhandlingapi&#x2F;nf-errhandlingapi-getlasterror&quot;&gt;&lt;code&gt;GetLastError&lt;&#x2F;code&gt;&lt;&#x2F;a&gt; value:&lt;&#x2F;p&gt;
+
+
+
+
+
+
+
+
+
+&lt;div class=&quot;center&quot;&gt;
+
+
+&lt;a title=&quot;OllyDbg showing the last error code after calling WriteConsoleW&quot; href=&quot;https:&amp;#x2F;&amp;#x2F;seri.tools&amp;#x2F;blog&amp;#x2F;compiling-rust-for-legacy-windows&amp;#x2F;olly_writeconsole_bp_after.png&quot;&gt;
+
+
+&lt;img alt=&quot;OllyDbg showing the last error code after calling WriteConsoleW&quot; src=&quot;https:&amp;#x2F;&amp;#x2F;seri.tools&amp;#x2F;blog&amp;#x2F;compiling-rust-for-legacy-windows&amp;#x2F;olly_writeconsole_bp_after.png&quot; width=&quot;1024&quot;
+  loading=&quot;lazy&quot;&gt;
+
+
+&lt;&#x2F;a&gt;
+
+
+&lt;&#x2F;div&gt;
+&lt;p&gt;&lt;code&gt;ERROR_CALL_NOT_IMPLEMENTED (0x00000078)&lt;&#x2F;code&gt; ... makes sense on Windows 98! At that point I had realized:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;that the Windows NT console Rust targets is Unicode&#x2F;UTF-16, so my attempt at writing a byte string directly to &lt;code&gt;stdout&lt;&#x2F;code&gt; was converted to unicode anyways (notice how Olly also shows the string passed in as parameter as &lt;code&gt;UNICODE&lt;&#x2F;code&gt;), and&lt;&#x2F;li&gt;
+&lt;li&gt;that I have added &lt;code&gt;unicows&lt;&#x2F;code&gt; incorrectly, since &lt;code&gt;WriteConsoleW&lt;&#x2F;code&gt; definitely is one of the &lt;a href=&quot;https:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20041118165629&#x2F;http:&#x2F;&#x2F;msdn.microsoft.com&#x2F;library&#x2F;en-us&#x2F;mslu&#x2F;winprog&#x2F;mslu_w_apis.asp&quot;&gt;supported functions&lt;&#x2F;a&gt;.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;get-unicows-working&quot;&gt;Get &lt;code&gt;unicows&lt;&#x2F;code&gt; working&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#get-unicows-working&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;p&gt;Since the error undoubtedly points to &lt;code&gt;unicows&lt;&#x2F;code&gt; not working correctly, I&#x27;ve finally taken a closer look at the documentation &lt;a href=&quot;https:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20051208110500&#x2F;http:&#x2F;&#x2F;msdn.microsoft.com&#x2F;library&#x2F;en-us&#x2F;mslu&#x2F;winprog&#x2F;microsoft_layer_for_unicode_on_windows_95_98_me_systems.asp&quot;&gt;[1]&lt;&#x2F;a&gt; &lt;a href=&quot;https:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20050220043829&#x2F;http:&#x2F;&#x2F;msdn.microsoft.com&#x2F;library&#x2F;en-us&#x2F;mslu&#x2F;winprog&#x2F;compiling_your_application_with_the_microsoft_layer_for_unicode.asp&quot;&gt;[2]&lt;&#x2F;a&gt; and I&#x27;ve found a nice blog post explaining &lt;a href=&quot;http:&#x2F;&#x2F;archives.miloush.net&#x2F;michkap&#x2F;archive&#x2F;2005&#x2F;05&#x2F;01&#x2F;413835.html&quot;&gt;how it works&lt;&#x2F;a&gt; under the hood.&lt;&#x2F;p&gt;
+&lt;p&gt;I have removed the old &lt;code&gt;unicows.lib&lt;&#x2F;code&gt; include from both the standard library&#x27;s &lt;code&gt;build.ts&lt;&#x2F;code&gt; and changed the project&#x27;s &lt;code&gt;rustflags&lt;&#x2F;code&gt; to include basically exactly what the documentation says:&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;em&gt;formatted for readability, actual TOML arrays have to be inline&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;toml&quot; style=&quot;background-color:#292828;color:#e2cca9;&quot; class=&quot;language-toml &quot;&gt;&lt;code class=&quot;language-toml&quot; data-lang=&quot;toml&quot;&gt;&lt;span&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8bba7f;&quot;&gt;build&lt;&#x2F;span&gt;&lt;span&gt;]
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#8bba7f;&quot;&gt;target &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b0b846;&quot;&gt;&amp;quot;i586-pc-windows-msvclegacy&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8bba7f;&quot;&gt;target.i586-pc-windows-msvclegacy&lt;&#x2F;span&gt;&lt;span&gt;]
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#8bba7f;&quot;&gt;linker &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b0b846;&quot;&gt;&amp;#39;D:\RustProjs\hello-w98\linker.cmd&amp;#39;
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#8bba7f;&quot;&gt;rustflags &lt;&#x2F;span&gt;&lt;span&gt;= [
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b0b846;&quot;&gt;&amp;quot;-Z&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b0b846;&quot;&gt;&amp;quot;print-link-args&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b0b846;&quot;&gt;&amp;quot;-C&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b0b846;&quot;&gt;&amp;quot;target-feature=+crt-static&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b0b846;&quot;&gt;&amp;quot;-C&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#3e120d;color:#fdf4c1;&quot;&gt;&amp;#39;link-args=&#x2F;nod:kernel32.lib&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#3e120d;color:#fdf4c1;&quot;&gt;&#x2F;nod:advapi32.lib&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#3e120d;color:#fdf4c1;&quot;&gt;&#x2F;nod:user32.lib&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#3e120d;color:#fdf4c1;&quot;&gt;&#x2F;nod:gdi32.lib&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#3e120d;color:#fdf4c1;&quot;&gt;&#x2F;nod:shell32.lib&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#3e120d;color:#fdf4c1;&quot;&gt;&#x2F;nod:comdlg32.lib&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#3e120d;color:#fdf4c1;&quot;&gt;&#x2F;nod:version.lib&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#3e120d;color:#fdf4c1;&quot;&gt;&#x2F;nod:mpr.lib&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#3e120d;color:#fdf4c1;&quot;&gt;&#x2F;nod:rasapi32.lib&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#3e120d;color:#fdf4c1;&quot;&gt;&#x2F;nod:winmm.lib&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#3e120d;color:#fdf4c1;&quot;&gt;&#x2F;nod:winspool.lib&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#3e120d;color:#fdf4c1;&quot;&gt;&#x2F;nod:vfw32.lib&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#3e120d;color:#fdf4c1;&quot;&gt;&#x2F;nod:secur32.lib&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#3e120d;color:#fdf4c1;&quot;&gt;&#x2F;nod:oleacc.lib&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#3e120d;color:#fdf4c1;&quot;&gt;&#x2F;nod:oledlg.lib&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#3e120d;color:#fdf4c1;&quot;&gt;&#x2F;nod:sensapi.lib&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;         &lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#3e120d;color:#fdf4c1;&quot;&gt;unicows.lib&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;         &lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#3e120d;color:#fdf4c1;&quot;&gt;kernel32.lib&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;         &lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#3e120d;color:#fdf4c1;&quot;&gt;advapi32.lib&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;         &lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#3e120d;color:#fdf4c1;&quot;&gt;user32.lib&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;         &lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#3e120d;color:#fdf4c1;&quot;&gt;gdi32.lib&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;         &lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#3e120d;color:#fdf4c1;&quot;&gt;shell32.lib&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;         &lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#3e120d;color:#fdf4c1;&quot;&gt;comdlg32.lib&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;         &lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#3e120d;color:#fdf4c1;&quot;&gt;version.lib&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;         &lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#3e120d;color:#fdf4c1;&quot;&gt;mpr.lib&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;         &lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#3e120d;color:#fdf4c1;&quot;&gt;rasapi32.lib&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;         &lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#3e120d;color:#fdf4c1;&quot;&gt;winmm.lib&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;         &lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#3e120d;color:#fdf4c1;&quot;&gt;winspool.lib&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;         &lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#3e120d;color:#fdf4c1;&quot;&gt;vfw32.lib&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;         &lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#3e120d;color:#fdf4c1;&quot;&gt;secur32.lib&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;         &lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#3e120d;color:#fdf4c1;&quot;&gt;oleacc.lib&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;         &lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#3e120d;color:#fdf4c1;&quot;&gt;oledlg.lib&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;         &lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#3e120d;color:#fdf4c1;&quot;&gt;sensapi.lib&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;]
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;After patching out &lt;code&gt;RtlCaptureContext&lt;&#x2F;code&gt; once again, I was greeted with my first truly Windows 98 SE compatible executable! Sleeping over the results, I&#x27;ve realized that &lt;code&gt;unicows&lt;&#x2F;code&gt; still wasn&#x27;t included correctly...&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;get-unicows-properly-working&quot;&gt;Get &lt;code&gt;unicows&lt;&#x2F;code&gt; &lt;em&gt;properly&lt;&#x2F;em&gt; working&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#get-unicows-properly-working&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;p&gt;The next day I&#x27;ve followed my train of thought about the linking process. Looking at the final linker command line:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#292828;color:#e2cca9;&quot;&gt;&lt;code&gt;&lt;span&gt;... &amp;quot;advapi32.lib&amp;quot; &amp;quot;ws2_32.lib&amp;quot; &amp;quot;userenv.lib&amp;quot; &amp;quot;libcmt.lib&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;&#x2F;nod:kernel32.lib&amp;quot; &amp;quot;&#x2F;nod:advapi32.lib&amp;quot; &amp;quot;&#x2F;nod:user32.lib&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;&#x2F;nod:gdi32.lib&amp;quot; &amp;quot;&#x2F;nod:shell32.lib&amp;quot; &amp;quot;&#x2F;nod:comdlg32.lib&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;&#x2F;nod:version.lib&amp;quot; &amp;quot;&#x2F;nod:mpr.lib&amp;quot; &amp;quot;&#x2F;nod:rasapi32.lib&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;&#x2F;nod:winmm.lib&amp;quot; &amp;quot;&#x2F;nod:winspool.lib&amp;quot; &amp;quot;&#x2F;nod:vfw32.lib&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;&#x2F;nod:secur32.lib&amp;quot; &amp;quot;&#x2F;nod:oleacc.lib&amp;quot; &amp;quot;&#x2F;nod:oledlg.lib&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;&#x2F;nod:sensapi.lib&amp;quot; &amp;quot;unicows.lib&amp;quot; &amp;quot;kernel32.lib&amp;quot; &amp;quot;advapi32.lib&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;user32.lib&amp;quot; &amp;quot;gdi32.lib&amp;quot; &amp;quot;shell32.lib&amp;quot; &amp;quot;comdlg32.lib&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;version.lib&amp;quot; &amp;quot;mpr.lib&amp;quot; &amp;quot;rasapi32.lib&amp;quot; &amp;quot;winmm.lib&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;winspool.lib&amp;quot; &amp;quot;vfw32.lib&amp;quot; &amp;quot;secur32.lib&amp;quot; &amp;quot;oleacc.lib&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;&amp;quot;oledlg.lib&amp;quot; &amp;quot;sensapi.lib&amp;quot;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;We can see that &lt;code&gt;&quot;advapi32.lib&quot;&lt;&#x2F;code&gt;, &lt;code&gt;&quot;ws2_32.lib&quot;&lt;&#x2F;code&gt;, &lt;code&gt;&quot;userenv.lib&quot;&lt;&#x2F;code&gt;, and &lt;code&gt;&quot;libcmt.lib&quot;&lt;&#x2F;code&gt; are added before the linker args from the &lt;code&gt;.cargo&#x2F;config&lt;&#x2F;code&gt;, meaning the respective &lt;code&gt;&#x2F;nod&lt;&#x2F;code&gt; (&lt;code&gt;&#x2F;NODEFAULT&lt;&#x2F;code&gt;; disable default import) entries are without effect, and functions imported from these would not be wrapped by &lt;code&gt;unicows&lt;&#x2F;code&gt;, as the linker priority order goes from left to right. So where do these imports come from? I have remembered seeing them in the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;blob&#x2F;1.43.1&#x2F;src&#x2F;libstd&#x2F;build.rs#L45-L47&quot;&gt;&lt;code&gt;build.rs&lt;&#x2F;code&gt;&lt;&#x2F;a&gt; of the standard library. Now to find out how they get there.&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[current seri here]&lt;&#x2F;p&gt;
+&lt;p&gt;Starting from here, all the Rust source code links will point to the tree at the exact commit I was at when working on this, since some of the features (e.g. &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;issues&#x2F;70093&quot;&gt;#70093&lt;&#x2F;a&gt;) are newer than the 1.43.1 that is current at the time of writing.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;After a bit of searching I have found &lt;code&gt;librustc_codegen_ssa&#x2F;back&#x2F;link.rs&lt;&#x2F;code&gt;, with &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;blob&#x2F;bad3bf622bded50a97c0a54e29350eada2a3a169&#x2F;src&#x2F;librustc_codegen_ssa&#x2F;back&#x2F;link.rs#L1405&quot;&gt;&lt;code&gt;linker_with_args&lt;&#x2F;code&gt;&lt;&#x2F;a&gt; looking promising! In fact, the called &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;blob&#x2F;bad3bf622bded50a97c0a54e29350eada2a3a169&#x2F;src&#x2F;librustc_codegen_ssa&#x2F;back&#x2F;link.rs#L1262&quot;&gt;&lt;code&gt;link_local_crate_native_libs_and_dependent_crate_libs&lt;&#x2F;code&gt;&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;blob&#x2F;bad3bf622bded50a97c0a54e29350eada2a3a169&#x2F;src&#x2F;librustc_codegen_ssa&#x2F;back&#x2F;link.rs#L1903&quot;&gt;&lt;code&gt;add_upstream_native_libraries&lt;&#x2F;code&gt;&lt;&#x2F;a&gt; look even more promising. To make sure this is the place that actually adds the libraries to the linker command line, I have just added a &lt;code&gt;println!&lt;&#x2F;code&gt; in the &lt;code&gt;for&lt;&#x2F;code&gt; loop at line 1935:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;rs&quot; style=&quot;background-color:#292828;color:#e2cca9;&quot; class=&quot;language-rs &quot;&gt;&lt;code class=&quot;language-rs&quot; data-lang=&quot;rs&quot;&gt;&lt;span style=&quot;color:#e9b143;&quot;&gt;println!&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b0b846;&quot;&gt;&amp;quot;lib: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;{}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b0b846;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;{:?}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b0b846;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;, name, lib.kind);
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Seems to be the right place! The call to &lt;code&gt;add_upstream_native_libraries&lt;&#x2F;code&gt; is actually wrapped in a condition checking for a compiler debugging (&lt;code&gt;-Z&lt;&#x2F;code&gt;) option, allowing us to deactivate the addition of these libraries:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;rs&quot; style=&quot;background-color:#292828;color:#e2cca9;&quot; class=&quot;language-rs &quot;&gt;&lt;code class=&quot;language-rs&quot; data-lang=&quot;rs&quot;&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;if&lt;&#x2F;span&gt;&lt;span&gt; sess.opts.debugging_opts.link_native_libraries {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e9b143;&quot;&gt;add_upstream_native_libraries&lt;&#x2F;span&gt;&lt;span&gt;(cmd, sess, codegen_results, crate_type);
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;This means adding &lt;code&gt;-Z link_native_libraries=no&lt;&#x2F;code&gt; to the ever-growing list of &lt;code&gt;rustflags&lt;&#x2F;code&gt; should do the trick. Additionally, I have added the libraries required by &lt;code&gt;libstd&lt;&#x2F;code&gt; to the end of the linker args, after &lt;code&gt;unicows&lt;&#x2F;code&gt;:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;toml&quot; style=&quot;background-color:#292828;color:#e2cca9;&quot; class=&quot;language-toml &quot;&gt;&lt;code class=&quot;language-toml&quot; data-lang=&quot;toml&quot;&gt;&lt;span style=&quot;font-weight:bold;color:#8bba7f;&quot;&gt;rustflags &lt;&#x2F;span&gt;&lt;span&gt;= [
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b0b846;&quot;&gt;&amp;quot;-Z&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b0b846;&quot;&gt;&amp;quot;print-link-args&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b0b846;&quot;&gt;&amp;quot;-Z&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b0b846;&quot;&gt;&amp;quot;link_native_libraries=no&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b0b846;&quot;&gt;&amp;quot;-C&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b0b846;&quot;&gt;&amp;quot;target-feature=+crt-static&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b0b846;&quot;&gt;&amp;quot;-C&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#3e120d;color:#fdf4c1;&quot;&gt;&amp;#39;link-args=&#x2F;nod:kernel32.lib&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#3e120d;color:#fdf4c1;&quot;&gt;&#x2F;nod:advapi32.lib&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#3e120d;color:#fdf4c1;&quot;&gt;&#x2F;nod:user32.lib&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#3e120d;color:#fdf4c1;&quot;&gt;&#x2F;nod:gdi32.lib&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#3e120d;color:#fdf4c1;&quot;&gt;&#x2F;nod:shell32.lib&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#3e120d;color:#fdf4c1;&quot;&gt;&#x2F;nod:comdlg32.lib&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#3e120d;color:#fdf4c1;&quot;&gt;&#x2F;nod:version.lib&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#3e120d;color:#fdf4c1;&quot;&gt;&#x2F;nod:mpr.lib&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#3e120d;color:#fdf4c1;&quot;&gt;&#x2F;nod:rasapi32.lib&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#3e120d;color:#fdf4c1;&quot;&gt;&#x2F;nod:winmm.lib&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#3e120d;color:#fdf4c1;&quot;&gt;&#x2F;nod:winspool.lib&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#3e120d;color:#fdf4c1;&quot;&gt;&#x2F;nod:vfw32.lib&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#3e120d;color:#fdf4c1;&quot;&gt;&#x2F;nod:secur32.lib&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#3e120d;color:#fdf4c1;&quot;&gt;&#x2F;nod:oleacc.lib&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#3e120d;color:#fdf4c1;&quot;&gt;&#x2F;nod:oledlg.lib&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#3e120d;color:#fdf4c1;&quot;&gt;&#x2F;nod:sensapi.lib&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;       &lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#3e120d;color:#fdf4c1;&quot;&gt;unicows.lib&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;       &lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#3e120d;color:#fdf4c1;&quot;&gt;kernel32.lib&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;       &lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#3e120d;color:#fdf4c1;&quot;&gt;advapi32.lib&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;       &lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#3e120d;color:#fdf4c1;&quot;&gt;user32.lib&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;       &lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#3e120d;color:#fdf4c1;&quot;&gt;gdi32.lib&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;       &lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#3e120d;color:#fdf4c1;&quot;&gt;shell32.lib&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;       &lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#3e120d;color:#fdf4c1;&quot;&gt;comdlg32.lib&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;       &lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#3e120d;color:#fdf4c1;&quot;&gt;version.lib&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;       &lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#3e120d;color:#fdf4c1;&quot;&gt;mpr.lib&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;       &lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#3e120d;color:#fdf4c1;&quot;&gt;rasapi32.lib&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;       &lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#3e120d;color:#fdf4c1;&quot;&gt;winmm.lib&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;       &lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#3e120d;color:#fdf4c1;&quot;&gt;winspool.lib&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;       &lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#3e120d;color:#fdf4c1;&quot;&gt;vfw32.lib&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;       &lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#3e120d;color:#fdf4c1;&quot;&gt;secur32.lib&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;       &lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#3e120d;color:#fdf4c1;&quot;&gt;oleacc.lib&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;       &lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#3e120d;color:#fdf4c1;&quot;&gt;oledlg.lib&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;       &lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#3e120d;color:#fdf4c1;&quot;&gt;sensapi.lib&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;       &lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#3e120d;color:#fdf4c1;&quot;&gt;ws2_32.lib&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;       &lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#3e120d;color:#fdf4c1;&quot;&gt;userenv.lib&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;       &lt;&#x2F;span&gt;&lt;span style=&quot;background-color:#3e120d;color:#fdf4c1;&quot;&gt;libcmt.lib&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;]
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Now the linker command line looks correct and all wrapped libraries should be properly wrapped by &lt;code&gt;unicows&lt;&#x2F;code&gt;! &lt;code&gt;link_native_libraries=no&lt;&#x2F;code&gt; is not a perfect solution, but good enough for now.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;the-hunt-for-rtlcapturecontext-part-two&quot;&gt;The hunt for &lt;code&gt;RtlCaptureContext&lt;&#x2F;code&gt;, part two&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#the-hunt-for-rtlcapturecontext-part-two&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;p&gt;Until this point, each and every new executable needs to be edited to &quot;remove&quot; the &lt;code&gt;RtlCaptureContext&lt;&#x2F;code&gt; import that is still added somehow.&lt;&#x2F;p&gt;
+&lt;p&gt;In order to find the source, the tool &lt;code&gt;dumpbin&lt;&#x2F;code&gt;, part of the MSVC toolset, comes to help. First I&#x27;ve confirmed that &lt;code&gt;RtlCaptureContext&lt;&#x2F;code&gt; is actually imported:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#292828;color:#e2cca9;&quot;&gt;&lt;code&gt;&lt;span&gt;dumpin &#x2F;imports hello-w98.exe
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Then I&#x27;ve gone through all libraries listed in the linker call, in order, to find the one that mentions &lt;code&gt;RtlCaptureContext&lt;&#x2F;code&gt; somewhere in its defined symbols. Of course &lt;code&gt;libstd&lt;&#x2F;code&gt; is the one:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#292828;color:#e2cca9;&quot;&gt;&lt;code&gt;&lt;span&gt;dumpbin &#x2F;symbols &amp;quot;D:\RustProjs\rust\build\x86_64-pc-windows-msvc\stage1\lib\rustlib\i586-pc-windows-msvclegacy\lib\libstd-ca1f5c4034a86a91.rlib&amp;quot; | rg Rtl
+&lt;&#x2F;span&gt;&lt;span&gt;239 00000000 UNDEF  notype       External     | _RtlCaptureContext@4
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Let&#x27;s open the file in Ghidra, which detects it as having 32 subfiles (first time I&#x27;ve seen such a thing, interesting!):&lt;&#x2F;p&gt;
+
+
+
+
+
+
+
+
+
+&lt;div class=&quot;center&quot;&gt;
+
+
+
+&lt;img alt=&quot;Ghidra project listing, showing all 32 added object files inside the rlib&quot; src=&quot;https:&amp;#x2F;&amp;#x2F;seri.tools&amp;#x2F;blog&amp;#x2F;compiling-rust-for-legacy-windows&amp;#x2F;ghidra_libstd.png&quot; width=&quot;411&quot;
+  loading=&quot;lazy&quot;&gt;
+
+
+
+&lt;&#x2F;div&gt;
+&lt;p&gt;There is probably a better way to do this, but I have opened them one by one until I found the one importing &lt;code&gt;RtlCaptureContext&lt;&#x2F;code&gt;. In the end it was the one starting with &lt;code&gt;5pja0&lt;&#x2F;code&gt;, and the function calling our target was &lt;code&gt;backtrace::backtrace::trace_unsynchronized&lt;&#x2F;code&gt;. Doh, &lt;code&gt;libstd&lt;&#x2F;code&gt; of course has dependencies that are not part of the rustc tree! And &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;backtrace-rs&#x2F;blob&#x2F;0d859d82d782a6784734cc618193907a354add46&#x2F;src&#x2F;backtrace&#x2F;dbghelp.rs#L88&quot;&gt;&lt;em&gt;there&lt;&#x2F;em&gt;&lt;&#x2F;a&gt; is the call, finally.&lt;&#x2F;p&gt;
+&lt;p&gt;Searching for &lt;code&gt;backtrace&lt;&#x2F;code&gt; in the project reveals that there is a compilation option in &lt;code&gt;config.toml&lt;&#x2F;code&gt; that allows turning off backtraces:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;toml&quot; style=&quot;background-color:#292828;color:#e2cca9;&quot; class=&quot;language-toml &quot;&gt;&lt;code class=&quot;language-toml&quot; data-lang=&quot;toml&quot;&gt;&lt;span&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8bba7f;&quot;&gt;rust&lt;&#x2F;span&gt;&lt;span&gt;]
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#928374;&quot;&gt;# Whether or not `panic!`s generate backtraces (RUST_BACKTRACE)
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#8bba7f;&quot;&gt;backtrace &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;false
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;So I have turned backtraces off, recompiled everything, checked the imports and &lt;code&gt;RtlCaptureContext&lt;&#x2F;code&gt; 🦀 is 🦀 gone 🦀! The executable seems to be fully compatible now, without modifications, with Windows 98 SE, at least with this &lt;em&gt;very&lt;&#x2F;em&gt; limited subset of features needed for displaying &lt;code&gt;Hello, Windows 98!&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;em&gt;Sidenote:&lt;&#x2F;em&gt; Disabling backtrace support reduced the binary size by about 50KiB, interesting!&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;windows-nt-3-51-and-debug-symbol-support&quot;&gt;Windows NT 3.51 and debug symbol support&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#windows-nt-3-51-and-debug-symbol-support&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;p&gt;Since the executable now works on Windows 98 SE, I&#x27;ve tried Windows NT 3.51 next. This worked out of the box (and should be easier anyways since it already supports the &lt;code&gt;W&lt;&#x2F;code&gt; unicode APIs out of the box). It works without further changes because NT 3.51 uses the &lt;a href=&quot;http:&#x2F;&#x2F;www.malsmith.net&#x2F;blog&#x2F;nt351-runs-40-applications&#x2F;&quot;&gt;same PE subsystem version &lt;code&gt;4&lt;&#x2F;code&gt;&lt;&#x2F;a&gt; that NT4 and Windows 98 SE use, both of which are (&lt;a href=&quot;http:&#x2F;&#x2F;www.malsmith.net&#x2F;blog&#x2F;visual-c-visual-history&#x2F;&quot;&gt;more or less&lt;&#x2F;a&gt;) supported by the VC2005 linker.&lt;&#x2F;p&gt;
+
+
+
+
+
+
+
+
+
+&lt;div class=&quot;center&quot;&gt;
+
+
+&lt;a title=&quot;&amp;#x27;Hello Windows 98!&amp;#x27; on Windows NT 3.51&quot; href=&quot;https:&amp;#x2F;&amp;#x2F;seri.tools&amp;#x2F;blog&amp;#x2F;compiling-rust-for-legacy-windows&amp;#x2F;nt351.png&quot;&gt;
+
+
+&lt;img alt=&quot;&amp;#x27;Hello Windows 98!&amp;#x27; on Windows NT 3.51&quot; src=&quot;https:&amp;#x2F;&amp;#x2F;seri.tools&amp;#x2F;blog&amp;#x2F;compiling-rust-for-legacy-windows&amp;#x2F;nt351.png&quot; width=&quot;640&quot;
+  loading=&quot;lazy&quot;&gt;
+
+
+&lt;&#x2F;a&gt;
+
+
+&lt;&#x2F;div&gt;
+&lt;p&gt;It seems that to go even lower, to NT 3.1, a subsystem version of &lt;code&gt;3.10&lt;&#x2F;code&gt; is needed. The &lt;a href=&quot;http:&#x2F;&#x2F;www.malsmith.net&#x2F;blog&#x2F;pe-subsystem-2&#x2F;&quot;&gt;original way&lt;&#x2F;a&gt; of setting that was to use &lt;code&gt;verfix.exe&lt;&#x2F;code&gt; from the NT 3.1 SDK, and looking for modern alternatives I have found that &lt;code&gt;editbin.exe&lt;&#x2F;code&gt; of the VC toolset has the same functionality as well. Just watch out for &lt;a href=&quot;http:&#x2F;&#x2F;www.malsmith.net&#x2F;blog&#x2F;pe-subsystem-version&#x2F;&quot;&gt;behavior changes&lt;&#x2F;a&gt; depending on the subsystem version.&lt;&#x2F;p&gt;
+&lt;p&gt;But wait, the subsystem can be set via the linker options directly... Can the modern VC2019 linker be used? I have added &lt;code&gt;&#x2F;SUBSYSTEM:CONSOLE,3.10&lt;&#x2F;code&gt; to the linker args and tried again: &lt;code&gt;link.exe&lt;&#x2F;code&gt; just gives a warning, stating that the subsystem version is invalid and will be replaced by the default version (&lt;code&gt;6.0&lt;&#x2F;code&gt;; Vista or later). It seems that the linker only allows supported subsystem versions.&lt;&#x2F;p&gt;
+&lt;p&gt;What about &lt;code&gt;editbin.exe&lt;&#x2F;code&gt;? &lt;code&gt;editbin &#x2F;SUBSYSTEM:CONSOLE,3.10 hello-w98.exe&lt;&#x2F;code&gt; gives the same warning but changes the version regardless! Linking with the modern linker against modern libraries causes it to import unavailable APIs again (probably from the modern MSVCRT), so the way to go is to still load the old &lt;code&gt;vsvars32.bat&lt;&#x2F;code&gt; environment, but call the modern linker via its full path. And, by using the modern linker, there are now no problems loading the debugging information anymore either!&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#conclusion&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;p&gt;With relatively small changes to the standard library and compilation settings, and by using old linker libraries, we can make simple applications work on legacy Windows versions already. It&#x27;s debatable of how much use all of this is, but the journey was fun nonetheless!&lt;&#x2F;p&gt;
+&lt;p&gt;If someone is interested in bringing this further, here are some of the open TODOs and ideas I&#x27;ve gathered while working on this:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Go through &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;blob&#x2F;bad3bf622bded50a97c0a54e29350eada2a3a169&#x2F;src&#x2F;libstd&#x2F;sys&#x2F;windows&#x2F;c.rs&quot;&gt;&lt;code&gt;src\libstd\sys\windows\c.rs&lt;&#x2F;code&gt;&lt;&#x2F;a&gt; and check&#x2F;rewrite ALL the APIs in a legacy-compatible way
+&lt;ul&gt;
+&lt;li&gt;I&#x27;ve thought about maybe adding additional &lt;a href=&quot;https:&#x2F;&#x2F;doc.rust-lang.org&#x2F;reference&#x2F;conditional-compilation.html#set-configuration-options&quot;&gt;configuration options&lt;&#x2F;a&gt;, one for each Windows version or API set, allowing the standard library to target any API level specifically. This could be done &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rust&#x2F;blob&#x2F;bad3bf622bded50a97c0a54e29350eada2a3a169&#x2F;src&#x2F;librustc_session&#x2F;config.rs#L672&quot;&gt;here&lt;&#x2F;a&gt;, for example.&lt;&#x2F;li&gt;
+&lt;li&gt;Note that the current Microsoft docs on the Windows API do not contain information about API support for versions older than Windows 2000. For that you will need an old MSDN Library as reference.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;Implement an ANSI&#x2F;Codepage based version of &lt;code&gt;OsStr&lt;&#x2F;code&gt;&#x2F;&lt;code&gt;OsString&lt;&#x2F;code&gt; for Windows 9x systems, removing the need for &lt;code&gt;unicows&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Minimize configuration needed (esp. when using &lt;code&gt;unicows&lt;&#x2F;code&gt;)
+&lt;ul&gt;
+&lt;li&gt;Ideally &lt;code&gt;unicows&lt;&#x2F;code&gt; would not be needed anyways, so all of the tricks of disabling the addition of native libs could be skipped&lt;&#x2F;li&gt;
+&lt;li&gt;If &lt;code&gt;unicows&lt;&#x2F;code&gt; should stay supported (or toggleable), add it to the linker args generation logic in rustc&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;Get &lt;code&gt;backtrace&lt;&#x2F;code&gt;s working again, if possible&lt;&#x2F;li&gt;
+&lt;li&gt;Get dynamic MSVCRT linking working&lt;&#x2F;li&gt;
+&lt;li&gt;Try out and test other VC toolsets and Windows versions to see how low you can go—it doesn&#x27;t seem like anything should prevent going down to Windows 95. &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Win32s&quot;&gt;Win32s&lt;&#x2F;a&gt; seems unlikely though.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;You can find the &lt;code&gt;rustc&lt;&#x2F;code&gt; changes I&#x27;ve made over on GitHub in the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;seritools&#x2F;rust&#x2F;tree&#x2F;windows-legacy-poc&quot;&gt;&lt;code&gt;windows-legacy-poc&lt;&#x2F;code&gt; branch&lt;&#x2F;a&gt;, if you&#x27;re at all interested! My &lt;code&gt;config.toml&lt;&#x2F;code&gt; basically looks like this:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;toml&quot; style=&quot;background-color:#292828;color:#e2cca9;&quot; class=&quot;language-toml &quot;&gt;&lt;code class=&quot;language-toml&quot; data-lang=&quot;toml&quot;&gt;&lt;span&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8bba7f;&quot;&gt;build&lt;&#x2F;span&gt;&lt;span&gt;]
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#8bba7f;&quot;&gt;build &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b0b846;&quot;&gt;&amp;quot;x86_64-pc-windows-msvc&amp;quot;
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#8bba7f;&quot;&gt;target &lt;&#x2F;span&gt;&lt;span&gt;= [&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b0b846;&quot;&gt;&amp;quot;i586-pc-windows-msvclegacy&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;]
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8bba7f;&quot;&gt;rust&lt;&#x2F;span&gt;&lt;span&gt;]
+&lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#8bba7f;&quot;&gt;backtrace &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;false
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Also see the blog&#x27;s footer for my contact information if you have any comments, questions or suggestions.&lt;&#x2F;p&gt;
+&lt;p&gt;Thank you for reading!&lt;&#x2F;p&gt;
+</description>
+      </item>
+      <item>
+          <title>How IDA 7.2&#x27;s installer password was found</title>
+          <pubDate>Mon, 08 Jul 2019 00:00:00 +0000</pubDate>
+          <author>Dennis Duda (seri)</author>
+          <link>https://seri.tools/blog/ida-72-password/</link>
+          <guid>https://seri.tools/blog/ida-72-password/</guid>
+          <description xml:base="https://seri.tools/blog/ida-72-password/">&lt;p&gt;&lt;em&gt;Note: All hashes and passwords are redacted.&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;previously&quot;&gt;Previously ...&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#previously&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;p&gt;In January 2019, the installer files for IDA 7.2 were leaked. This does not mean it was usable however, as you need an installer password to install and a licence file to activate it.
+Separately to that, a license file from ESET was leaked, which didn&#x27;t match the feature set of the installer file.&lt;&#x2F;p&gt;
+&lt;p&gt;But all the leaks didn&#x27;t matter, because without the installer password, the program files were safe. Until now. :)&lt;&#x2F;p&gt;
+&lt;p&gt;On 2019-06-21, devcore published a &lt;a href=&quot;https:&#x2F;&#x2F;devco.re&#x2F;blog&#x2F;2019&#x2F;06&#x2F;21&#x2F;operation-crack-hacking-IDA-Pro-installer-PRNG-from-an-unusual-way-en&#x2F;&quot;&gt;blog post&lt;&#x2F;a&gt; about obvious flaws in the MacOS and Linux installers for IDA, including the password as plaintext in the setup file. The Windows installer, however, uses &lt;a href=&quot;http:&#x2F;&#x2F;www.jrsoftware.org&#x2F;isinfo.php&quot;&gt;InnoSetup&lt;&#x2F;a&gt; as installation engine.&lt;&#x2F;p&gt;
+&lt;p&gt;InnoSetup encrypts the program data with the installer password and hashes it via SHA-1, prepending it with &lt;code&gt;PasswordCheckHash&lt;&#x2F;code&gt; and eight random bytes as salt. The password being 12 alphanumeric characters long means that bruteforcing it is pretty much out of the question.&lt;&#x2F;p&gt;
+&lt;p&gt;Unless you find out how the passwords were generated in the first place! Devcore found out that the passwords are simply generated with a small Perl script using &lt;code&gt;srand()&lt;&#x2F;code&gt;&#x2F;&lt;code&gt;rand()&lt;&#x2F;code&gt;. This only works for versions up to 6.8 though, and not even all installers, as &lt;em&gt;qudiss&lt;&#x2F;em&gt; noted:&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;I noticed &lt;a href=&quot;https:&#x2F;&#x2F;rosettacode.org&#x2F;wiki&#x2F;Random_number_generator_(included)#Perl&quot;&gt;Perl 5.20.0&#x27;s PRNG implementation&lt;&#x2F;a&gt; can&#x27;t be used to find seeds for the other leaked passwords or to bruteforce IDA 7.0-7.2 setup passwords. I assume different algorithms&#x2F;charsets&#x2F;etc. were used for these?&lt;&#x2F;p&gt;
+&lt;p&gt;— &lt;a href=&quot;https:&#x2F;&#x2F;devco.re&#x2F;blog&#x2F;2019&#x2F;06&#x2F;21&#x2F;operation-crack-hacking-IDA-Pro-installer-PRNG-from-an-unusual-way-en&#x2F;#comment-4511595557&quot;&gt;qudiss&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;I found that interesting and verified their findings by converting the code to Rust and do a full search for all PRNG seeds (assuming a 32-bit seed). To do that I&#x27;ve dug through the Perl source code to find the exact &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Perl&#x2F;perl5&#x2F;blob&#x2F;df09255f565b73f060cd59e80498786e0f80d4a7&#x2F;util.c#L5817&quot;&gt;implementation of DRand48&lt;&#x2F;a&gt;. This, converted to Rust, amounts to something like:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;rust&quot; style=&quot;background-color:#292828;color:#e2cca9;&quot; class=&quot;language-rust &quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;use &lt;&#x2F;span&gt;&lt;span&gt;float_extras::f64::ldexp;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;pub struct &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8bba7f;&quot;&gt;DRand48 &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;pub &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;x&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;u64
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;impl &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8bba7f;&quot;&gt;DRand48 &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;    #[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;inline&lt;&#x2F;span&gt;&lt;span&gt;]
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;pub fn &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8bba7f;&quot;&gt;next_f64&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;&amp;amp;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;mut &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span&gt;) -&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;f64 &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span&gt;.x &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span&gt;.x
+&lt;&#x2F;span&gt;&lt;span&gt;            .&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e9b143;&quot;&gt;wrapping_mul&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;0x5DEE_CE66D&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;            .&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e9b143;&quot;&gt;wrapping_add&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;0xB&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;&amp;amp; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;0xFFFF_FFFF_FFFF&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e9b143;&quot;&gt;ldexp&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span&gt;.x &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;as &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;f64&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;48&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;    }
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    #[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;inline&lt;&#x2F;span&gt;&lt;span&gt;]
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;pub fn &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8bba7f;&quot;&gt;set_seed&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;&amp;amp;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;mut &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;seed&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;u32&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;self&lt;&#x2F;span&gt;&lt;span&gt;.x &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;0x330E&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;u64 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;+ &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;u64&lt;&#x2F;span&gt;&lt;span&gt;::from(seed) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;&amp;lt;&amp;lt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;16&lt;&#x2F;span&gt;&lt;span&gt;);
+&lt;&#x2F;span&gt;&lt;span&gt;    }
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;The rest is just a big loop over the full 32-bit range, setting the initial seed, generating the password, hashing it according to InnoSetup&#x27;s scheme, and comparing that with the saved hash in the installer. Using &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rayon-rs&#x2F;rayon&quot;&gt;Rayon&lt;&#x2F;a&gt; I&#x27;ve quickly converted it to use multiple threads, yielding an &amp;gt;8x speed improvement on my system.&lt;&#x2F;p&gt;
+&lt;p&gt;... and yes, as qudiss said, neither the IDA 7.0 nor the other mentioned leaked passwords can be found. So, what now?&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;breaking-open-the-7-0-installer&quot;&gt;Breaking open the 7.0 installer&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#breaking-open-the-7-0-installer&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;p&gt;I guess I was pretty lucky since my first idea was actually correct. Qudiss&#x27; comment above included a very helpful link and hint: The PRNG implementation used in Perl was first introduced in Perl 5.20. So I&#x27;ve looked into what Perl used before DRand48 was added, thinking the passwords could have just be generated with an even older version.&lt;&#x2F;p&gt;
+&lt;p&gt;And &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;Perl&#x2F;perl5&#x2F;blob&#x2F;05ccd577e15cc66bbb7414fad5ee3c02f536c7a5&#x2F;uconfig.h#L3096&quot;&gt;here&lt;&#x2F;a&gt; it is:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;c&quot; style=&quot;background-color:#292828;color:#e2cca9;&quot; class=&quot;language-c &quot;&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;#define &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8bba7f;&quot;&gt;Drand01&lt;&#x2F;span&gt;&lt;span&gt;()       ((&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e9b143;&quot;&gt;rand&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;() &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;&amp;amp; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;0x7FFF&lt;&#x2F;span&gt;&lt;span&gt;) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;&#x2F; &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;double&lt;&#x2F;span&gt;&lt;span&gt;) ((&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;unsigned long&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;1 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;&amp;lt;&amp;lt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;15&lt;&#x2F;span&gt;&lt;span&gt;))     &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#928374;&quot;&gt;&#x2F;**&#x2F;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;#define &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8bba7f;&quot;&gt;Rand_seed_t     &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;int    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#928374;&quot;&gt;&#x2F;**&#x2F;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;#define &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8bba7f;&quot;&gt;seedDrand01&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;x&lt;&#x2F;span&gt;&lt;span&gt;)  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e9b143;&quot;&gt;srand&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;((Rand_seed_t)x)   &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#928374;&quot;&gt;&#x2F;**&#x2F;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Just a simple call to the C functions &lt;code&gt;srand&lt;&#x2F;code&gt; and &lt;code&gt;rand&lt;&#x2F;code&gt;, converting the random number to a double with a bit of bit-fiddling.&lt;&#x2F;p&gt;
+&lt;p&gt;Re-checking the full range was a little bit uglier with the older PRNG code, since C&#x27;s &lt;code&gt;srand&lt;&#x2F;code&gt;&#x2F;&lt;code&gt;rand&lt;&#x2F;code&gt; are not thread-safe, as it uses globals to store the PRNG state. This meant that instead of using rayon multithreading, the brute-force loop has to run single-threaded. To make the program not lose all of its previous speed, chunking the search space into 16 blocks and just running the tool 16 times in parallel worked well enough.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;rs&quot; style=&quot;background-color:#292828;color:#e2cca9;&quot; class=&quot;language-rs &quot;&gt;&lt;code class=&quot;language-rs&quot; data-lang=&quot;rs&quot;&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;use &lt;&#x2F;span&gt;&lt;span&gt;hex_literal::hex;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;use &lt;&#x2F;span&gt;&lt;span&gt;libc::{rand, srand};
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;use &lt;&#x2F;span&gt;&lt;span&gt;sha1::{Digest, Sha1};
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;use &lt;&#x2F;span&gt;&lt;span&gt;std::{env, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;f64&lt;&#x2F;span&gt;&lt;span&gt;};
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;CHARS&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;&amp;amp;&lt;&#x2F;span&gt;&lt;span&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;u8&lt;&#x2F;span&gt;&lt;span&gt;; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;54&lt;&#x2F;span&gt;&lt;span&gt;] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;b&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b0b846;&quot;&gt;&amp;quot;abcdefghijkmpqrstuvwxyzABCDEFGHJKLMPQRSTUVWXYZ23456789&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;HASH&lt;&#x2F;span&gt;&lt;span&gt;: [&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;u8&lt;&#x2F;span&gt;&lt;span&gt;; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;20&lt;&#x2F;span&gt;&lt;span&gt;] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e9b143;&quot;&gt;hex!&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b0b846;&quot;&gt;&amp;quot;0000000000000000000000000000000000000000&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;);
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;PEPPER&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;&amp;amp;&lt;&#x2F;span&gt;&lt;span&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;u8&lt;&#x2F;span&gt;&lt;span&gt;; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;17&lt;&#x2F;span&gt;&lt;span&gt;] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;b&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b0b846;&quot;&gt;&amp;quot;PasswordCheckHash&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;SALT&lt;&#x2F;span&gt;&lt;span&gt;: [&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;u8&lt;&#x2F;span&gt;&lt;span&gt;; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;8&lt;&#x2F;span&gt;&lt;span&gt;] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e9b143;&quot;&gt;hex!&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b0b846;&quot;&gt;&amp;quot;0000000000000000&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;);
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;fn &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8bba7f;&quot;&gt;main&lt;&#x2F;span&gt;&lt;span&gt;() {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;let&lt;&#x2F;span&gt;&lt;span&gt; block_str &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;env::args().&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e9b143;&quot;&gt;nth&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;).&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e9b143;&quot;&gt;expect&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b0b846;&quot;&gt;&amp;quot;block&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;);
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;let&lt;&#x2F;span&gt;&lt;span&gt; block &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt; block_str.parse::&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;u32&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;().&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e9b143;&quot;&gt;expect&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b0b846;&quot;&gt;&amp;quot;block&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;);
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e9b143;&quot;&gt;assert!&lt;&#x2F;span&gt;&lt;span&gt;(block &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;&amp;lt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;16&lt;&#x2F;span&gt;&lt;span&gt;);
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;let&lt;&#x2F;span&gt;&lt;span&gt; sha1template &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;let mut&lt;&#x2F;span&gt;&lt;span&gt; hasher &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;Sha1::new();
+&lt;&#x2F;span&gt;&lt;span&gt;        hasher.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e9b143;&quot;&gt;input&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;PEPPER&lt;&#x2F;span&gt;&lt;span&gt;);
+&lt;&#x2F;span&gt;&lt;span&gt;        hasher.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e9b143;&quot;&gt;input&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;SALT&lt;&#x2F;span&gt;&lt;span&gt;);
+&lt;&#x2F;span&gt;&lt;span&gt;        hasher
+&lt;&#x2F;span&gt;&lt;span&gt;    };
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;let&lt;&#x2F;span&gt;&lt;span&gt; start &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt; block &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;&amp;lt;&amp;lt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;28&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;let&lt;&#x2F;span&gt;&lt;span&gt; length &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;0x0FFF_FFFF&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;u32&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;let mut&lt;&#x2F;span&gt;&lt;span&gt; buf &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;u8&lt;&#x2F;span&gt;&lt;span&gt;; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;12&lt;&#x2F;span&gt;&lt;span&gt;];
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;for&lt;&#x2F;span&gt;&lt;span&gt; i &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;in&lt;&#x2F;span&gt;&lt;span&gt; start&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;..=&lt;&#x2F;span&gt;&lt;span&gt;(start &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;+&lt;&#x2F;span&gt;&lt;span&gt; length) {
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e9b143;&quot;&gt;perl_srand&lt;&#x2F;span&gt;&lt;span&gt;(i);
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;for&lt;&#x2F;span&gt;&lt;span&gt; n &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;in &amp;amp;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;mut&lt;&#x2F;span&gt;&lt;span&gt; buf {
+&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;*&lt;&#x2F;span&gt;&lt;span&gt;n &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;CHARS&lt;&#x2F;span&gt;&lt;span&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e9b143;&quot;&gt;perl_rand&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;54&lt;&#x2F;span&gt;&lt;span&gt;) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;as &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;usize&lt;&#x2F;span&gt;&lt;span&gt;];
+&lt;&#x2F;span&gt;&lt;span&gt;        }
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;let mut&lt;&#x2F;span&gt;&lt;span&gt; hasher &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt; sha1template.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e9b143;&quot;&gt;clone&lt;&#x2F;span&gt;&lt;span&gt;();
+&lt;&#x2F;span&gt;&lt;span&gt;        hasher.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e9b143;&quot;&gt;input&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;&amp;amp;&lt;&#x2F;span&gt;&lt;span&gt;buf);
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;let&lt;&#x2F;span&gt;&lt;span&gt; hash &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt; hasher.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e9b143;&quot;&gt;result&lt;&#x2F;span&gt;&lt;span&gt;();
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;if&lt;&#x2F;span&gt;&lt;span&gt; hash[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;..&lt;&#x2F;span&gt;&lt;span&gt;] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;== &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;HASH &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e9b143;&quot;&gt;println!&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b0b846;&quot;&gt;&amp;quot;FOUND: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;{}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b0b846;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;, i);
+&lt;&#x2F;span&gt;&lt;span&gt;            &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;return&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;        }
+&lt;&#x2F;span&gt;&lt;span&gt;    }
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e9b143;&quot;&gt;println!&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b0b846;&quot;&gt;&amp;quot;not found&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;);
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;#[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;inline&lt;&#x2F;span&gt;&lt;span&gt;]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;fn &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8bba7f;&quot;&gt;perl_srand&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;seed&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;u32&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;unsafe &lt;&#x2F;span&gt;&lt;span&gt;{ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e9b143;&quot;&gt;srand&lt;&#x2F;span&gt;&lt;span&gt;(seed) }
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;#[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;inline&lt;&#x2F;span&gt;&lt;span&gt;]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;fn &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8bba7f;&quot;&gt;perl_rand&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;max&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;u32&lt;&#x2F;span&gt;&lt;span&gt;) -&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;u32 &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;    (&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;f64&lt;&#x2F;span&gt;&lt;span&gt;::from(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;unsafe &lt;&#x2F;span&gt;&lt;span&gt;{ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e9b143;&quot;&gt;rand&lt;&#x2F;span&gt;&lt;span&gt;() } &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;&amp;amp; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;0x7FFF&lt;&#x2F;span&gt;&lt;span&gt;) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;&#x2F; &lt;&#x2F;span&gt;&lt;span&gt;((&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;u64 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;&amp;lt;&amp;lt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;15&lt;&#x2F;span&gt;&lt;span&gt;) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;as &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;f64&lt;&#x2F;span&gt;&lt;span&gt;) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;* &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;f64&lt;&#x2F;span&gt;&lt;span&gt;::from(max)) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;as &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;u32
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;This, surprisingly, turned out to be the right idea and successfully bruteforced the other hashes&#x2F;passwords (when using Microsoft&#x27;s C runtime implementation for &lt;code&gt;srand&lt;&#x2F;code&gt; and &lt;code&gt;rand&lt;&#x2F;code&gt;).&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;ida-7-2-though&quot;&gt;IDA 7.2, though&amp;nbsp;&lt;a class=&quot;anchor&quot; href=&quot;#ida-7-2-though&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;p&gt;The next thing I&#x27;ve tested was the IDA 7.2 installer, of course. &lt;a href=&quot;http:&#x2F;&#x2F;constexpr.org&#x2F;innoextract&#x2F;&quot;&gt;InnoExtract&lt;&#x2F;a&gt; (&lt;code&gt;innoextract.exe --show-password&lt;&#x2F;code&gt;) is probably the easiest way of extracting the relevant data from the installer:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#292828;color:#e2cca9;&quot;&gt;&lt;code&gt;&lt;span&gt;Inspecting &amp;quot;IDA Pro v7.2 and Hex-Rays Decompiler (x64)&amp;quot; - setup data version 5.5.7 (unicode)
+&lt;&#x2F;span&gt;&lt;span&gt;Password hash: SHA-1 0000000000000000000000000000000000000000
+&lt;&#x2F;span&gt;&lt;span&gt;Password salt: 50617373776f7264436865636b486173680000000000000000 (hex bytes, prepended to password)
+&lt;&#x2F;span&gt;&lt;span&gt;Password encoding: UTF-16LE
+&lt;&#x2F;span&gt;&lt;span&gt;Done.
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;One thing that immediately stood out was the password encoding. IDA 7.2 uses the unicode variant of InnoSetup, hence the UTF16 encoding—previous installers used the ANSI variant. With a bit of unsafe slicing, the DRand48 version of the hashing code looks like this now:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;rs&quot; style=&quot;background-color:#292828;color:#e2cca9;&quot; class=&quot;language-rs &quot;&gt;&lt;code class=&quot;language-rs&quot; data-lang=&quot;rs&quot;&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;let mut&lt;&#x2F;span&gt;&lt;span&gt; buf &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;u16&lt;&#x2F;span&gt;&lt;span&gt;; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;12&lt;&#x2F;span&gt;&lt;span&gt;];
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;let mut&lt;&#x2F;span&gt;&lt;span&gt; rand &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt; DRand48 { x: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;0 &lt;&#x2F;span&gt;&lt;span&gt;};
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;for&lt;&#x2F;span&gt;&lt;span&gt; i &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;in&lt;&#x2F;span&gt;&lt;span&gt; pos&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;..&lt;&#x2F;span&gt;&lt;span&gt;(pos &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;+ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;0xFF_FFFF&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;    rand.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e9b143;&quot;&gt;set_seed&lt;&#x2F;span&gt;&lt;span&gt;(i);
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;let mut&lt;&#x2F;span&gt;&lt;span&gt; n &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;while&lt;&#x2F;span&gt;&lt;span&gt; n &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;&amp;lt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;12 &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;        n &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;+= &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;CHARS&lt;&#x2F;span&gt;&lt;span&gt;[(rand.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e9b143;&quot;&gt;next_f64&lt;&#x2F;span&gt;&lt;span&gt;() &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;* &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;54.0&lt;&#x2F;span&gt;&lt;span&gt;) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;as &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;usize&lt;&#x2F;span&gt;&lt;span&gt;] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;as &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;char&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;            .&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e9b143;&quot;&gt;encode_utf16&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;&amp;amp;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;mut&lt;&#x2F;span&gt;&lt;span&gt; buf[n&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;..&lt;&#x2F;span&gt;&lt;span&gt;])
+&lt;&#x2F;span&gt;&lt;span&gt;            .&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e9b143;&quot;&gt;len&lt;&#x2F;span&gt;&lt;span&gt;();
+&lt;&#x2F;span&gt;&lt;span&gt;    }
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;let&lt;&#x2F;span&gt;&lt;span&gt; hash &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;let mut&lt;&#x2F;span&gt;&lt;span&gt; hasher &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt; sha1template.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e9b143;&quot;&gt;clone&lt;&#x2F;span&gt;&lt;span&gt;();
+&lt;&#x2F;span&gt;&lt;span&gt;        hasher.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e9b143;&quot;&gt;input&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;unsafe &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;            std::slice::from_raw_parts(
+&lt;&#x2F;span&gt;&lt;span&gt;                (buf[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;..&lt;&#x2F;span&gt;&lt;span&gt;]).&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e9b143;&quot;&gt;as_ptr&lt;&#x2F;span&gt;&lt;span&gt;() &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;as &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;*const &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;_&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;                buf[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;..&lt;&#x2F;span&gt;&lt;span&gt;].&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e9b143;&quot;&gt;len&lt;&#x2F;span&gt;&lt;span&gt;() &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;* &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;2&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;            )
+&lt;&#x2F;span&gt;&lt;span&gt;        });
+&lt;&#x2F;span&gt;&lt;span&gt;        hasher.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e9b143;&quot;&gt;result&lt;&#x2F;span&gt;&lt;span&gt;()
+&lt;&#x2F;span&gt;&lt;span&gt;    };
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;if&lt;&#x2F;span&gt;&lt;span&gt; hash[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;..&lt;&#x2F;span&gt;&lt;span&gt;] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;== &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;HASH &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e9b143;&quot;&gt;Some&lt;&#x2F;span&gt;&lt;span&gt;(buf);
+&lt;&#x2F;span&gt;&lt;span&gt;    }
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;I&#x27;ve tried both the DRand48 PRNG and the older C-based PRNG, to no avail. Giving up for the night I&#x27;ve shared my findings as a reply to qudiss&#x27; comment.&lt;&#x2F;p&gt;
+&lt;p&gt;On the next morning a lot of comments on both devco.re and the chinese discussion board pediy.com had appeared, pointing to a few more ideas to test. The first one was pretty simple, checking if the password length was increased to 14 characters, which sadly was not the case.&lt;&#x2F;p&gt;
+&lt;p&gt;The second hint was posted as a small inconspicuous reply in the comments section on the devco.re blog post, by hishe:&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;i think you need to omit the first rand.&lt;&#x2F;p&gt;
+&lt;p&gt;this article doesn&#x27;t mention this.&lt;&#x2F;p&gt;
+&lt;p&gt;— &lt;a href=&quot;https:&#x2F;&#x2F;devco.re&#x2F;blog&#x2F;2019&#x2F;06&#x2F;21&#x2F;operation-crack-hacking-IDA-Pro-installer-PRNG-from-an-unusual-way-en&#x2F;#comment-4512664132&quot;&gt;hishe&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;o_O&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Yup, got it!&lt;&#x2F;p&gt;
+&lt;p&gt;— &lt;a href=&quot;https:&#x2F;&#x2F;devco.re&#x2F;blog&#x2F;2019&#x2F;06&#x2F;21&#x2F;operation-crack-hacking-IDA-Pro-installer-PRNG-from-an-unusual-way-en&#x2F;#comment-4512903087&quot;&gt;me in reply to hishe&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;It probably was a well-educated guess by hishe that led to IDA 7.2 being finally pried open. Discarding the first generated number after setting the seed was everything that had to be changed to make it work (with DRand48):&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;rs&quot; style=&quot;background-color:#292828;color:#e2cca9;&quot; class=&quot;language-rs &quot;&gt;&lt;code class=&quot;language-rs&quot; data-lang=&quot;rs&quot;&gt;&lt;span style=&quot;color:#f2594b;&quot;&gt;for&lt;&#x2F;span&gt;&lt;span&gt; i &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;in&lt;&#x2F;span&gt;&lt;span&gt; pos&lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;..&lt;&#x2F;span&gt;&lt;span&gt;(pos &lt;&#x2F;span&gt;&lt;span style=&quot;color:#f28534;&quot;&gt;+ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;0xFF_FFFF&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;    rand.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e9b143;&quot;&gt;set_seed&lt;&#x2F;span&gt;&lt;span&gt;(i);
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#928374;&quot;&gt;&#x2F;&#x2F; skip first value
+&lt;&#x2F;span&gt;&lt;span&gt;    rand.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e9b143;&quot;&gt;next_f64&lt;&#x2F;span&gt;&lt;span&gt;();
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;font-style:italic;color:#928374;&quot;&gt;&#x2F;&#x2F; ... (see above)
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;After waiting for somebody else to post the actual password for the installer I pushed my code for anyone interested to see:
+&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;seritools&#x2F;find_drand48_innosetup_pw&quot;&gt;gh&#x2F;find_drand48_innosetup_pw&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;The timing of it all was lucky as well—the weakness was reported to Hex-Rays on January 31st 2019, while the leaks happened just a few weeks earlier. Since Hex-Rays promised to harden the installer password, this will probably be the last version of IDA to be leaked&#x2F;cracked in a usable state without a password.&lt;&#x2F;p&gt;
+</description>
+      </item>
+    </channel>
+</rss>
