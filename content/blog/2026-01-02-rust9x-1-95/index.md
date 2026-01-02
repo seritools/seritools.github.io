@@ -5,7 +5,7 @@ title = "Rust9x update: Rust 1.93.0-beta"
 {{ image(src="/images/rust9x-logo.svg",
    alt="'Ferrissoft Visual Rust 9X', logo in the style of old Visual Studio logos") }}
 
-You know the drill by now: Another year and 8-9 Rust versions later, it's time for another Rust9x
+You know the drill by now: Another year and 8-9 Rust versions later, it's time for a new Rust9x
 update!
 
 Rust9x provides Windows downlevel support for the Rust standard library, bringing it to Windows 95,
@@ -14,7 +14,7 @@ Rust9x provides Windows downlevel support for the Rust standard library, bringin
 
 ## What's new?
 
-- Rebased and partially reimplemented all fallback code ontop of **Rust 1.93-beta**.
+- Rebased and partially reimplemented all fallback code on-top of **Rust 1.93-beta**.
 - `target_vendor` is on the way to being deprecated. Rust9x now uses `target_family = "rust9x"`,
   instead.
 - [`std::net::hostname`](https://doc.rust-lang.org/std/net/fn.hostname.html) has a fallback now
@@ -24,6 +24,9 @@ Rust9x provides Windows downlevel support for the Rust standard library, bringin
   doesn't prevent us from setting the subsystem and OS version to legacy values like modern
   `link.exe` versions do, so we can get rid of the post-build step that executed `editbin.exe` on
   built binaries. Check out the updated [rust9x-sample] for the new configuration.
+- (Back in 1.84 after the last blog post) Reimplemented the [`fileextd.lib`
+  fallbacks](https://github.com/rust9x/rust/issues/43) in Rust, giving us a near-complete
+  `std::fs` implementation on Windows XP (and improved coverage for earlier NT-based systems).
 
 [rust9x-sample]: https://github.com/rust9x/rust9x-sample
 
